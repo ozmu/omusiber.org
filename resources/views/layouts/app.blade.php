@@ -21,8 +21,9 @@
 
 		@stack('styles')
 
-    <link id="theme_css" rel="stylesheet" href="{{asset('assets/css/theme/light.css')}}">
+    	<link id="theme_css" rel="stylesheet" href="{{asset('assets/css/theme/light.css')}}">
 		<link id="skin_css" rel="stylesheet" href="{{asset('assets/css/theme/skin/default.css')}}">
+		@stack('poststyles')
   </head>
   <body>
     <!-- site preloader start -->
@@ -46,7 +47,7 @@
 					<div class="container">
 						<div class="row">
 							<!-- footer copyrights left cell -->
-							<div class="copyrights col-md-5">© Copyrights <b class="main-color">OMUSIBER</b> 2017. All rights reserved.</div>
+							<div class="copyrights">© Copyrights <b class="main-color">OMUSIBER</b> 2017. All rights reserved.</div>
 						</div>
 					</div>
 				</div>

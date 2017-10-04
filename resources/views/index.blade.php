@@ -8,6 +8,9 @@
   <!-- Particles CSS-->
   <link rel='stylesheet' id='rs-particles-front-css' href='{{asset('assets/css/particles.css')}}' type='text/css' media='all'/>
 @endpush
+@push('poststyles')
+	<link rel="stylesheet" type="text/css" href="{{asset('assets//css/index.css')}}">
+@endpush
 @push('scripts')
   <!-- SLIDER REVOLUTION  -->
   <script type="text/javascript" src="{{asset('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
@@ -150,12 +153,17 @@
 				<div class="col-md-3 col-md-offset-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="http://it-rays.org/bookra/assets/images/people/1.jpg">
+							<img alt="" src="{{asset('assets/images/team/emre.png')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
-							<h4 class="team-name">Mohamed Abdelfattah</h4>
-							<h5 class="uppercase main-color">Founder</h5>
+							<div class="chairman">
+								<h4 class="team-name">Emre Engin</h4>
+								<h5 class="uppercase main-color">Kurucu</h5>
+							</div>
+							<div class="person-info">
+								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
+							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
 									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
@@ -178,7 +186,7 @@
 								<h5 class="uppercase main-color">Başkan</h5>
 							</div>
 							<div class="person-info">
-								<p>aslkdjaslkşdjaklş</p>
+								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
@@ -195,12 +203,17 @@
 				<div class="col-md-3 ">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="http://it-rays.org/bookra/assets/images/people/1.jpg">
+							<img alt="" src="{{asset('assets/images/team/emre.png')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
-							<h4 class="team-name">Mohamed Abdelfattah</h4>
-							<h5 class="uppercase main-color">Founder</h5>
+							<div class="chairman">
+								<h4 class="team-name">Emre Engin</h4>
+								<h5 class="uppercase main-color">1. Başkan</h5>
+							</div>
+							<div class="person-info">
+								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
+							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
 									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
@@ -214,12 +227,17 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="http://it-rays.org/bookra/assets/images/people/1.jpg">
+							<img alt="" src="{{asset('assets/images/team/salihcan.jpg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
-							<h4 class="team-name">Mohamed Abdelfattah</h4>
-							<h5 class="uppercase main-color">Founder</h5>
+							<div class="chairman">
+								<h4 class="team-name">Salih Can Özel</h4>
+								<h5 class="uppercase main-color">2. Başkan</h5>
+							</div>
+							<div class="person-info">
+								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
+							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
 									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
@@ -233,12 +251,17 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="http://it-rays.org/bookra/assets/images/people/1.jpg">
+							<img alt="" src="{{asset('assets/images/team/sinan.jpg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
-							<h4 class="team-name">Mohamed Abdelfattah</h4>
-							<h5 class="uppercase main-color">Founder</h5>
+							<div class="chairman">
+								<h4 class="team-name">Sinan Şahin</h4>
+								<h5 class="uppercase main-color">3. Başkan</h5>
+							</div>
+							<div class="person-info">
+								<h5 class="uppercase main-color">Sysadmin, Ruby on rails, Linux</h5>
+							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
 									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
@@ -252,12 +275,17 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="http://it-rays.org/bookra/assets/images/people/1.jpg">
+							<img alt="" src="{{asset('assets/images/team/umutcan.jpeg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
-							<h4 class="team-name">Mohamed Abdelfattah</h4>
-							<h5 class="uppercase main-color">Founder</h5>
+							<div class="chairman">
+								<h4 class="team-name">Umut Can Purtul</h4>
+								<h5 class="uppercase main-color">4. Başkan</h5>
+							</div>
+							<div class="person-info">
+								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
+							</div>
 							<div class="team-socials">
 								<div class="social-list tbl">
 									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
@@ -351,90 +379,90 @@
 						<div class="post-item">
 							<div class="timeline_date">
 									<span class="inner_date main-bg">
-										<span class="day">7</span>
-										<span class="month">Jan</span>
+										<span class="day">21</span>
+										<span class="month">Ekim</span>
 									</span>
-								<span class="year">2016</span>
+								<span class="year">2017</span>
 							</div>
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="blog-single.html">
-										<img src="http://it-rays.org/bookra/assets/images/blog/large/1.jpg" alt="Our Blog post image goes here">
+										<img src="http://it-rays.org/bookra/assets/images/blog/large/1.jpg" alt="Pwnlydays">
 									</a>
 								</div>
 								<div class="post-item-rit">
 									<div class="post-info-container">
 										<div class="post-info">
-											<h4><a href="blog-single.html">Mauris mauris ante, blandit et, ultrices.</a></h4>
+											<h4><a href="blog-single.html">Pwnlydays</a></h4>
 											<ul class="post-meta">
-												<li class="main-bg"><i class="fa fa-video-camera"></i></li>
-												<li class="meta-user"><i class="fa fa-user"></i>By: <a href="#">John Martin</a></li>
-												<li class="meta_date"><i class="fa fa-folder-o"></i>in: <a href="#">Entertainment</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i><span>35</span></a></li>
+												<li><i class="fa fa-info"></i><span class="activity-active">Aktif</span></li>
+												<li><i class="fa fa-bolt"></i><a href="#">Eğitim</a></li>
+												<li><i class="fa fa-user"></i><a href="#">Canyoupwnme</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>Mühendislik Fakültesi</span></a></li>
 											</ul>
 										</div>
 									</div>
-									<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin a, suscipit eget, quam. Integer ut neque. <a class="more_btn main-color" href="blog-single.html">Read More</a></p>
+									<p>Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  <a class="more_btn main-color" href="blog-single.html">Read More</a></p>
 								</div>
 							</article>
 						</div>
 						<div class="post-item">
 							<div class="timeline_date">
 									<span class="inner_date main-bg">
-										<span class="day">7</span>
-										<span class="month">Jan</span>
+										<span class="day">16</span>
+										<span class="month">Nisan</span>
 									</span>
-								<span class="year">2016</span>
+								<span class="year">2017</span>
 							</div>
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="blog-single.html">
-										<img src="http://it-rays.org/bookra/assets/images/blog/large/1.jpg" alt="Our Blog post image goes here">
+										<img src="{{asset('assets/images/activities/omuctf2.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
 									<div class="post-info-container">
 										<div class="post-info">
-											<h4><a href="blog-single.html">Mauris mauris ante, blandit et, ultrices.</a></h4>
+											<h4><a href="blog-single.html">OMUCTF-II</a></h4>
 											<ul class="post-meta">
-												<li class="main-bg"><i class="fa fa-video-camera"></i></li>
-												<li class="meta-user"><i class="fa fa-user"></i>By: <a href="#">John Martin</a></li>
-												<li class="meta_date"><i class="fa fa-folder-o"></i>in: <a href="#">Entertainment</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i><span>35</span></a></li>
+												<li><i class="fa fa-info"></i><span class="activity-over">Bitti</span></li>
+												<li class="meta-user"><i class="fa fa-bolt"></i><a href="#">Yarışma</a></li>
+												<li class="meta_date"><i class="fa fa-user"></i><a href="#">OmuSiber</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>Online</span></a></li>
 											</ul>
 										</div>
 									</div>
-									<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin a, suscipit eget, quam. Integer ut neque. <a class="more_btn main-color" href="blog-single.html">Read More</a></p>
+									<p>OMUCTF-II, üniversitemizin topluluğumuza Hacktrick Siber Güvenlik Konferansı için onayladığı 3 kişilik yol harçlığını kullanacak üyelerimizi belirlemek için düzenlediğimiz siber güvenlik bilgi yarışmasıdır.<a class="more_btn main-color" href="blog-single.html">Read More</a></p>
 								</div>
 							</article>
 						</div>
 						<div class="post-item">
 							<div class="timeline_date">
 									<span class="inner_date main-bg">
-										<span class="day">7</span>
-										<span class="month">Jan</span>
+										<span class="day">5</span>
+										<span class="month">Mart</span>
 									</span>
-								<span class="year">2016</span>
+								<span class="year">2017</span>
 							</div>
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="blog-single.html">
-										<img src="http://it-rays.org/bookra/assets/images/blog/large/1.jpg" alt="Our Blog post image goes here">
+										<img src="{{asset('assets/images/activities/omuctf17.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
 									<div class="post-info-container">
 										<div class="post-info">
-											<h4><a href="blog-single.html">Mauris mauris ante, blandit et, ultrices.</a></h4>
+											<h4><a href="blog-single.html">OMUCTF'17</a></h4>
 											<ul class="post-meta">
-												<li class="main-bg"><i class="fa fa-video-camera"></i></li>
-												<li class="meta-user"><i class="fa fa-user"></i>By: <a href="#">John Martin</a></li>
-												<li class="meta_date"><i class="fa fa-folder-o"></i>in: <a href="#">Entertainment</a></li>
-												<li><a href="#"><i class="fa fa-comments"></i><span>35</span></a></li>
+												<li><i class="fa fa-info"></i><span class="activity-over">Bitti</span></li>
+												<li class="meta-user"><i class="fa fa-bolt"></i><a href="#">Yarışma</a></li>
+												<li class="meta_date"><i class="fa fa-user"></i><a href="#">OmuSiber</a></li>
+												<li><a href="#"><i class="fa fa-map-signs"></i><span>Online</span></a></li>
 											</ul>
 										</div>
 									</div>
-									<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin a, suscipit eget, quam. Integer ut neque. <a class="more_btn main-color" href="blog-single.html">Read More</a></p>
+									<p> OMUCTF’17, Siber Güvenlik Topluluğu olarak insanların düşünme ve araştırma becerilerini geliştirmelerini amaçlayarak gerçekleştirdiğimiz yarışmasıdır.<a class="more_btn main-color" href="blog-single.html">Read More</a></p>
 								</div>
 							</article>
 						</div>
@@ -453,19 +481,19 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="camera_wrap camera-slider lg-slider-cam" data-hide-pagination data-hide-play-pause data-height="500px" data-fx="simpleFade">
-							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/01.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/1.jpg">
+							<div data-thumb="{{asset('assets/images/gallery/thumb/ab2017.jpeg')}}" data-src="{{asset('assets/images/gallery/ab2017.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
-									Stricken Chinese cruise ship lifted from Yangtze River
+									Akademik Bilişim 2017'ye katıldık.
 								</div>
 							</div>
-							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/02.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/2.jpg">
+							<div data-thumb="{{asset('assets/images/gallery/thumb/ctfodul.jpeg')}}" data-src="{{asset('assets/images/gallery/ctfodul.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
-									Stricken Chinese cruise ship lifted from Yangtze River
+									OMUCTF'17 kazananlarına ödülleri verildi.
 								</div>
 							</div>
-							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/03.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/3.jpg">
+							<div data-thumb="{{asset('assets/images/gallery/thumb/denizparlak.jpeg')}}" data-src="{{asset('assets/images/gallery/denizparlak.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
-									Stricken Chinese cruise ship lifted from Yangtze River
+									Deniz Parlak okulumuzda siber güvenlik üzerine konuşma yaptı.
 								</div>
 							</div>
 							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/04.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/4.jpg">
@@ -515,23 +543,23 @@
 							<div class="row form-group over-hidden">
 								<div class="col-md-6">
 									<label for="contact-name">İsim <small>*</small></label>
-									<input type="text" id="contact-name" name="contact-name" class="form-control required">
+									<input type="text" id="contact-name" name="contact-name" class="form-control required" maxlength="30">
 								</div>
 
 								<div class="col-md-6">
 									<label for="contact-email">Soyisim <small>*</small></label>
-									<input type="text" id="contact-surname" name="contact-surname" class="form-control required">
+									<input type="text" id="contact-surname" name="contact-surname" class="form-control required" maxlength="30">
 								</div>
 							</div>
 							<div class="row form-group over-hidden">
 								<div class="col-md-12">
 									<label for="contact-subject">Konu <small>*</small></label>
-									<input type="text" id="contact-subject" name="contact-subject" class="form-control required">
+									<input type="text" id="contact-subject" name="contact-subject" class="form-control required" maxlength="100">
 								</div>
 							</div>
 							<div class="form-group over-hidden">
 								<label for="contact-message">Mesaj <small>*</small></label>
-								<textarea id="contact-message" name="contact-message" rows="6" cols="30" class="form-control required"></textarea>
+								<textarea id="contact-message" name="contact-message" rows="6" cols="30" class="form-control required" maxlength="500"></textarea>
 							</div>
 							<div class="form-group clearfix captcha-div">
 								<img alt="" src="/bookra/assets/php/captcha.php?_CAPTCHA&amp;t=0.42518900+1507065009" id='captchaimg' class="left">
@@ -550,7 +578,7 @@
 						<div class="p-a-3 gry-bg">
 							<h4 class="main-color uppercase">Merkez:</h4>
 							<ul class="details">
-								<li>Ondokuz Mayıs Üniversitesi Yaşam Merkezi 2. Kat <br>55270 Atakum/Samsun, Türkiye</li>
+								<li>Ondokuz Mayıs Üniversitesi Yaşam Merkezi 2. Kat Kulüp Odası 3<br>55270 Atakum/Samsun, Türkiye</li>
 								<li><i class="fa fa-envelope main-color"></i><span><strong>Email:</strong> siber@omu.edu.tr </span></li>
 								<li><i class="fa fa-telegram main-color"></i><span><strong>Telegram Kanalı:</strong> https://t.me/omusiber</span></li>
 							</ul>
