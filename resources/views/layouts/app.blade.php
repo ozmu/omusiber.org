@@ -3,16 +3,16 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>OMUSİBER | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu</title>
-		<meta name="description" content="BOOKRA | Multi-purpose HTML5 Template">
+		<meta name="description" content="Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu resmi web sitesidir.">
 		<meta name="author" content="Muhammet Öztürk">
 
 		<!-- Devices Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 		<!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+		<link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
 
-    <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
 		<!-- Plugins CSS files -->
 		<link rel="stylesheet" href="{{asset('assets/css/assets.css')}}">
@@ -68,3 +68,4 @@
 
 
   </body>
+</html>

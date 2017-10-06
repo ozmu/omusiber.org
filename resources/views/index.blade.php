@@ -164,12 +164,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
 							</div>
 						</div>
 					</div>
@@ -188,12 +188,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="https://twitter.com/ozturkmuhammeet" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="https://www.linkedin.com/in/muhammet-ozturk-49a425111/" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-									<a href="https://www.github.com/ozmu/" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="github"><i class="fa fa-github ic-github"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="https://twitter.com/ozturkmuhammeet" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="https://www.linkedin.com/in/muhammet-ozturk-49a425111/" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
+								<a href="https://www.github.com/ozmu/" target="_blank" data-toggle="tooltip" data-placement="top" data-original-title="github"><i class="fa fa-github ic-github"></i></a>
 							</div>
 						</div>
 					</div>
@@ -214,12 +214,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
 							</div>
 						</div>
 					</div>
@@ -238,12 +238,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
 							</div>
 						</div>
 					</div>
@@ -262,12 +262,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Sysadmin, Ruby on rails, Linux</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
 							</div>
 						</div>
 					</div>
@@ -286,12 +286,12 @@
 							<div class="person-info">
 								<h5 class="uppercase main-color">Python,Linux,PHP</h5>
 							</div>
-							<div class="team-socials">
-								<div class="social-list tbl">
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
-									<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
-								</div>
+						</div>
+						<div class="team-socials">
+							<div class="social-list tbl">
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Facebook"><i class="fa fa-facebook ic-facebook"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Twitter"><i class="fa fa-twitter ic-twitter"></i></a>
+								<a href="#" data-toggle="tooltip" data-placement="top" data-original-title="Linkedin"><i class="fa fa-linkedin ic-linkedin"></i></a>
 							</div>
 						</div>
 					</div>
@@ -496,17 +496,6 @@
 									Deniz Parlak okulumuzda siber güvenlik üzerine konuşma yaptı.
 								</div>
 							</div>
-							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/04.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/4.jpg">
-								<div class="camera_caption fadeFromBottom">
-									Stricken Chinese cruise ship lifted from Yangtze River
-								</div>
-							</div>
-
-							<div data-thumb="http://it-rays.org/bookra/assets/images/demos/magazine/thumbs/05.jpg" data-src="http://it-rays.org/bookra/assets/images/demos/magazine/5.jpg">
-								<div class="camera_caption fadeFromBottom">
-									Stricken Chinese cruise ship lifted from Yangtze River
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -532,7 +521,7 @@
 						<form id="contact-form" class="ajax-form" name="contact" action="assets/php/sendemail.php" method="post" novalidate="novalidate">
 							{{csrf_field()}}
 							<div class="contact-msg">
-								<div class="alert alert-success">
+								<div class="alert contact-success">
 									<img alt="" src="{{asset('assets/images/ajax-loader.gif')}}" class="contact-loader" />
 									<div class="success-msg">
 										<i class="fa fa-thumbs-o-up ico-block"></i>
@@ -553,6 +542,12 @@
 							</div>
 							<div class="row form-group over-hidden">
 								<div class="col-md-12">
+									<label for="contact-email">Email<small>*</small></label>
+									<input type="email" id="contact-email" name="contact-email" placeholder="E-Postanızı Girin" class="form-control required">
+								</div>
+							</div>
+							<div class="row form-group over-hidden">
+								<div class="col-md-12">
 									<label for="contact-subject">Konu <small>*</small></label>
 									<input type="text" id="contact-subject" name="contact-subject" class="form-control required" maxlength="100">
 								</div>
@@ -560,11 +555,6 @@
 							<div class="form-group over-hidden">
 								<label for="contact-message">Mesaj <small>*</small></label>
 								<textarea id="contact-message" name="contact-message" rows="6" cols="30" class="form-control required" maxlength="500"></textarea>
-							</div>
-							<div class="form-group clearfix captcha-div">
-								<img alt="" src="/bookra/assets/php/captcha.php?_CAPTCHA&amp;t=0.42518900+1507065009" id='captchaimg' class="left">
-								<input type="hidden" id="hidCap" value="VxtRd" data-error="Captcha does not match!" />
-								<input id="captcha_input" class="form-control sm required" name="captcha_input" type="text" placeholder="Enter the code here">
 							</div>
 							<div class="form-group m-t-2">
 								<button class="btn rect-angles btn-gry-border btn-lg" type="submit" id="contact-submit" name="contact-submit" value="submit"><i class="fa fa-crop"></i></span></span></span>Send Message</button>

@@ -121,7 +121,7 @@ button[name="contact-submit"] {
 .team-box.box-1 .chairman {
     display: inline-block;
     opacity: 1;
-    transform: translateX(50px);
+    transform: translateX(75px);
     transition: opacity 0.5s 2s, transform 0.5s 0.5s;
 }
 .team-box.box-1 .person-info {
@@ -155,4 +155,21 @@ button[name="contact-submit"] {
 
 .copyrights  {
     text-align: center;
+}
+
+.teammates .team-details.t-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-msg {
+    background-color: rgba(51, 50, 50, 0.55);
+
+}
+
+.contact-success {
+    width: 75% !important;
+    left: 12% !important;
+    background-color: rgba(76, 135, 185, 0.6) !important;
 }
