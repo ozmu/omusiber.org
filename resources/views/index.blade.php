@@ -287,7 +287,7 @@
 
 	<div id="about-us">
 		<div class="heading main centered">
-			<h3 class="uppercase lg-title"><span class="titles">Hakkımızda</span></h3>
+			<h3 class="uppercase lg-title"><span class="titles">About Usss</span></h3>
 			<p class="text-color">OMUSiber, 2015 tarihinde Ondokuz Mayıs Üniversitesi öğrencileri ve eğitim görevlilerince Samsun
 				ve çevresinde bilgi güvenliği üzerine farkındalığı artırmak için ve ilgili insanları tek bir çatı altında
 				toplamak için kurulmuştur.</p>
