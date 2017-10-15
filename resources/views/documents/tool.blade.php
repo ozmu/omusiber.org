@@ -1,22 +1,31 @@
 @extends('layouts.docs')
 @section('content')
-    @foreach($toolName as $tool)
-        Kategori = {{ $tool->category }} <br>
-        Adı = {{ $tool->tool }} <br>
-        Id = {{ $tool->id }} <br>
-    @endforeach
 
     <div class="row">
-        <div class="tool-name">
-            <p>{{$toolName[0]->tool}}</p>
+        <div class="breadcrumbs style2">
+            <a href="#" class="main-bg">Home</a><a href="#">{{$toolName[0]->category}}</a><span>{{$toolName[0]->tool}}</span>
         </div>
     </div>
 
-    <div class="row">
-        <div class="tool-desc">
-            {{$toolName[0]->description}}
-        </div>
+    @markdown
+    ```bash
+    require 'redcarpet'
+    markdown = Redcarpet.new("Hello World!")
+    puts markdown.to_html
+    ```
+    @endmarkdown
+
+    <div class="row tool-name">
+        @markdown
+            # {{$toolName[0]->tool}}
+        @endmarkdown
     </div>
+    <div class="row tool-desc">
+        @markdown
+        {{$toolName[0]->description}}
+        @endmarkdown
+    </div>
+
 
 
 @endsection

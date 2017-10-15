@@ -2,8 +2,40 @@ html,body,a{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
-    font-weight:200;
+
+h1,h2,h3,h4 {
+    font-weight:700;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {font-size:42px;}
+h2 {font-size:25px;margin:5px 0;}
+h3 {font-size:22px;margin:5px 0;}
+h4 {font-size:20px;margin:5px 0;}
+
+p {
+    text-align: justify;
+    /*margin:25px 0;*/
+    font-size:16px;
+}
+
+table {
+    width:100%;
+    overflow: auto;
+    border: 2px solid #dfdfdf;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+th{
+    background-color: #e8e8e8;
+    padding: 5px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
 }
 
 article.docs {
@@ -81,13 +113,25 @@ ul.tools a:hover {
     text-align: center;
 }
 
-.tool-name {
-    font-size:42px;
-    font-weight:700;
-    text-align: center;
-    text-transform: uppercase;
+.breadcrumbs.style2{
+    text-transform: capitalize;
 }
 
 .tool-desc {
-    text-align: justify;
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.tool-name h1{
+    font-size:52px;
+}
+
+.pem {
+    text-align: center;
+    font-size:14px;
+
+}
+
+.pimg {
+    margin:0;
 }
