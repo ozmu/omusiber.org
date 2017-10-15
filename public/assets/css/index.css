@@ -23,6 +23,10 @@
     margin-left:20px;
 }
 
+#projects .projects-right .post-image,#projects .post-image.main-border.bot-4-border {
+    max-height:233px;
+}
+
 #projects .projects-right .post-item-rit,#activities .post-item:nth-child(even) .post-content {
     text-align: right;
 }
@@ -85,6 +89,11 @@ button[name="contact-submit"] {
     color:#4C87B9;
 }
 
+a.tp-caption.rev-btn.tc-btnshadow:hover {
+    -moz-box-shadow: 0 0 10px 5px #424242 !important;
+    -webkit-box-shadow: 0 0 10px 5px #424242 !important;
+}
+
 .head-sep:before,.head-sep:after {
     background-color: #888 !important ;
     width: 100px !important ;
@@ -100,7 +109,7 @@ button[name="contact-submit"] {
 
 .blog-posts.timeline.full:before {
     border-left: 1px #dfdfdf dashed;
-    height: 40%;
+    height: 50%;
 }
 
 .team-box.box-1:hover .team-img img {
@@ -121,26 +130,29 @@ button[name="contact-submit"] {
 .team-box.box-1 .chairman {
     display: inline-block;
     opacity: 1;
-    transform: translateX(75px);
+    width:100%;
+    text-align: center;
     transition: opacity 0.5s 2s, transform 0.5s 0.5s;
 }
-.team-box.box-1 .person-info {
-    display: inline-block;
-    opacity: 0;
-    transform: translateX(500px);
-    transition: opacity 0.5s 1s, transform 0.5s 1s;
-}
 
+
+.team-box.box-1 .person-info {
+    opacity: 0;
+    /*display: inline-block;
+    transform: translateX(500px);
+    transition: opacity 0.5s 1s, transform 0.5s 1s;*/
+}
+/*
 .team-box.box-1:hover .chairman {
     opacity: 0;
     transform: translateX(-500px);
 }
 
 .team-box.box-1:hover .person-info{
-    opacity: 1;
+    opacity: 0;
     transform: translateX(-50px);
 }
-
+*/
 .activity-active {
     color:#26C281;
 }
