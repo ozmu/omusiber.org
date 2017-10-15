@@ -11,8 +11,12 @@
 |
 */
 
+use App\Doc;
+
+
 Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/docs','DocsController@index');
+Route::get('/docs/{category}/{tool}','DocsController@displayTool');

@@ -10,14 +10,19 @@ article.docs {
     color: #555;
 }
 
+.row {
+    margin-right:0;
+    margin-left:0;
+}
+
 a[data-toggle="collapse"] {
     font-weight:600;
 }
 
 .logo img {
     display: block;
-    margin:20px auto;
-    height:100px;
+    margin:-20px auto;
+    height:200px;
 }
 
 ul.docsnav {
@@ -70,4 +75,19 @@ ul.tools li {
 }
 ul.tools a:hover {
     text-decoration: underline;
+}
+
+.footer-bottom .copyrights {
+    text-align: center;
+}
+
+.tool-name {
+    font-size:42px;
+    font-weight:700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.tool-desc {
+    text-align: justify;
 }

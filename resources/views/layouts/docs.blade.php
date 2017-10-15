@@ -35,7 +35,27 @@
 
 <!-- Content start -->
     <div class="pageContent">
-        @yield('content')
+        <div class="col-md-8 col-md-offset-2">
+
+            <!-- Logo start -->
+            <div class="logo">
+                <a href="/"><img alt="" src="{{asset('assets/images/logo.png')}}" /></a>
+            </div>
+            <!-- Logo end -->
+
+            <ul class="docsnav">
+                <li><a href="/">Anasayfa</a></li>
+                <li><a href="/repo">Depo</a></li>
+                <li><a href="/#about-us">Hakkında</a></li>
+            </ul>
+
+            <div class="breadcrumbs style2">
+                <a href="#" class="main-bg">Home</a><a href="#">Shortcodes</a><span>Breadcrumbs</span>
+            </div>
+
+            @yield('content')
+
+        </div>
     </div>
     <!-- Content end -->
 
