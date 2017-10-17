@@ -17,6 +17,9 @@ class DocsController extends Controller
         $toolInfo = Tool::where('tool',$tool)->first();
         $categories = Tool::find($toolInfo->id)->categories;
         return view('documents.tool',compact('toolInfo','categories'));
+    }
 
+    public function addTool(){
+        return view('documents.add');
     }
 }

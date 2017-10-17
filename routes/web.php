@@ -20,3 +20,8 @@ Route::get('/', function () {
 
 Route::get('/docs','DocsController@index');
 Route::get('/docs/{tool}','DocsController@displayTool');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/docs/add',['middleware'=> ['auth', 'editor'],'DocsController@addTool']);

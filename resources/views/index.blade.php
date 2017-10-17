@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.site')
 @push('styles')
   <link href="https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro" rel="stylesheet">
   <!-- Slider Revolution CSS Files -->

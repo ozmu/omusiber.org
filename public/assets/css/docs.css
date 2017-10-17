@@ -167,3 +167,21 @@ ul.categories li:hover {
     -o-transition: all .4s;
     transition: all .4s;
 }
+
+.add-toolp {
+    margin:20px 0;
+}
+
+.add-tool {
+    margin:0 auto;
+    background-color: #d0d0d0;
+    padding:20px;
+    text-align: center;
+    width:15%;
+    display: block;
+}
+
+.add-tool a{
+    font-size:16px;
+    text-transform: uppercase;
+}

@@ -18,6 +18,11 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    protected $attributes = [
+        'is_editor' => false,
+        'is_admin' => false
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -26,4 +31,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isEditor(){
+        return $this->is_editor;
+    }
+
+    public function isAdmin(){
+        return $this->is_admin;
+    }
 }

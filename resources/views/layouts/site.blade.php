@@ -12,14 +12,12 @@
     <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
     <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
 
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- Plugins CSS files -->
     <link rel="stylesheet" href="{{asset('assets/css/assets.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/shortcodes.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/docs.css')}}">
-
 
     @stack('styles')
 
@@ -33,28 +31,12 @@
 <!-- site preloader end -->
 
 <div class="pageWrapper">
+@include('layouts.nav')
+
 
 <!-- Content start -->
     <div class="pageContent">
-        <div class="col-md-8 col-md-offset-2">
-
-            <!-- Logo start -->
-            <div class="logo">
-                <a href="/"><img alt="" src="{{asset('assets/images/logo.png')}}" /></a>
-            </div>
-            <!-- Logo end -->
-
-            <ul class="docsnav">
-                <li><a href="/docs">Anasayfa</a></li>
-                <li><a href="/repo">Depo</a></li>
-                <li><a href="/#about-us">Hakkında</a></li>
-            </ul>
-
-
-
-            @yield('content')
-
-        </div>
+        @yield('content')
     </div>
     <!-- Content end -->
 
@@ -83,7 +65,6 @@
 @stack('scripts')
 <!-- general script file -->
 <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/docs.js')}}"></script>
 
 
 </body>

@@ -1,71 +1,80 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>OMUSİBER | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu</title>
-		<meta name="description" content="Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu resmi web sitesidir.">
-		<meta name="author" content="Muhammet Öztürk">
+<html lang="{{ app()->getLocale() }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Devices Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
-		<link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <title>OMUSiber | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu</title>
 
-		<link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
 
-		<!-- Plugins CSS files -->
-		<link rel="stylesheet" href="{{asset('assets/css/assets.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-		<link rel="stylesheet" href="{{asset('assets/css/shortcodes.css')}}">
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-		@stack('styles')
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        <img style="width: 100px;margin: -37px;" src="{{asset('assets/images/logo.png')}}" alt="logo">
+                    </a>
+                </div>
 
-    	<link id="theme_css" rel="stylesheet" href="{{asset('assets/css/theme/light.css')}}">
-		<link id="skin_css" rel="stylesheet" href="{{asset('assets/css/theme/skin/default.css')}}">
-		@stack('poststyles')
-  </head>
-  <body>
-    <!-- site preloader start -->
-		<div class="page-loader"></div>
-		<!-- site preloader end -->
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        &nbsp;
+                    </ul>
 
-    <div class="pageWrapper">
-			@include('layouts.nav')
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li><a href="{{ route('login') }}">Giriş Yap</a></li>
+                            <li><a href="{{ route('register') }}">Kayıt Ol</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
 
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
 
-			<!-- Content start -->
-			<div class="pageContent">
-				@yield('content')
-			</div>
-			<!-- Content end -->
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-			<!-- Footer start -->
-			<footer id="footWrapper">
-				<!-- footer bottom bar start -->
-				<div class="footer-bottom">
-					<div class="container">
-						<div class="row">
-							<!-- footer copyrights left cell -->
-							<div class="copyrights">© Copyrights <b class="main-color">OMUSIBER</b> 2017. All rights reserved.</div>
-						</div>
-					</div>
-				</div>
-				<!-- footer bottom bar end -->
-			</footer>
-			<!-- Footer end -->
-		</div>
+        @yield('content')
+    </div>
 
-		<!-- Back to top Link -->
-	  <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
-
-		<!-- Load JS plugins -->
- 		<script type="text/javascript" src="{{asset('assets/js/jquery-1.12.0.min.js')}}"></script>
- 		<script type="text/javascript" src="{{asset('assets/js/assets.js')}}"></script>
-		@stack('scripts')
- 		<!-- general script file -->
-		<script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
-
-
-  </body>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
 </html>

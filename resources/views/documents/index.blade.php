@@ -1,7 +1,11 @@
 @extends('layouts.docs')
 
 @section('content')
-
+    <div class="row add-toolp">
+        <div class="add-tool">
+            <a href="/docs/add">Yazı Ekle</a>
+        </div>
+    </div>
     <div id="acc" class="accordion toggle bottom-border">
         @foreach($datas as $data)
             <div class="panel">
