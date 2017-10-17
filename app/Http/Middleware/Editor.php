@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class Editor
 {
@@ -15,7 +16,7 @@ class Editor
      */
     public function handle($request, Closure $next)
     {
-        if ( Auth::check() && Auth::user()->isEditor()){
+        if ( Auth::check()){
             return $next($request);
         }
         return redirect('/docs');

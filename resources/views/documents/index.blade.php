@@ -1,11 +1,11 @@
 @extends('layouts.docs')
 
 @section('content')
-    <div class="row add-toolp">
-        <div class="add-tool">
-            <a href="/docs/add">Yazı Ekle</a>
+    @if($isEditor)
+        <div class="row add-toolp">
+            <a class="add-tool" href="/docs/add">Yazı Ekle</a>
         </div>
-    </div>
+    @endif
     <div id="acc" class="accordion toggle bottom-border">
         @foreach($datas as $data)
             <div class="panel">
@@ -17,7 +17,7 @@
                     <div class="acc-content">
                         <ul class="tools">
                             @foreach($data->tools as $tool)
-                                <li><a href="/docs/{{$tool->tool}}">{{$tool->toolName}}</a></li>
+                                <li><a href="/docs/tool/{{$tool->tool}}">{{$tool->toolName}}</a></li>
                             @endforeach
                         </ul>
                     </div>

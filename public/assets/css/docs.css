@@ -99,7 +99,7 @@ ul.docsnav li a:hover {
 }
 
 .accordion.toggle.bottom-border {
-    margin:100px 0;
+    margin:70px 0;
 }
 
 ul.tools {
@@ -179,9 +179,29 @@ ul.categories li:hover {
     text-align: center;
     width:15%;
     display: block;
-}
-
-.add-tool a{
     font-size:16px;
     text-transform: uppercase;
+}
+
+.add-title {
+    font-size:42px;
+    font-weight:700;
+    text-align: center;
+    padding:20px;
+}
+
+.markdown-header {
+    font-size:20px;
+    text-shadow: 1px 2px;
+    text-align: center;
+    font-weight:700;
+    padding:20px;
+}
+
+#preview {
+    border:2px solid #e1e1e1;
+}
+
+#markdown,#preview {
+    min-height:400px;
 }
