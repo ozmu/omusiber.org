@@ -5,20 +5,25 @@ html,body,a{
 
 h1,h2,h3,h4 {
     font-weight:700;
-    text-align: center;
+    /*text-align: center;*/
     text-transform: uppercase;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {font-size:42px;}
+h1::after,h2::after,h3::after,h4::after {
+    border-bottom:2px solid #000;
+}
+
+h1 {font-size:36px;margin-top:25px;border-bottom:1px solid #797979;text-align: center;}
 h2 {font-size:25px;margin:5px 0;}
 h3 {font-size:22px;margin:5px 0;}
 h4 {font-size:20px;margin:5px 0;}
 
-p {
+p,li {
     text-align: justify;
     /*margin:25px 0;*/
     font-size:16px;
+    word-break: break-all;
 }
 
 table {
@@ -124,14 +129,41 @@ ul.tools a:hover {
 
 .tool-name h1{
     font-size:52px;
-}
-
-.pem {
     text-align: center;
-    font-size:14px;
-
+    border-style:none;
 }
+
 
 .pimg {
     margin:0;
+}
+
+#categories {
+    margin:50px 0;
+}
+
+.row.category {
+    font-size:40px;
+}
+
+ul.categories {
+    padding-left:0;
+    list-style-type: none;
+    display: inline-block;
+}
+
+ul.categories li {
+    padding:20px;
+    background-color: #d0d0d0;
+    display: inline-block;
+    font-size:20px;
+}
+
+ul.categories li:hover {
+    background-color: #e8e5e5;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
 }

@@ -19,4 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/docs','DocsController@index');
-Route::get('/docs/{category}/{tool}','DocsController@displayTool');
+Route::get('/docs/{tool}','DocsController@displayTool');

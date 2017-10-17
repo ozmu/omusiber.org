@@ -241,7 +241,7 @@
 
 			  <!-- Button 1 -->
 			  <a class="tp-caption rev-btn tc-btnshadow tp-rs-menulink"
-				 href="#about-us"
+				 href="/docs"
 				 target="_self"
 				 id="slide-972-layer-12"
 				 data-x="['left','left','left','left']"

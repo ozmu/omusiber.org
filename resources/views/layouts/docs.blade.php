@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/shortcodes.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/docs.css')}}">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 
 
     @stack('styles')
@@ -84,7 +83,6 @@
 @stack('scripts')
 <!-- general script file -->
 <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script type="text/javascript" src="{{asset('assets/js/docs.js')}}"></script>
 
 

@@ -1,31 +1,31 @@
 @extends('layouts.docs')
 @section('content')
 
-    <div class="row">
-        <div class="breadcrumbs style2">
-            <a href="#" class="main-bg">Home</a><a href="#">{{$toolName[0]->category}}</a><span>{{$toolName[0]->tool}}</span>
-        </div>
-    </div>
-
-    @markdown
-    ```bash
-    require 'redcarpet'
-    markdown = Redcarpet.new("Hello World!")
-    puts markdown.to_html
-    ```
-    @endmarkdown
-
     <div class="row tool-name">
         @markdown
-            # {{$toolName[0]->tool}}
+                # {{$toolInfo->toolName}}
         @endmarkdown
     </div>
     <div class="row tool-desc">
         @markdown
-        {{$toolName[0]->description}}
+        {!! $toolInfo->description !!}
         @endmarkdown
     </div>
 
+
+    <div id="categories">
+        <div class="row">
+            <ul class="categories">
+                @foreach($categories as $category)
+                    <li class="category">
+                        <a href="">
+                            #{{ $category->categoryName }}
+                        </a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
 
 
 @endsection

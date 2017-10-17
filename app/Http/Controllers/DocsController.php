@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Doc;
+use App\Category;
+use App\Tool;
 use Illuminate\Http\Request;
 
 class DocsController extends Controller
 {
     public function index(){
-        return view('documents.index');
+        $datas = Category::all();
+        return view('documents.index',compact('datas'));
     }
 
-    public function displayTool($category,$tool){
-        $toolName = Doc::where('tool',$tool)->get();
-        $categoryName = Doc::where('category',$category)->get();
-        return view('documents.tool',compact('toolName'));
+    public function displayTool($tool){
+        $toolInfo = Tool::where('tool',$tool)->first();
+        $categories = Tool::find($toolInfo->id)->categories;
+        return view('documents.tool',compact('toolInfo','categories'));
+
     }
 }
