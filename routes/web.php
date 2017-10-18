@@ -26,5 +26,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('docs')->group(function (){
    Route::get('add','DocsController@addTool')->middleware('editor');
+   Route::post('add','DocsController@store');
+   Route::get('add-category','DocsController@addCategory')->middleware('editor');
+   Route::post('add-category','DocsController@addCategorytoDB')->middleware('editor');
    Route::get('tool/{tool}','DocsController@displayTool');
+   Route::get('tool/{tool}/edit',function (){
+      return "şsldjaşlsjda";
+   });
 });

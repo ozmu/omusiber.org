@@ -18,6 +18,7 @@ class CreateToolsTable extends Migration
             $table->string('tool');
             $table->string('toolName');
             $table->text('description');
+            $table->text('resources');
             $table->timestamps();
 
         });

@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="{{asset('assets/css/assets.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/shortcodes.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/docs.css')}}">
 
 
     @stack('styles')
@@ -26,6 +25,8 @@
     <link id="theme_css" rel="stylesheet" href="{{asset('assets/css/theme/light.css')}}">
     <link id="skin_css" rel="stylesheet" href="{{asset('assets/css/theme/skin/default.css')}}">
     @stack('poststyles')
+
+    <link rel="stylesheet" href="{{asset('assets/css/docs.css')}}">
 </head>
 <body>
 <!-- site preloader start -->

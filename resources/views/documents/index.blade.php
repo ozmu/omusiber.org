@@ -6,6 +6,11 @@
             <a class="add-tool" href="/docs/add">Yazı Ekle</a>
         </div>
     @endif
+    @if($isAdmin)
+        <div class="row add-toolp">
+            <a class="add-tool" href="/docs/add-category">Kategori Ekle</a>
+        </div>
+    @endif
     <div id="acc" class="accordion toggle bottom-border">
         @foreach($datas as $data)
             <div class="panel">

@@ -205,3 +205,52 @@ ul.categories li:hover {
 #markdown,#preview {
     min-height:400px;
 }
+
+.resources {
+    margin:20px 0;
+}
+
+#tool-submit {
+    display: block;
+    margin:0 auto;
+    width:30%;
+}
+
+.form-control{
+    border-width: medium;
+    border-style: double;
+    padding: 10px 12px;
+    height: auto;
+    border-color: #d9d9d9;
+}
+
+.markdown-preview-button {
+    width:170%;
+}
+
+.add-error {
+    padding:0 15px;
+}
+
+.add-error .alert-danger {
+    background-color: #d46464;
+    border-color: #d698a2;
+    color: #ffffff;
+    font-size: 17px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.add-category-form {
+    margin:50px 0;
+}
+
+.exist-cats {
+    list-style: none;
+    padding:0;
+}
+
+.exist-cats li {
+    padding:10px;
+    display: inline-block;
+    background: #e1e1e1;
+}
