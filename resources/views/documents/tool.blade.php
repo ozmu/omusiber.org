@@ -1,6 +1,12 @@
 @extends('layouts.docs')
 @section('content')
 
+    @if($isEditor)
+        <div class="row add-toolp">
+            <a class="add-tool" href="/docs/tool/{{$toolInfo->tool}}/edit">Düzenle</a>
+        </div>
+    @endif
+
     <div class="row tool-name">
         @markdown
                 # {{$toolInfo->toolName}}

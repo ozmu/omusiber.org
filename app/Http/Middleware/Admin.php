@@ -4,8 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use \App\User;
 
-class Editor
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -16,7 +17,7 @@ class Editor
      */
     public function handle($request, Closure $next)
     {
-        if ( Auth::check() && User::find(Auth::id())->is_editor){
+        if(Auth::check() && User::find(Auth::id())->is_admin){
             return $next($request);
         }
         return redirect('/docs');

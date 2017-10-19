@@ -25,10 +25,18 @@ class DocsController extends Controller
     }
 
     public function displayTool($tool){
+        $isEditor = false;
+        $isAdmin = false;
+        if(Auth::check() && User::find(Auth::id())->is_editor == 1){
+            $isEditor = true;
+        }
+        if(Auth::check() && User::find(Auth::id())->is_admin == 1){
+            $isAdmin = true;
+        }
         $toolInfo = Tool::where('tool',$tool)->first();
         $resources = explode(',',$toolInfo->resources);
         $categories = Tool::find($toolInfo->id)->categories;
-        return view('documents.tool',compact('toolInfo','categories','resources'));
+        return view('documents.tool',compact('toolInfo','categories','resources'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
     }
 
     public function addTool(){
@@ -54,6 +62,28 @@ class DocsController extends Controller
         $category->save();
         return "Başarılı";
 
+    }
+
+    public function editTool($tool){
+        $categories = Category::all();
+        $toolInfo = Tool::where('tool',$tool)->first();
+        $tool_categories = Tool::where('tool',$tool)->first()->categories;
+        $tool_cats = array();
+        foreach ($tool_categories as $tool_category){
+            array_push($tool_cats,$tool_category->category);
+        }
+        return view('documents.edit',compact('categories','tool_cats','toolInfo'));
+    }
+
+    public function updateTool($tool){
+        $toolInfo = Tool::where('tool',$tool)->first();
+        $toolInfo->update([
+            'tool' => request('tool-tool'),
+            'toolName' => request('tool-name'),
+            'description' => request('tool-content'),
+            'resources' => request('tool-resources')
+        ]);
+        return redirect('/docs/tool/'.$tool);
     }
 
     public function store(Request $request){

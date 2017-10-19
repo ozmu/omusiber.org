@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/docs','DocsController@index');
 Auth::routes();
 
+Route::get('/users','UserController@index')->middleware('admin');
 Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -30,7 +31,6 @@ Route::prefix('docs')->group(function (){
    Route::get('add-category','DocsController@addCategory')->middleware('editor');
    Route::post('add-category','DocsController@addCategorytoDB')->middleware('editor');
    Route::get('tool/{tool}','DocsController@displayTool');
-   Route::get('tool/{tool}/edit',function (){
-      return "şsldjaşlsjda";
-   });
+   Route::get('tool/{tool}/edit','DocsController@editTool')->middleware('editor');
+   Route::post('tool/{tool}/edit','DocsController@updateTool')->middleware('editor');
 });
