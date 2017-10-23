@@ -22,6 +22,8 @@ Route::get('/docs','DocsController@index');
 Auth::routes();
 
 Route::get('/users','UserController@index')->middleware('admin');
+Route::get('/users/{id}','UserController@edit')->middleware('admin');
+Route::post('/users/{id}','UserController@update');
 Route::get('/home', 'HomeController@index')->name('home');
 
 

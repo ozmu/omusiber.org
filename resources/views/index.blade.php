@@ -572,7 +572,7 @@
 										<div class="post-info">
 											<h4><a href="#">Pwnlydays</a></h4>
 											<ul class="post-meta">
-												<li><i class="fa fa-info"></i><span class="activity-active">Aktif</span></li>
+												<li><i class="fa fa-info"></i><span class="activity-over">Bitti</span></li>
 												<li><i class="fa fa-bolt"></i><a href="#">Eğitim</a></li>
 												<li><i class="fa fa-user"></i><a href="#">Canyoupwnme</a></li>
 												<li><a href="#"><i class="fa fa-map-signs"></i><span>Mühendislik Fakültesi</span></a></li>

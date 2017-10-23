@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
 @endpush
 @section('content')
-    <form id="tool-form" name="contact" action="/docs/add" method="POST" novalidate="novalidate" style="margin: 50px 0;">
+    <form id="tool-form" name="contact" action="/docs/tool/{{$toolInfo->tool}}/edit" method="POST" novalidate="novalidate" style="margin: 50px 0;">
         {{csrf_field()}}
 
         @if ($errors->any())
@@ -25,7 +25,7 @@
             </div>
             <div class="col-md-6">
                 <label for="tool-tool">Tool Adı(boşluksuz ve küçük harf)<small>*</small></label>
-                <input type="text" id="tool-tool" name="tool-tool" placeholder="{{$toolInfo->tool}}" class="form-control required" required>
+                <input type="text" id="tool-tool" name="tool-tool" placeholder="{{$toolInfo->tool}}" class="form-control required" disabled>
             </div>
         </div>
         <div class="row form-group over-hidden">

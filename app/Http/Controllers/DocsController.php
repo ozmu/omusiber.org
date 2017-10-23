@@ -55,6 +55,9 @@ class DocsController extends Controller
            'cat-cat' => 'required|max:255',
            'cat-icon' => 'required|max:255'
         ]);
+        if(Category::where('category',request('cat-cat'))->count() >= 1){
+          return "Böyle bir kategori var.";
+        }
         $category = new Category;
         $category->category = request('cat-cat');
         $category->categoryName = request('cat-name');
@@ -67,7 +70,7 @@ class DocsController extends Controller
     public function editTool($tool){
         $categories = Category::all();
         $toolInfo = Tool::where('tool',$tool)->first();
-        $tool_categories = Tool::where('tool',$tool)->first()->categories;
+        $tool_categories = $toolInfo->categories;
         $tool_cats = array();
         foreach ($tool_categories as $tool_category){
             array_push($tool_cats,$tool_category->category);
@@ -75,14 +78,27 @@ class DocsController extends Controller
         return view('documents.edit',compact('categories','tool_cats','toolInfo'));
     }
 
-    public function updateTool($tool){
+    public function updateTool(Request $request,$tool){
+        $categories = request('category');
+        $catIDs = array();
+        foreach ($categories as $category){
+            $catID = Category::where('category',$category)->first()->id;
+            array_push($catIDs,$catID);
+        }
         $toolInfo = Tool::where('tool',$tool)->first();
-        $toolInfo->update([
-            'tool' => request('tool-tool'),
-            'toolName' => request('tool-name'),
-            'description' => request('tool-content'),
-            'resources' => request('tool-resources')
-        ]);
+        $toolID = $toolInfo->id;
+        CategoryTool::where('tool_id',$toolID)->delete();
+        foreach ($catIDs as $cat){
+          $relationship = new CategoryTool;
+          $relationship->category_id = $cat;
+          $relationship->tool_id = $toolID;
+          $relationship->save();    // Relationship saved
+        }
+        $toolInfo->tool = request('tool-tool');
+        $toolInfo->toolName = request('tool-name');
+        $toolInfo->description = request('tool-content');
+        $toolInfo->resources = request('tool-resources');
+        $toolInfo->save();
         return redirect('/docs/tool/'.$tool);
     }
 
@@ -100,6 +116,9 @@ class DocsController extends Controller
             $catID = Category::where('category',$category)->first()->id;
             array_push($catIDs,$catID);
         }
+        if(Tool::where('tool',request('tool-tool'))->count() >= 1){
+          return "Böyle bir tool var";
+        }
         $tool = new Tool;
         $tool->tool = request('tool-tool');
         $tool->toolName = request('tool-name');
@@ -108,10 +127,10 @@ class DocsController extends Controller
         $tool->save();    // Tool saved
         $toolID = Tool::where('tool',request('tool-tool'))->first()->id;
         foreach ($catIDs as $cat){
-            $relationship = new CategoryTool;
-            $relationship->category_id = $cat;
-            $relationship->tool_id = $toolID;
-            $relationship->save();    // Relationship saved
+          $relationship = new CategoryTool;
+          $relationship->category_id = $cat;
+          $relationship->tool_id = $toolID;
+          $relationship->save();    // Relationship saved
         }
         return redirect('/docs/tool/'.$tool->tool);
 

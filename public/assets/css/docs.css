@@ -153,6 +153,8 @@ ul.categories {
 }
 
 ul.categories li {
+    margin-right: 5px;
+    margin-bottom: 5px;
     padding:20px;
     background-color: #dedede;
     display: inline-block;
