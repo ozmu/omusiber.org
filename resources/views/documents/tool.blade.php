@@ -1,11 +1,15 @@
 @extends('layouts.docs')
 @section('content')
 
-    @if($isEditor)
-        <div class="row add-toolp">
-            <a class="add-tool" href="/docs/tool/{{$toolInfo->tool}}/edit">Düzenle</a>
-        </div>
-    @endif
+    @section('tool-edit')
+        @if (auth()->user()->isEditor() || auth()->user()->isAdmin())
+            <li>
+                <a href="/docs/tool/{{$toolInfo->tool}}/edit">
+                    İçeriği Düzenle
+                </a>
+            </li>
+        @endif
+    @endsection
 
     <div class="row tool-name">
         @markdown
@@ -38,12 +42,22 @@
         <ul class="resources">
             @foreach($resources as $resource)
                 <li class="resource">
-                    <a href="{{$resource}}">
+                    <a href="{{$resource}}" target="_blank">
                         {{$resource}}
                     </a>
                 </li>
             @endforeach
         </ul>
+    </div>
+    <div id="author">
+        <div class="row">
+            <ul class="author">
+                <li class="category">
+                    <i class="fa fa-user"></i>
+                    <span>{{ $created_by }}</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
 

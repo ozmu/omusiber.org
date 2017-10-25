@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>OMUSİBER | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu resmi web sitesidir.">
     <meta name="author" content="Muhammet Öztürk">
 

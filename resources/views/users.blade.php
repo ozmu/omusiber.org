@@ -18,7 +18,9 @@
                 <td>{{$user->is_editor}}</td>
                 <td>{{$user->is_admin}}</td>
                 <td>
-                  <a href="/users/{{$user->id}}" class="btn btn-default">Düzenle</a>
+                  @if($user->id != Auth::id())
+                        <a href="/users/{{$user->id}}" class="btn btn-default">Düzenle</a>
+                  @endif
                 </td>
             </tr>
         @endforeach

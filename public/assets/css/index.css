@@ -185,3 +185,12 @@ a.tp-caption.rev-btn.tc-btnshadow:hover {
     left: 12% !important;
     background-color: rgba(76, 135, 185, 0.6) !important;
 }
+
+.contact-preparing {
+    opacity:.2;
+}
+
+.contact-preparing span{
+    z-index:999;
+    text-align: center;
+}

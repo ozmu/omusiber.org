@@ -24,6 +24,6 @@ class UserController extends Controller
      $user->is_admin = $admin;
      $user->is_editor = $editor;
      $user->save();
-     return "Başarılı!";
+     return "Başarılı!<a href='/docs'>Anasayfaya dön!</a>";
     }
 }

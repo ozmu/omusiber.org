@@ -31,86 +31,7 @@
   <!-- Particles Js -->
   <script type='text/javascript' src="{{asset('assets/js/particles.js')}}"></script>
   <script type="text/javascript" src="{{asset('assets/js/onepage-nav.js')}}"></script>
-	<script type="text/javascript">
-	var revapi262,
-		tpj=jQuery;
-
-	tpj(document).ready(function() {
-		if(tpj("#welcome").revolution == undefined){
-			revslider_showDoubleJqueryError("#welcome");
-		}else{
-			revapi262 = tpj("#welcome").show().revolution({
-				sliderType:"hero",
-				jsFileLocation:"{{asset('assets/revolution/js/')}}",
-				sliderLayout:"fullscreen",
-				dottedOverlay:"none",
-				delay:9000,
-							particles: {startSlide: "first", endSlide: "last", zIndex: "1",
-								particles: {
-									number: {value: 200}, color: {value: "#ffffff"},
-									shape: {
-										type: "circle", stroke: {width: 0, color: "#ffffff", opacity: 1},
-										image: {src: ""}
-									},
-									opacity: {value: 0.2, random: true, min: 0.1, anim: {enable: false, speed: 3, opacity_min: 0, sync: false}},
-									size: {value: 2, random: false, min: 30, anim: {enable: false, speed: 40, size_min: 1, sync: false}},
-									line_linked: {enable: true, distance: 150, color: "#ffffff", opacity: 0.2, width: 1},
-									move: {enable: true, speed: 6, direction: "none", random: true, min_speed: 6, straight: false, out_mode: "out"}},
-								interactivity: {
-									events: {onhover: {enable: true, mode: "repulse"}, onclick: {enable: false, mode: "repulse"}},
-									modes: {grab: {distance: 400, line_linked: {opacity: 0.1}}, bubble: {distance: 400, size: 40, opacity: 0.4}, repulse: {distance: 100}}
-								}
-							},
-				viewPort: {
-					enable:true,
-					outof:"wait",
-					visible_area:"80%",
-					presize:true
-				},
-				responsiveLevels:[1240,1024,778,480],
-				visibilityLevels:[1240,1024,778,480],
-				gridwidth:[1240,1024,778,480],
-				gridheight:[868,768,960,720],
-				lazyType:"none",
-				parallax: {
-					type:"scroll",
-					origo:"slidercenter",
-					speed:400,
-					speedbg:0,
-					speedls:0,
-					levels:[5,10,15,20,25,30,35,40,45,46,47,48,49,50,51,55],
-				},
-				shadow:0,
-				spinner:"spinner3",
-				autoHeight:"off",
-				fullScreenAutoWidth:"off",
-				fullScreenAlignForce:"off",
-				fullScreenOffsetContainer: "",
-				fullScreenOffset: "",
-				disableProgressBar:"on",
-				hideThumbsOnMobile:"off",
-				hideSliderAtLimit:0,
-				hideCaptionAtLimit:0,
-				hideAllCaptionAtLilmit:0,
-				debugMode:false,
-				fallbacks: {
-					simplifyAll:"off",
-					disableFocusListener:false,
-				}
-			});
-		}
-	  RsParticlesAddOn(revapi262);
-
-						RsTypewriterAddOn(tpj, revapi262);
-		try {initSocialSharing("262");} catch(err){}
-		});	/*ready*/
-
-	  </script>
-<script type="text/javascript">
-    $(window).load(function(){
-        $('.one-page').onePageNav();
-    });
-</script>
+  <script type="text/javascript" src="{{asset('assets/js/index.js')}}"></script>
 
 @endpush
 @section('content')
@@ -508,7 +429,7 @@
 											</ul>
 										</div>
 									</div>
-									<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. <a class="more_btn main-color" href="#">Read More</a></p>
+									<p>Siber güvenlikte kendini geliştirmek isteyenler için zaafiyetli sanal makine çözmek çok eğlenceli ve bilgi vericidir. OMUVm, kendini geliştirmek isteyen öğrencilerin uğraşması gereken bir vulnerable machine(zaafiyetli makine) dir.<a class="more_btn main-color" href="#">Devamını oku..</a></p>
 								</div>
 							</article>
 						</div>
@@ -535,7 +456,7 @@
 											</ul>
 										</div>
 									</div>
-									<p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. <a class="more_btn main-color" href="#">Read More</a></p>
+									<p>Günümüzde internetin yayılmasıyla devasa bir bilgi birikimine ulaşıldı. Fakat gerçekten yararlı bilgiler olduğu gibi, anlaşılmaz karmaşık bir dile sahip ve yanıltıcı bilgiler de mevcut. Amacımız en sade şekilde insanların konuyu kavrayacağı dökümanlar hazırlamak. <a class="more_btn main-color" href="#">Devamını oku..</a></p>
 								</div>
 							</article>
 						</div>
@@ -579,7 +500,7 @@
 											</ul>
 										</div>
 									</div>
-									<p>Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  <a class="more_btn main-color" href="#">Read More</a></p>
+									<p>Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  <a class="more_btn main-color" href="#">Devamını oku..</a></p>
 								</div>
 							</article>
 						</div>
@@ -609,7 +530,7 @@
 											</ul>
 										</div>
 									</div>
-									<p>OMUCTF-II, üniversitemizin topluluğumuza Hacktrick Siber Güvenlik Konferansı için onayladığı 3 kişilik yol harçlığını kullanacak üyelerimizi belirlemek için düzenlediğimiz siber güvenlik bilgi yarışmasıdır.<a class="more_btn main-color" href="#">Read More</a></p>
+									<p>OMUCTF-II, üniversitemizin topluluğumuza Hacktrick Siber Güvenlik Konferansı için onayladığı 3 kişilik yol harçlığını kullanacak üyelerimizi belirlemek için düzenlediğimiz siber güvenlik bilgi yarışmasıdır.<a class="more_btn main-color" href="#">Devamını oku..</a></p>
 								</div>
 							</article>
 						</div>
@@ -639,7 +560,7 @@
 											</ul>
 										</div>
 									</div>
-									<p> OMUCTF’17, Siber Güvenlik Topluluğu olarak insanların düşünme ve araştırma becerilerini geliştirmelerini amaçlayarak gerçekleştirdiğimiz yarışmasıdır.<a class="more_btn main-color" href="#">Read More</a></p>
+									<p> OMUCTF’17, Siber Güvenlik Topluluğu olarak insanların düşünme ve araştırma becerilerini geliştirmelerini amaçlayarak gerçekleştirdiğimiz yarışmasıdır.<a class="more_btn main-color" href="#">Devamını oku..</a></p>
 								</div>
 							</article>
 						</div>
@@ -658,6 +579,11 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="camera_wrap camera-slider lg-slider-cam" data-hide-pagination data-hide-play-pause data-height="500px" data-fx="simpleFade">
+							<div data-thumb="{{asset('assets/images/gallery/thumb/pwnlydays.jpeg')}}" data-src="{{asset('assets/images/gallery/pwnlydays.jpeg')}}">
+								<div class="camera_caption fadeFromBottom">
+									Pwnlydays 2017 açılış konferansı Eğitim Fakültesi A Blok Konferans Salonu'nda gerçekleşti.
+								</div>
+							</div>
 							<div data-thumb="{{asset('assets/images/gallery/thumb/ab2017.jpeg')}}" data-src="{{asset('assets/images/gallery/ab2017.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
 									Akademik Bilişim 2017'ye katıldık.
@@ -687,7 +613,7 @@
 		<div class="md-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-7 contact-preparing">
 						<div class="heading style2">
 							<h3 class="uppercase"><span class="main-color">Bize </span> Ulaşın</h3>
 						</div>
@@ -709,32 +635,32 @@
 							<div class="row form-group over-hidden">
 								<div class="col-md-6">
 									<label for="contact-name">İsim <small>*</small></label>
-									<input type="text" id="contact-name" name="contact-name" class="form-control required" maxlength="30">
+									<input type="text" id="contact-name" name="contact-name" class="form-control required" maxlength="30" disabled>
 								</div>
 
 								<div class="col-md-6">
 									<label for="contact-email">Soyisim <small>*</small></label>
-									<input type="text" id="contact-surname" name="contact-surname" class="form-control required" maxlength="30">
+									<input type="text" id="contact-surname" name="contact-surname" class="form-control required" maxlength="30" disabled>
 								</div>
 							</div>
 							<div class="row form-group over-hidden">
 								<div class="col-md-12">
 									<label for="contact-email">Email<small>*</small></label>
-									<input type="email" id="contact-email" name="contact-email" placeholder="E-Postanızı Girin" class="form-control required">
+									<input type="email" id="contact-email" name="contact-email" placeholder="E-Postanızı Girin" class="form-control required" disabled>
 								</div>
 							</div>
 							<div class="row form-group over-hidden">
 								<div class="col-md-12">
 									<label for="contact-subject">Konu <small>*</small></label>
-									<input type="text" id="contact-subject" name="contact-subject" class="form-control required" maxlength="100">
+									<input type="text" id="contact-subject" name="contact-subject" class="form-control required" maxlength="100" disabled>
 								</div>
 							</div>
 							<div class="form-group over-hidden">
 								<label for="contact-message">Mesaj <small>*</small></label>
-								<textarea id="contact-message" name="contact-message" rows="6" cols="30" class="form-control required" maxlength="500"></textarea>
+								<textarea id="contact-message" name="contact-message" rows="6" cols="30" class="form-control required" maxlength="500" disabled></textarea>
 							</div>
 							<div class="form-group m-t-2">
-								<button class="btn rect-angles btn-gry-border btn-lg" type="submit" id="contact-submit" name="contact-submit" value="submit"><i class="fa fa-crop"></i></span></span></span>Send Message</button>
+								<button class="btn rect-angles btn-gry-border btn-lg" type="submit" id="contact-submit" name="contact-submit" value="submit" disabled><i class="fa fa-crop"></i></span></span></span>Send Message</button>
 							</div>
 
 						</form>

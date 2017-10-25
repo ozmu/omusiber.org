@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Category;
 use App\Tool;
 use App\User;
@@ -25,18 +26,11 @@ class DocsController extends Controller
     }
 
     public function displayTool($tool){
-        $isEditor = false;
-        $isAdmin = false;
-        if(Auth::check() && User::find(Auth::id())->is_editor == 1){
-            $isEditor = true;
-        }
-        if(Auth::check() && User::find(Auth::id())->is_admin == 1){
-            $isAdmin = true;
-        }
         $toolInfo = Tool::where('tool',$tool)->first();
         $resources = explode(',',$toolInfo->resources);
         $categories = Tool::find($toolInfo->id)->categories;
-        return view('documents.tool',compact('toolInfo','categories','resources'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
+        $created_by = User::find(Tool::find($toolInfo->user_id))->first()->name;
+        return view('documents.tool',compact('toolInfo','categories','resources'))->with('created_by',$created_by);
     }
 
     public function addTool(){
@@ -63,7 +57,7 @@ class DocsController extends Controller
         $category->categoryName = request('cat-name');
         $category->icon = request('cat-icon');
         $category->save();
-        return "Başarılı";
+        return "Başarılı!<a href='/docs'>Anasayfaya dön!</a>";
 
     }
 
@@ -94,7 +88,6 @@ class DocsController extends Controller
           $relationship->tool_id = $toolID;
           $relationship->save();    // Relationship saved
         }
-        $toolInfo->tool = request('tool-tool');
         $toolInfo->toolName = request('tool-name');
         $toolInfo->description = request('tool-content');
         $toolInfo->resources = request('tool-resources');
@@ -124,6 +117,7 @@ class DocsController extends Controller
         $tool->toolName = request('tool-name');
         $tool->description = request('tool-content');
         $tool->resources = request('tool-resources');
+        $tool->user_id = Auth::id();
         $tool->save();    // Tool saved
         $toolID = Tool::where('tool',request('tool-tool'))->first()->id;
         foreach ($catIDs as $cat){

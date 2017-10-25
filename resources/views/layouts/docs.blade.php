@@ -47,9 +47,56 @@
 
             <ul class="docsnav">
                 <li><a href="/docs">Anasayfa</a></li>
-                <li><a href="/repo">Depo</a></li>
+                <li><a href="#">Depo</a></li>
                 <li><a href="/#about-us">Hakkında</a></li>
             </ul>
+
+            @auth
+            <div class="row">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            @if (auth()->user()->isAdmin())
+                                <li>
+                                    <a href="/users">
+                                        Kullanıcıları Yönet
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/docs/add-category">
+                                        Kategori Ekle
+                                    </a>
+                                </li>
+                            @endif
+                            @if (auth()->user()->isEditor() || auth()->user()->isAdmin())
+                                <li>
+                                    <a href="/docs/add">
+                                        İçerik Ekle
+                                    </a>
+                                </li>
+                            @endif
+                            @yield('tool-edit')
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    Çıkış Yap
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            @endauth
 
 
 

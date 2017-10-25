@@ -18,4 +18,8 @@ class Tool extends Model
     public function categories(){
         return $this->belongsToMany('App\Category');
     }
+
+    public function created_by(){
+        return $this->belongsTo('App\User');
+    }
 }
