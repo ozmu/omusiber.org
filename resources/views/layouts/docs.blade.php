@@ -39,17 +39,19 @@
     <div class="pageContent">
         <div class="col-md-8 col-md-offset-2">
 
-            <!-- Logo start -->
-            <div class="logo">
-                <a href="/"><img alt="" src="{{asset('assets/images/logo2.png')}}" /></a>
-            </div>
-            <!-- Logo end -->
+            <div class="row">
+                <!-- Logo start -->
+                <div class="logo">
+                    <a href="/"><img alt="" src="{{asset('assets/images/logo2.png')}}" /></a>
+                </div>
+                <!-- Logo end -->
 
-            <ul class="docsnav">
-                <li><a href="/docs">Anasayfa</a></li>
-                <li><a href="#">Depo</a></li>
-                <li><a href="/#about-us">Hakkında</a></li>
-            </ul>
+                <ul class="docsnav">
+                    <li><a href="/docs">Anasayfa</a></li>
+                    <li><a href="#">Depo</a></li>
+                    <li><a href="/#about-us">Hakkında</a></li>
+                </ul>
+            </div>
 
             @auth
             <div class="row">

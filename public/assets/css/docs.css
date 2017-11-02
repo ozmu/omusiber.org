@@ -65,7 +65,10 @@ a[data-toggle="collapse"] {
 ul.docsnav {
     text-align: center;
     padding:0;
+    padding-bottom:15px;
+    border-bottom:1px solid #e1e1e1;
 }
+
 
 ul.docsnav li {
     list-style-type: none;
