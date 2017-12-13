@@ -24,7 +24,7 @@ Auth::routes();
 Route::get('/users','UserController@index')->middleware('admin');
 Route::get('/users/{id}','UserController@edit')->middleware('admin');
 Route::post('/users/{id}','UserController@update');
-
+Route::get('active-members','ActiveMembers@index');
 
 Route::prefix('docs')->group(function (){
    Route::get('add','DocsController@addTool')->middleware('editor');
@@ -34,4 +34,9 @@ Route::prefix('docs')->group(function (){
    Route::get('tool/{tool}','DocsController@displayTool');
    Route::get('tool/{tool}/edit','DocsController@editTool')->middleware('editor');
    Route::post('tool/{tool}/edit','DocsController@updateTool')->middleware('editor');
+});
+
+
+Route::get('test',function (){
+    return view('test');
 });

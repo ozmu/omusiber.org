@@ -1,15 +1,17 @@
 @extends('layouts.docs')
 @section('content')
 
-    @section('tool-edit')
-        @if (auth()->user()->isEditor() || auth()->user()->isAdmin())
-            <li>
-                <a href="/docs/tool/{{$toolInfo->tool}}/edit">
-                    İçeriği Düzenle
-                </a>
-            </li>
-        @endif
-    @endsection
+    @if(Auth::user() != NULL)
+        @section('tool-edit')
+            @if (Auth::user()->is_editor || Auth::user()->is_admin)
+                <li>
+                    <a href="/docs/tool/{{$toolInfo->tool}}/edit">
+                        İçeriği Düzenle
+                    </a>
+                </li>
+            @endif
+        @endsection
+    @endif
 
     <div class="row tool-name">
         @markdown
