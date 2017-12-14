@@ -5728,3 +5728,18 @@ body.opened-slid .body-overlay{
     pointer-events: auto;
 }
 
+.pageContent {
+	min-height: 91vh;
+}
+
+select#member-role {
+	width: 100%;
+	height: 45px;
+	margin-top: 25px;
+}
+
+button#member-submit {
+	display: block;
+	margin:0 auto;
+	width:30%;
+}
