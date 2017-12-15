@@ -194,3 +194,15 @@ a.tp-caption.rev-btn.tc-btnshadow:hover {
     z-index:999;
     text-align: center;
 }
+
+#subscribe p.text-color {
+    font-size:18px;
+    width:70%;
+    text-align: center;
+    display: block;
+    margin:0 auto;
+}
+
+#subscribe .heading {
+    margin-bottom:0;
+}

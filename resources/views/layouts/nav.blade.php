@@ -13,6 +13,7 @@
 					<li class=""><a href="#projects"><span>Projelerimiz</span></a></li>
 					<li class=""><a href="#activities"><span>Etkinliklerimiz</span></a></li>
 					<li class=""><a href="#gallery"><span>Galeri</span></a></li>
+					<li class=""><a href="#subscribe"><span>Üyelik</span></a></li>
 					<li class=""><a href="#contact"><span>İletişim</span></a></li>
 				</ul>
 			</nav>

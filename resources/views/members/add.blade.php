@@ -30,13 +30,15 @@
         <div class="row form-group over-hidden">
             <div class="col-md-6">
                 <label for="member-name">Telefon<small>*</small></label>
-                <input type="text" id="member-phone" name="member-phone" class="form-control required" onkeypress="return numberPressed(event);" required>
+                <input type="text" id="member-phone" name="member-phone" class="form-control required" required>
             </div>
             <div class="col-md-6">
                 <select name="member-role" id="member-role">
-                    <option value="">1</option>
-                    <option value="">1</option>
-                    <option value="">1</option>
+                    <option value="">Üye</option>
+                    <option value="">Aktif Üye</option>
+                    <option value="">Yönetim Üyesi</option>
+                    <option value="">Başkan Yrd.</option>
+                    <option value="">Başkan</option>
                 </select>
             </div>
         </div>

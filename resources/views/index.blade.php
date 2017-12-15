@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="{{asset('assets/revolution/css/navigation.css')}}">
   <!-- Particles CSS-->
   <link rel='stylesheet' id='rs-particles-front-css' href='{{asset('assets/css/particles.css')}}' type='text/css' media='all'/>
+  <link rel='stylesheet' href='{{asset('assets/css/bttn.min.css')}}' type='text/css' media='all'/>
+
 @endpush
 @push('poststyles')
 	<link rel="stylesheet" type="text/css" href="{{asset('assets//css/index.css')}}">
@@ -601,6 +603,29 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="subscribe">
+		<div class="heading main centered">
+			<h3 class="uppercase lg-title"><span class="titles">Üyemiz Olun</span></h3>
+		</div>
+		<div class="md-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="text-color">
+							Resmi olarak topluluğumuza kayıt olmanız için <a href="">topluluk.omu.edu.tr</a> adresini kullanmanız gerekiyor.
+							Fakat bunun için Ondokuz Mayıs Üniversitesi öğrencisi olmak zorundasınız.<br>
+							Biz sosyal bir topluluğuz ve kapımız herkese açık. Eğer isterseniz üyemiz olabilirsiniz.
+							Üyemiz olduğunuzda, bizim düzenlediğimiz etkinlikler hakkında mail ile bildirim alacaksınız.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<button class="bttn-unite bttn-md bttn-primary">medium</button>
 				</div>
 			</div>
 		</div>
