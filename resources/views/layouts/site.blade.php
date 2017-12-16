@@ -11,19 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{secure_asset('assets/images/favicon.ico')}}">
 
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- Plugins CSS files -->
-    <link rel="stylesheet" href="{{asset('assets/css/assets.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/shortcodes.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('assets/css/assets.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{secure_asset('assets/css/shortcodes.css')}}">
 
     @stack('styles')
 
-    <link id="theme_css" rel="stylesheet" href="{{asset('assets/css/theme/light.css')}}">
-    <link id="skin_css" rel="stylesheet" href="{{asset('assets/css/theme/skin/default.css')}}">
+    <link id="theme_css" rel="stylesheet" href="{{secure_asset('assets/css/theme/light.css')}}">
+    <link id="skin_css" rel="stylesheet" href="{{secure_asset('assets/css/theme/skin/default.css')}}">
     @stack('poststyles')
 </head>
 <body>
@@ -61,11 +61,11 @@
 <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
 
 <!-- Load JS plugins -->
-<script type="text/javascript" src="{{asset('assets/js/jquery-1.12.0.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/assets.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('assets/js/jquery-1.12.0.min.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('assets/js/assets.js')}}"></script>
 @stack('scripts')
 <!-- general script file -->
-<script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('assets/js/script.js')}}"></script>
 
 
 </body>

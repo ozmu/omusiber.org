@@ -2,7 +2,7 @@
 	<div class="container">
   	<!-- Logo start -->
   	<div class="logo">
-    	<a href="/"><img alt="" src="{{asset('assets/images/logo-nav.png')}}" /></a>
+    	<a href="/"><img alt="" src="{{secure_asset('assets/images/logo-nav.png')}}" /></a>
     </div>
     <!-- Logo end -->
 		<div class="responsive-nav">

@@ -2,38 +2,38 @@
 @push('styles')
   <link href="https://fonts.googleapis.com/css?family=Poiret+One|Source+Sans+Pro" rel="stylesheet">
   <!-- Slider Revolution CSS Files -->
-  <link rel="stylesheet" type="text/css" href="{{asset('assets/revolution/css/settings.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('assets/revolution/css/layers.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('assets/revolution/css/navigation.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/revolution/css/settings.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/revolution/css/layers.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{secure_asset('assets/revolution/css/navigation.css')}}">
   <!-- Particles CSS-->
-  <link rel='stylesheet' id='rs-particles-front-css' href='{{asset('assets/css/particles.css')}}' type='text/css' media='all'/>
-  <link rel='stylesheet' href='{{asset('assets/css/bttn.min.css')}}' type='text/css' media='all'/>
+  <link rel='stylesheet' id='rs-particles-front-css' href='{{secure_asset('assets/css/particles.css')}}' type='text/css' media='all'/>
+  <link rel='stylesheet' href='{{secure_asset('assets/css/bttn.min.css')}}' type='text/css' media='all'/>
 
 @endpush
 @push('poststyles')
-	<link rel="stylesheet" type="text/css" href="{{asset('assets//css/index.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{secure_asset('assets//css/index.css')}}">
 @endpush
 @push('scripts')
   <!-- SLIDER REVOLUTION  -->
-  <script type="text/javascript" src="{{asset('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
   <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
 	  (Load Extensions only on Local File Systems !  +
 	  The following part can be removed on Server for On Demand Loading) -->
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.kenburn.min.j')}}s"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/revolution/js/extensions/source/revolution.extension.video.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.kenburn.min.j')}}s"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.migration.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/revolution/js/extensions/source/revolution.extension.video.js')}}"></script>
   <!-- END SLIDER REVOLUTION 5.0 EXTENSIONS -->
   <!-- Particles Js -->
-  <script type='text/javascript' src="{{asset('assets/js/particles.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/js/onepage-nav.js')}}"></script>
-  <script type="text/javascript" src="{{asset('assets/js/index.js')}}"></script>
+  <script type='text/javascript' src="{{secure_asset('assets/js/particles.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/js/onepage-nav.js')}}"></script>
+  <script type="text/javascript" src="{{secure_asset('assets/js/index.js')}}"></script>
 
 @endpush
 @section('content')
@@ -106,7 +106,7 @@
 				   data-paddingbottom="[0,0,0,0]"
 				   data-paddingleft="[0,0,0,0]"
 				   style="z-index: 6; white-space: nowrap; font-size: 80px; line-height: 80px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family:Source Sans Pro;">
-				  <img src="{{asset('assets/images/logo.png')}}"/>
+				  <img src="{{secure_asset('assets/images/logo.png')}}"/>
 			  </div>
 
 				<!-- Header -->
@@ -226,7 +226,7 @@
 				   data-transform_out="x:right;s:1000;e:Power2.easeIn;s:1000;e:Power2.easeIn;"
 				   data-start="1000"
 				   data-responsive_offset="on"
-				   style="z-index: 11;"><img src="" alt="" data-lazyload="{{asset('assets/images/anonman.png')}}">
+				   style="z-index: 11;"><img src="" alt="" data-lazyload="{{secure_asset('assets/images/anonman.png')}}">
 			  </div>
 			</li>
 		  </ul>
@@ -245,7 +245,7 @@
 				<div class="col-md-3 col-md-offset-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/emre.png')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/emre.png')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -271,7 +271,7 @@
 				<div class="col-md-3 ">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/muhammet.jpg')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/muhammet.jpg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -299,7 +299,7 @@
 				<div class="col-md-3 ">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/emre.png')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/emre.png')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -325,7 +325,7 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/salihcan.jpg')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/salihcan.jpg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -351,7 +351,7 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/sinan.jpg')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/sinan.jpg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -377,7 +377,7 @@
 				<div class="col-md-3">
 					<div class="team-box box-1">
 						<div class="team-img">
-							<img alt="" src="{{asset('assets/images/team/umutcan.jpeg')}}">
+							<img alt="" src="{{secure_asset('assets/images/team/umutcan.jpeg')}}">
 							<span></span>
 						</div>
 						<div class="team-details t-center">
@@ -416,7 +416,7 @@
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="#">
-										<img src="{{asset('assets/images/logo.jpg')}}" alt="Our Blog post image goes here">
+										<img src="{{secure_asset('assets/images/logo.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
@@ -443,7 +443,7 @@
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="#">
-										<img src="{{asset('assets/images/logo.jpg')}}" alt="Our Blog post image goes here">
+										<img src="{{secure_asset('assets/images/logo.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
@@ -487,7 +487,7 @@
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="#">
-										<img src="{{asset('assets/images/activities/pwnlydays.jpg')}}" alt="Pwnlydays">
+										<img src="{{secure_asset('assets/images/activities/pwnlydays.jpg')}}" alt="Pwnlydays">
 									</a>
 								</div>
 								<div class="post-item-rit">
@@ -517,7 +517,7 @@
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="#">
-										<img src="{{asset('assets/images/activities/omuctf2.jpg')}}" alt="Our Blog post image goes here">
+										<img src="{{secure_asset('assets/images/activities/omuctf2.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
@@ -547,7 +547,7 @@
 							<article class="post-content">
 								<div class="post-image main-border bot-4-border">
 									<a href="#">
-										<img src="{{asset('assets/images/activities/omuctf17.jpg')}}" alt="Our Blog post image goes here">
+										<img src="{{secure_asset('assets/images/activities/omuctf17.jpg')}}" alt="Our Blog post image goes here">
 									</a>
 								</div>
 								<div class="post-item-rit">
@@ -581,22 +581,22 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="camera_wrap camera-slider lg-slider-cam" data-hide-pagination data-hide-play-pause data-height="500px" data-fx="simpleFade">
-							<div data-thumb="{{asset('assets/images/gallery/thumb/pwnlydays.jpeg')}}" data-src="{{asset('assets/images/gallery/pwnlydays.jpeg')}}">
+							<div data-thumb="{{secure_asset('assets/images/gallery/thumb/pwnlydays.jpeg')}}" data-src="{{secure_asset('assets/images/gallery/pwnlydays.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
 									Pwnlydays 2017 açılış konferansı Eğitim Fakültesi A Blok Konferans Salonu'nda gerçekleşti.
 								</div>
 							</div>
-							<div data-thumb="{{asset('assets/images/gallery/thumb/ab2017.jpeg')}}" data-src="{{asset('assets/images/gallery/ab2017.jpeg')}}">
+							<div data-thumb="{{secure_asset('assets/images/gallery/thumb/ab2017.jpeg')}}" data-src="{{secure_asset('assets/images/gallery/ab2017.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
 									Akademik Bilişim 2017'ye katıldık.
 								</div>
 							</div>
-							<div data-thumb="{{asset('assets/images/gallery/thumb/ctfodul.jpeg')}}" data-src="{{asset('assets/images/gallery/ctfodul.jpeg')}}">
+							<div data-thumb="{{secure_asset('assets/images/gallery/thumb/ctfodul.jpeg')}}" data-src="{{secure_asset('assets/images/gallery/ctfodul.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
 									OMUCTF'17 kazananlarına ödülleri verildi.
 								</div>
 							</div>
-							<div data-thumb="{{asset('assets/images/gallery/thumb/denizparlak.jpeg')}}" data-src="{{asset('assets/images/gallery/denizparlak.jpeg')}}">
+							<div data-thumb="{{secure_asset('assets/images/gallery/thumb/denizparlak.jpeg')}}" data-src="{{secure_asset('assets/images/gallery/denizparlak.jpeg')}}">
 								<div class="camera_caption fadeFromBottom">
 									Deniz Parlak okulumuzda siber güvenlik üzerine konuşma yaptı.
 								</div>
@@ -650,7 +650,7 @@
 							{{csrf_field()}}
 							<div class="contact-msg">
 								<div class="alert contact-success">
-									<img alt="" src="{{asset('assets/images/ajax-loader.gif')}}" class="contact-loader" />
+									<img alt="" src="{{secure_asset('assets/images/ajax-loader.gif')}}" class="contact-loader" />
 									<div class="success-msg">
 										<i class="fa fa-thumbs-o-up ico-block"></i>
 										<p>İlginiz için teşekkür ederiz.En kısa sürede dönüş yapacağız! :)</p>
