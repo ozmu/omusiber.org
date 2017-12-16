@@ -206,3 +206,17 @@ a.tp-caption.rev-btn.tc-btnshadow:hover {
 #subscribe .heading {
     margin-bottom:0;
 }
+
+a.bttn-unite.bttn-lg.bttn-primary{
+    display: block;
+    margin: 0 auto;
+    margin-top:30px;
+    padding:10px 20px;
+    font-size:19px;
+    background: transparent;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    border-radius:15px;
+    text-align: center;
+    width:25%;
+}

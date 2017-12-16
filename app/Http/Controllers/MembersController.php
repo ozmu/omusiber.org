@@ -12,6 +12,10 @@ class MembersController extends Controller
         return view('members.all');
     }
 
+    public function newMember(){
+        return view('members.new');
+    }
+
     public function addMember(){
         return view('members.add');
     }

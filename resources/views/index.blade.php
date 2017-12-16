@@ -625,7 +625,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<button class="bttn-unite bttn-md bttn-primary">medium</button>
+					<a class="bttn-unite bttn-lg bttn-primary" href="subscribe">Üye Ol</a>
 				</div>
 			</div>
 		</div>
