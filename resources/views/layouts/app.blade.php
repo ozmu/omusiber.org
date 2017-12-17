@@ -11,7 +11,7 @@
     <title>OMUSiber | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img style="width: 45px;margin: -14px;" src="{{asset('assets/images/logo.png')}}" alt="logo">
+                        <img style="width: 45px;margin: -14px;" src="{{secure_asset('assets/images/logo.png')}}" alt="logo">
                     </a>
                 </div>
 
@@ -75,6 +75,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ secure_asset('js/app.js') }}"></script>
 </body>
 </html>

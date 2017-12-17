@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMember;
+use App\User;
+use function foo\func;
 use Illuminate\Http\Request;
 use App\Member;
+use Illuminate\Support\Facades\Mail;
+
 
 
 class MembersController extends Controller
@@ -12,6 +17,15 @@ class MembersController extends Controller
         return view('members.all');
     }
 
+    public function test(){
+        /*$data = array('name'=>'Muhammet Öztürk');
+        Mail::send(['text' => 'mail'], $data, function ($message){
+            $message->to('ozturkmuhammeet@gmail.com','Kedi Köpek')->subject('Laravel temel mail deneme');
+            $message->from('siber@omu.edu.tr','Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu');
+        });*/
+        \Mail::to(Member::find(9)->email)->send(new WelcomeMember);
+        echo "Gönderildi.";
+    }
     public function newMember(){
         return view('members.new');
     }

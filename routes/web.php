@@ -24,6 +24,8 @@ Auth::routes();
 Route::get('subscribe','MembersController@newMember');
 Route::post('subscribe','MembersController@newMembertoDB');
 
+Route::get('test','MembersController@test');
+
 Route::get('/users','UserController@index')->middleware('admin');
 Route::get('/users/{id}','UserController@edit')->middleware('admin');
 Route::post('/users/{id}','UserController@update');
