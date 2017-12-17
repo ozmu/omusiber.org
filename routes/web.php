@@ -22,6 +22,7 @@ Route::get('/docs','DocsController@index');
 Auth::routes();
 
 Route::get('subscribe','MembersController@newMember');
+Route::post('subscribe','MembersController@newMembertoDB');
 
 Route::get('/users','UserController@index')->middleware('admin');
 Route::get('/users/{id}','UserController@edit')->middleware('admin');

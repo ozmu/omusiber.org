@@ -13,7 +13,16 @@ class MembersController extends Controller
     }
 
     public function newMember(){
-        return view('members.test');
+        return view('members.new');
+    }
+
+    public function newMembertoDB(Request $request){
+        $member = new Member;
+        $member->name = $request->input('questions.0.value');
+        $member->phone = $request->input('questions.1.value');
+        $member->email = $request->input('questions.2.value');
+        $member->telegram = $request->input('questions.3.value');
+        $member->save();
     }
 
     public function addMember(){
