@@ -22,6 +22,7 @@ class MembersController extends Controller
         $member->phone = $request->input('questions.1.value');
         $member->email = $request->input('questions.2.value');
         $member->telegram = $request->input('questions.3.value');
+        $member->role = "member";
         $member->save();
     }
 
