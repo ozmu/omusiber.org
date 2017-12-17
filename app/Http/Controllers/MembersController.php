@@ -13,7 +13,7 @@ class MembersController extends Controller
     }
 
     public function newMember(){
-        return view('members.new');
+        return view('members.test');
     }
 
     public function addMember(){

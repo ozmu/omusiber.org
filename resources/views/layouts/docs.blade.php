@@ -42,7 +42,7 @@
             <div class="row">
                 <!-- Logo start -->
                 <div class="logo">
-                    <a href="/"><img alt="" src="{{secure_asset('assets/images/logo2.png')}}" /></a>
+                    <a href="/"><img alt="logo" src="{{secure_asset('assets/images/logo2.png')}}" /></a>
                 </div>
                 <!-- Logo end -->
 
