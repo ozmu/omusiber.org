@@ -16,6 +16,7 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,100,300,500,700%7CLato:400,300,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!-- Plugins CSS files -->
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/assets.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/shortcodes.css')}}">
@@ -61,6 +62,7 @@
 <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
 
 <!-- Load JS plugins -->
+<script type="text/javascript" src="{{secure_asset('js/app.js')}}"></script>
 <script type="text/javascript" src="{{secure_asset('assets/js/jquery-1.12.0.min.js')}}"></script>
 <script type="text/javascript" src="{{secure_asset('assets/js/assets.js')}}"></script>
 @stack('scripts')
@@ -72,6 +74,7 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111259450-1"></script>
 <script>
+    window.csrf_token = {{ csrf_token() }};
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());

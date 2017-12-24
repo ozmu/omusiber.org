@@ -14,9 +14,8 @@
 use App\Doc;
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@site');
+Route::post('/','HomeController@store');
 
 Route::get('/docs','DocsController@index');
 Auth::routes();
