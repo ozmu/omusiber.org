@@ -64,10 +64,13 @@
                         <ul class="dropdown-menu" role="menu">
                             @if (auth()->user()->isAdmin())
                                 <li>
-                                    <a href="/users">
-                                        Kullanıcıları Yönet
+                                    <a href="/admin">
+                                        Admin
                                     </a>
                                 </li>
+                                <li><a href="/users">
+                                        users
+                                    </a></li>
                                 <li>
                                     <a href="/docs/add-category">
                                         Kategori Ekle

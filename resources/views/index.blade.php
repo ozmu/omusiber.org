@@ -188,31 +188,7 @@
 				  <i class="fa-icon-file-text-o" style="font-size:17px;margin-right:5px;"></i>
 				  Dökümanlar
 			  </a>
-				<a class="tp-caption rev-btn tc-btnshadow tp-rs-menulink"
-				   href="/login"
-				   target="_self"
-				   id="slide-972-layer-13"
-				   data-x="['left','left','left','left']"
-				   data-hoffset="['300','300','250','200']"
-				   data-y="['middle','middle','middle','middle']"
-				   data-voffset="['50','50','20','0']"
-				   data-width="none"
-				   data-height="none"
-				   data-whitespace="nowrap"
-				   data-type="button"
-				   data-actions=''
-				   data-responsive_offset="off"
-				   data-responsive="off"
-				   data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"150","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:#ffffff;bg:#4c87b9;"}]'
-				   data-textAlign="['inherit','inherit','inherit','inherit']"
-				   data-paddingtop="[0,0,0,0]"
-				   data-paddingright="[20,20,20,20]"
-				   data-paddingbottom="[0,0,0,0]"
-				   data-paddingleft="[20,20,20,20]"
-				   style="z-index: 9; white-space: nowrap; font-size: 17px; line-height: 50px; font-weight: 600; color: #dfdfdf; letter-spacing: px;font-family:Source Sans Pro;background-color:rgb(41,112,255);border-radius:3px 3px 3px 3px;outline:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;">
-					<i class="fa-icon-file-text-o" style="font-size:17px;margin-right:5px;"></i>
-					Giriş Yap
-				</a>
+
 
 			  <!-- Anon Man Layer -->
 			  <div class="tp-caption tp-resizeme"

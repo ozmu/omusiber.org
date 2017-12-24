@@ -34,6 +34,10 @@ Route::group(['prefix' => 'members', 'middleware' => 'admin'],function (){
     Route::get('add','MembersController@addMember');
 });
 
+Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
+    Route::get('','AdminController@index');
+});
+
 Route::group(['prefix' => 'docs'],function (){
     Route::get('add','DocsController@addTool')->middleware('editor');
     Route::post('add','DocsController@store');

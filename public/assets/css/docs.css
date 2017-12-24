@@ -298,3 +298,15 @@ ul.categories li:hover {
 #author .author li.category span{
     margin:0 5px;
 }
+
+/* Admin */
+
+#admin ul.admin{
+    list-style: none;
+}
+
+#admin ul.admin li{
+    margin: 5px;
+    padding: 20px;
+    background: #e1e1e1;
+}
