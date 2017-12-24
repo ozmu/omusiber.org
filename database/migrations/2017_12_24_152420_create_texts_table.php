@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAboutUsTable extends Migration
+class CreateTextsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateAboutUsTable extends Migration
      */
     public function up()
     {
-        Schema::create('about_us', function (Blueprint $table) {
+        Schema::create('texts', function (Blueprint $table) {
             $table->increments('id');
-            $table->text('body');
+            $table->text('about_us_body');
+            $table->text('subscribe_body');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateAboutUsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('about_us');
+        Schema::dropIfExists('texts');
     }
 }
