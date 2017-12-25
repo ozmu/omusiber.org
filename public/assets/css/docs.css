@@ -233,13 +233,21 @@ ul.categories li:hover {
     width:170%;
 }
 
-.add-error {
+.add-error,.add-success {
     padding:0 15px;
 }
 
 .add-error .alert-danger {
     background-color: #d46464;
     border-color: #d698a2;
+}
+
+.add-success .alert-success {
+    background-color: #6cc140;
+    border-color: #59e46a;
+}
+
+.add-error .alert-danger,.add-success .alert-success {
     color: #ffffff;
     font-size: 17px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -349,4 +357,26 @@ ul.messages li.message div.email {
 ul.messages li.message div.from,ul.messages li.message div.time{
     float: right;
     padding:0 5px;
+}
+
+div.heading {
+    font-size: 25px;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+div#edit div {
+    margin:30px 0;
+    padding:0 15px;
+}
+
+div#edit div textarea {
+    overflow-y: hidden;
+}
+div#edit button.btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 25%;
 }

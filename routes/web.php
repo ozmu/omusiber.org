@@ -23,10 +23,6 @@ Auth::routes();
 Route::get('subscribe','MembersController@newMember');
 Route::post('subscribe','MembersController@newMembertoDB');
 
-Route::get('/users','UserController@index')->middleware('admin');
-Route::get('/users/{id}','UserController@edit')->middleware('admin');
-Route::post('/users/{id}','UserController@update');
-
 Route::group(['prefix' => 'members', 'middleware' => 'admin'],function (){
     Route::get('','MembersController@index');
     Route::post('add','MembersController@addMembertoDB');
@@ -37,6 +33,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::get('','AdminController@index');
     Route::get('messages','AdminController@messages');
     Route::delete('messages/delete/{id}','AdminController@deleteMessage');
+    Route::get('users','UserController@index');
+    Route::get('users/{id}','UserController@edit');
+    Route::post('users/{id}','UserController@update');
+    Route::get('about-us','AdminController@aboutUs');
+    Route::post('about-us','AdminController@aboutUsPOST');
 });
 
 Route::group(['prefix' => 'docs'],function (){

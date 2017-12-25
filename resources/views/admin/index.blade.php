@@ -4,13 +4,13 @@
     <div id="admin">
         <ul class="admin">
             <li><a href="/admin/messages">Mesajlar</a></li>
-            <li><a href="/admin/edit/about-us">Hakkımızda Düzenle</a></li>
-            <li><a href="/admin/edit/projects">Projeleri Düzenle</a></li>
-            <li><a href="/admin/edit/activities">Etkinlikleri Düzenle</a></li>
-            <li><a href="/admin/edit/gallery">Galeriyi Düzenle</a></li>
-            <li><a href="/admin/edit/members">Üyeleri Düzenle</a></li>
-            <li><a href="/admin/edit/users">Kullanıcıları Düzenle</a></li>
-            <li><a href="/admin/edit/categories">Kategorileri Düzenle</a></li>
+            <li><a href="/admin/about-us">Hakkımızda Düzenle</a></li>
+            <li><a href="/admin/projects">Projeleri Düzenle</a></li>
+            <li><a href="/admin/activities">Etkinlikleri Düzenle</a></li>
+            <li><a href="/admin/gallery">Galeriyi Düzenle</a></li>
+            <li><a href="/admin/members">Üyeleri Düzenle</a></li>
+            <li><a href="/admin/users">Kullanıcıları Düzenle</a></li>
+            <li><a href="/admin/categories">Kategorileri Düzenle</a></li>
         </ul>
     </div>
 @endsection

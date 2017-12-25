@@ -69,9 +69,6 @@
                                         Admin
                                     </a>
                                 </li>
-                                <li><a href="/users">
-                                        users
-                                    </a></li>
                                 <li>
                                     <a href="/docs/add-category">
                                         Kategori Ekle
@@ -106,7 +103,9 @@
 
 
 
-            @yield('content')
+            <div id="home">
+                @yield('content')
+            </div>
 
         </div>
     </div>

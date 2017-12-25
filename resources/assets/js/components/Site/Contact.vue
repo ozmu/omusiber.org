@@ -1,7 +1,7 @@
 <template>
     <div id="contact">
         <div class="heading main centered">
-            <h3 class="uppercase lg-title"><span class="titles">Iletişim</span></h3>
+            <h3 class="uppercase lg-title"><span class="titles">{{ header }}</span></h3>
         </div>
         <div class="md-padding">
             <div class="container">
@@ -82,6 +82,7 @@
 
 <script>
     export default {
+        props: ['header'],
         data(){
             return {
                 error: false,

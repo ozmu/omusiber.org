@@ -4,11 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use App\Title;
+use App\Text;
 
 class IndexController extends Controller
 {
     public function index(){
-        return view('index');
+        $titles = Title::first();
+        $texts = Text::first();
+        return view('index',compact('titles','texts'));
     }
 
     public function store(Request $request){
