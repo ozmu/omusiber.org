@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     <!-- Plugins CSS files -->
+    <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/assets.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/shortcodes.css')}}">
@@ -131,6 +132,7 @@
 <a id="to-top" href="#"><span class="fa fa fa-angle-up"></span></a>
 
 <!-- Load JS plugins -->
+<script type="text/javascript" src="{{secure_asset('js/app.js')}}"></script>
 <script type="text/javascript" src="{{secure_asset('assets/js/jquery-1.12.0.min.js')}}"></script>
 <script type="text/javascript" src="{{secure_asset('assets/js/assets.js')}}"></script>
 @stack('scripts')

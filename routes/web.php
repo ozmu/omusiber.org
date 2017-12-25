@@ -14,8 +14,8 @@
 use App\Doc;
 
 
-Route::get('/', 'HomeController@site');
-Route::post('/','HomeController@store');
+Route::get('/', 'IndexController@index');
+Route::post('/','IndexController@store');
 
 Route::get('/docs','DocsController@index');
 Auth::routes();
@@ -35,6 +35,8 @@ Route::group(['prefix' => 'members', 'middleware' => 'admin'],function (){
 
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::get('','AdminController@index');
+    Route::get('messages','AdminController@messages');
+    Route::delete('messages/delete/{id}','AdminController@deleteMessage');
 });
 
 Route::group(['prefix' => 'docs'],function (){

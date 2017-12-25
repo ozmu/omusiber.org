@@ -310,3 +310,43 @@ ul.categories li:hover {
     padding: 20px;
     background: #e1e1e1;
 }
+
+/* Messages */
+
+ul.messages li{
+    list-style: none;
+    padding:20px;
+    padding-bottom:30px;
+    margin:20px 0;
+    background: #e1e1e1;
+}
+
+ul.messages li.message div.head {
+    padding:5px 0;
+    border-bottom: 1px solid #000;
+}
+
+ul.messages li.message div.subject {
+    font-size:20px;
+    font-weight:700;
+    display: inline-block;
+}
+
+ul.messages li.message i{
+    float: right;
+    margin-left:5px;
+}
+
+ul.messages li.message div.body {
+    padding:10px 0;
+}
+
+ul.messages li.message div.email {
+    font-weight:700;
+    text-align: right;
+}
+
+ul.messages li.message div.from,ul.messages li.message div.time{
+    float: right;
+    padding:0 5px;
+}

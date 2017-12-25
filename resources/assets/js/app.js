@@ -16,7 +16,8 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
-Vue.component('contact', require('./components/Contact.vue'));
+Vue.component('contact', require('./components/Site/Contact.vue'));
+Vue.component('messages', require('./components/Admin/Messages.vue'));
 
 const app = new Vue({
     el: '#home'
