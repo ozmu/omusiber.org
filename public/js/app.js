@@ -43568,18 +43568,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             error: false,
-            success: false
+            success: false,
+            title: this.header,
+            body: this.content
         };
     },
 
 
     methods: {
         updateAbout: function updateAbout() {
+            var _this = this;
+
             axios.post('/admin/about-us', {
-                about_us: header,
-                about_us_body: content
-            }).then(function (response) {
-                console.log(response);
+                about_us: this.title,
+                about_us_body: this.body
+            }).then(function () {
+                _this.success = true;
+            }).catch(function () {
+                _this.error = true;
             });
         }
     }
@@ -43621,19 +43627,19 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.header,
-              expression: "header"
+              value: _vm.title,
+              expression: "title"
             }
           ],
           staticClass: "form-control",
           attrs: { cols: "30", rows: "1" },
-          domProps: { value: _vm.header },
+          domProps: { value: _vm.title },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.header = $event.target.value
+              _vm.title = $event.target.value
             }
           }
         })
@@ -43645,19 +43651,19 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.content,
-              expression: "content"
+              value: _vm.body,
+              expression: "body"
             }
           ],
           staticClass: "form-control",
           attrs: { id: "", cols: "30", rows: "5", maxlength: "500" },
-          domProps: { value: _vm.content },
+          domProps: { value: _vm.body },
           on: {
             input: function($event) {
               if ($event.target.composing) {
                 return
               }
-              _vm.content = $event.target.value
+              _vm.body = $event.target.value
             }
           }
         })

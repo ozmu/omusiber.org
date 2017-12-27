@@ -15,10 +15,10 @@
         </div>
         <div id="edit">
             <div class="title">
-                <textarea cols="30" rows="1" class="form-control" v-model="header"></textarea>
+                <textarea cols="30" rows="1" class="form-control" v-model="title"></textarea>
             </div>
             <div class="body">
-                <textarea id="" cols="30" rows="5" class="form-control" maxlength="500" v-model="content"></textarea>
+                <textarea id="" cols="30" rows="5" class="form-control" maxlength="500" v-model="body"></textarea>
             </div>
             <button class="btn btn-lg" @click="updateAbout">Güncelle</button>
         </div>
@@ -33,18 +33,22 @@
         data(){
             return {
                 error: false,
-                success: false
+                success: false,
+                title: this.header,
+                body: this.content
             }
         },
 
         methods: {
             updateAbout(){
                 axios.post('/admin/about-us',{
-                    about_us: header,
-                    about_us_body: content
-                }).then(function (response) {
-                    console.log(response)
-                })
+                    about_us: this.title,
+                    about_us_body: this.body
+                }).then(() => {
+                    this.success = true;
+                }).catch(() => {
+                    this.error = true;
+                });
             }
         }
     }

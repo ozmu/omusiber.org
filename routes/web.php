@@ -38,6 +38,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::post('users/{id}','UserController@update');
     Route::get('about-us','AdminController@aboutUs');
     Route::post('about-us','AdminController@aboutUsPOST');
+    Route::get('projects','AdminController@projects');
+    Route::post('projects','AdminController@projectsPOST');
 });
 
 Route::group(['prefix' => 'docs'],function (){

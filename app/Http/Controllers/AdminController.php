@@ -28,7 +28,23 @@ class AdminController extends Controller
         return view('admin.about_us',compact('titles','about'));
     }
 
-    public function aboutUsPOST(){
-        return "test";
+    public function aboutUsPOST(Request $request){
+        $header = Title::first();
+        $header->about_us = $request->input('about_us');
+        $header->save();
+        $content = Text::first();
+        $content->about_us_body = $request->input('about_us_body');
+        $content->save();
+        return true;
+    }
+
+    public function projects(){
+        $titles = Title::first();
+        $projects = Text::first()->about_us_body;
+        return view('admin.about_us',compact('titles','about'));
+    }
+
+    public function projectsPOST(){
+
     }
 }

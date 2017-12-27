@@ -8,6 +8,7 @@
 
     <!-- Devices Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Put favicon.ico and apple-touch-icon(s).png in the images folder -->
     <link rel="shortcut icon" href="{{secure_asset('assets/images/favicon.ico')}}">
