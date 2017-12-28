@@ -177,7 +177,7 @@ ul.categories li:hover {
     margin:20px 0;
 }
 
-.add-tool {
+.add-tool,.add-project {
     margin:0 auto;
     background-color: #d0d0d0;
     padding:20px;
@@ -186,6 +186,11 @@ ul.categories li:hover {
     display: block;
     font-size:16px;
     text-transform: uppercase;
+}
+
+.add-project {
+    width: 30%;
+    cursor: pointer;
 }
 
 .add-title {
@@ -374,9 +379,52 @@ div#edit div {
 div#edit div textarea {
     overflow-y: hidden;
 }
-div#edit button.btn {
+div#edit button.btn,div#project-add button.btn {
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
     width: 25%;
+}
+
+
+/* Projects */
+
+.projects {
+    margin: 40px 0;
+}
+
+.projects .project {
+    background: #e1e1e1;
+    padding: 20px;
+}
+
+.projects .project .project-title {
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-align: center;
+}
+
+.projects .project .project-image img{
+    height: 275px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+}
+
+.projects .project table{
+    width: auto;
+    margin:0 auto;
+}
+
+.projects .project table tr:nth-child(odd){
+    background: #9de0f7;
+}
+
+.projects .project table td {
+    padding:10px;
+}
+
+div#project-add  div{
+    margin: 10px 0;
+    padding: 0 15px;
 }

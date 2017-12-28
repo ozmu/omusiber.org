@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\Title;
 use App\Text;
+use App\Project;
 
 class AdminController extends Controller
 {
@@ -40,11 +41,31 @@ class AdminController extends Controller
 
     public function projects(){
         $titles = Title::first();
-        $projects = Text::first()->about_us_body;
-        return view('admin.about_us',compact('titles','about'));
+        $projects = Project::all();
+        return view('admin.projects',compact('titles','projects'));
     }
 
-    public function projectsPOST(){
+    public function projectsPOST(Request $request){
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required|image64:jpeg,jpg,png',
+            'icon'  => 'required',
+            'category' => 'required',
+            'date' => 'required',
+            'state' => 'required'
+        ]);
+        $project = new Project();
+        $project::create([
+            'title' => $request->input('title'),
+            'icon' => $request->input('icon'),
+            'category' => $request->input('category'),
+            'date' => $request->input('date'),
+            'state' => $request->input('state'),
+        ]);
+        $imageData = $request->get('image');
+        $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
+        Image::make($request->get('image'))->save(public_path('images/').$fileName);
+        return response()->json(['error'=>false]);
 
     }
 }
