@@ -46,26 +46,50 @@ class AdminController extends Controller
     }
 
     public function projectsPOST(Request $request){
-        $request->validate([
+        /*$request->validate([
             'title' => 'required',
             'image' => 'required|image64:jpeg,jpg,png',
             'icon'  => 'required',
             'category' => 'required',
             'date' => 'required',
             'state' => 'required'
-        ]);
-        $project = new Project();
-        $project::create([
+        ]);*/
+
+        $imageData = $request->input('image');
+        return $imageData;
+/*
+        Project::create([
             'title' => $request->input('title'),
             'icon' => $request->input('icon'),
             'category' => $request->input('category'),
             'date' => $request->input('date'),
             'state' => $request->input('state'),
         ]);
-        $imageData = $request->get('image');
         $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
         Image::make($request->get('image'))->save(public_path('images/').$fileName);
         return response()->json(['error'=>false]);
 
+        */
+
+    }
+
+    public function activities(){
+        return view('admin.activities');
+    }
+
+    public function activitiesPOST(Request $request){
+        return "test";
+    }
+
+    public function gallery(){
+        return view('admin.gallery');
+    }
+
+    public function members(){
+        return view('admin.members');
+    }
+
+    public function categories(){
+        return view('admin.categories');
     }
 }

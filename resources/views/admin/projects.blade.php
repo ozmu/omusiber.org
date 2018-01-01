@@ -2,4 +2,5 @@
 
 @section('content')
     <projects projects="{{ $projects }}"></projects>
+    {{ $projects }}
 @endsection

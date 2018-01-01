@@ -396,6 +396,7 @@ div#edit button.btn,div#project-add button.btn {
 .projects .project {
     background: #e1e1e1;
     padding: 20px;
+    margin:20px 0;
 }
 
 .projects .project .project-title {

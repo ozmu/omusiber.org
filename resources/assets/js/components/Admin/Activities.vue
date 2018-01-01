@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="heading">
-            Proje Kısmı Düzenleme
+            Etkinlikler Kısmı Düzenleme
         </div>
         <div class="add-error row" v-if="error">
             <div class=" alert alert-danger">
@@ -15,7 +15,7 @@
         </div>
 
         <div class="add-project" v-if="!add" @click="add = !add">
-            Proje Ekle
+            Etkinlik Ekle
         </div>
 
         <div v-if="add">
@@ -59,9 +59,9 @@
         </div>
 
         <div class="projects" v-if="!add">
-            <div class="project" v-for="project in projects">
+            <div class="project">
                 <div class="project-title">
-                    proje başlığı
+                    Etkinlik Başlığı
                 </div>
                 <div class="project-image">
                     <img src="https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg" alt="img">
@@ -121,8 +121,8 @@
                 };
                 reader.readAsDataURL(file);
             },
-            addProject(){
-                axios.post('/admin/projects',{
+            addActivities(){
+                axios.post('/admin/activities',{
                     name: this.name,
                     image: this.image,
                     icon: this.icon,
@@ -132,9 +132,8 @@
                 }).then((response) => {
                     this.success = true;
                     console.log(response);
-                }).catch((e) => {
+                }).catch(() => {
                     this.error = true;
-                    console.log(e)
                 })
             }
         }

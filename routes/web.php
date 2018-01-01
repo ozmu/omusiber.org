@@ -40,6 +40,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::post('about-us','AdminController@aboutUsPOST');
     Route::get('projects','AdminController@projects');
     Route::post('projects','AdminController@projectsPOST');
+    Route::get('activities','AdminController@activities');
+    Route::post('activities','AdminController@activitiesPOST');
+    Route::get('gallery','AdminController@gallery');
+    Route::get('members','AdminController@members');
+    Route::get('categories','AdminController@categories');
 });
 
 Route::group(['prefix' => 'docs'],function (){

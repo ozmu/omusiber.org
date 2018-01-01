@@ -20,6 +20,7 @@ Vue.component('contact', require('./components/Site/Contact.vue'));
 Vue.component('messages', require('./components/Admin/Messages.vue'));
 Vue.component('about-us', require('./components/Admin/AboutUs.vue'));
 Vue.component('projects', require('./components/Admin/Projects.vue'));
+Vue.component('activities', require('./components/Admin/Activities.vue'));
 
 const app = new Vue({
     el: '#home'

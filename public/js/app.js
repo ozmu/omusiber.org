@@ -1072,7 +1072,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(54);
+module.exports = __webpack_require__(57);
 
 
 /***/ }),
@@ -1101,6 +1101,7 @@ Vue.component('contact', __webpack_require__(42));
 Vue.component('messages', __webpack_require__(45));
 Vue.component('about-us', __webpack_require__(48));
 Vue.component('projects', __webpack_require__(51));
+Vue.component('activities', __webpack_require__(54));
 
 var app = new Vue({
   el: '#home'
@@ -43878,9 +43879,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 date: this.date,
                 state: this.state
             }).then(function (response) {
+                _this2.success = true;
                 console.log(response);
-            }).catch(function () {
+            }).catch(function (e) {
                 _this2.error = true;
+                console.log(e);
             });
         }
     }
@@ -44100,6 +44103,493 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
+    !_vm.add
+      ? _c(
+          "div",
+          { staticClass: "projects" },
+          _vm._l(_vm.projects, function(project) {
+            return _c("div", { staticClass: "project" }, [
+              _c("div", { staticClass: "project-title" }, [
+                _vm._v("\n                proje başlığı\n            ")
+              ]),
+              _vm._v(" "),
+              _vm._m(0, true),
+              _vm._v(" "),
+              _vm._m(1, true)
+            ])
+          })
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "project-image" }, [
+      _c("img", {
+        attrs: {
+          src:
+            "https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg",
+          alt: "img"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", { staticClass: "project-meta" }, [
+      _c("tr", [
+        _c("td", { staticClass: "project-icon" }, [_vm._v("ikon")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "project-icon" }, [_vm._v("ikon2")])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", { staticClass: "project-category" }, [_vm._v("kategori")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "project-category" }, [_vm._v("kategori2")])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", { staticClass: "project-date" }, [_vm._v("tarih")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "project-date" }, [_vm._v("tarih2")])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", { staticClass: "project-state" }, [_vm._v("durum")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "project-state" }, [_vm._v("durum2")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2be158a0", module.exports)
+  }
+}
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(55)
+/* template */
+var __vue_template__ = __webpack_require__(56)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Admin/Activities.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0304d3ba", Component.options)
+  } else {
+    hotAPI.reload("data-v-0304d3ba", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['projects'],
+
+    data: function data() {
+        return {
+            name: '',
+            image: '',
+            icon: '',
+            category: '',
+            date: '',
+            state: '',
+            add: false,
+            success: false,
+            error: false
+        };
+    },
+
+
+    methods: {
+        onFileChange: function onFileChange(e) {
+            var files = e.target.files || e.dataTransfer.files;
+            if (!files.length) return;
+            this.createImage(files[0]);
+        },
+        createImage: function createImage(file) {
+            var _this = this;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                _this.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        },
+        addActivities: function addActivities() {
+            var _this2 = this;
+
+            axios.post('/admin/activities', {
+                name: this.name,
+                image: this.image,
+                icon: this.icon,
+                category: this.category,
+                date: this.date,
+                state: this.state
+            }).then(function (response) {
+                _this2.success = true;
+                console.log(response);
+            }).catch(function () {
+                _this2.error = true;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "heading" }, [
+      _vm._v("\n        Etkinlikler Kısmı Düzenleme\n    ")
+    ]),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "add-error row" }, [
+          _c("div", { staticClass: " alert alert-danger" }, [
+            _vm._v("\n            Lütfen formu eksiksiz doldurunuz!\n        ")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.success
+      ? _c("div", { staticClass: "row add-success" }, [
+          _c("div", { staticClass: " alert alert-success" }, [
+            _vm._v("\n            Güncellendi!\n        ")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add
+      ? _c(
+          "div",
+          {
+            staticClass: "add-project",
+            on: {
+              click: function($event) {
+                _vm.add = !_vm.add
+              }
+            }
+          },
+          [_vm._v("\n        Etkinlik Ekle\n    ")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.add
+      ? _c("div", [
+          _c("div", { attrs: { id: "project-add" } }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "title" } }, [
+                  _vm._v("Proje Adı*")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "title" },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-6", staticStyle: { margin: "0 25%" } },
+                [_c("img", { attrs: { src: _vm.image } })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "image" } }, [_vm._v("Afiş*")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file", id: "image" },
+                  on: { change: _vm.onFileChange }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("label", { attrs: { for: "icon" } }, [
+                  _vm._v("İkon(Font Awesome)")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.icon,
+                      expression: "icon"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "icon", type: "text" },
+                  domProps: { value: _vm.icon },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.icon = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("label", { attrs: { for: "category" } }, [
+                  _vm._v("Kategori*")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.category,
+                      expression: "category"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "category" },
+                  domProps: { value: _vm.category },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.category = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("label", { attrs: { for: "date" } }, [_vm._v("Tarih*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.date,
+                      expression: "date"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "date" },
+                  domProps: { value: _vm.date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.date = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("label", { attrs: { for: "state" } }, [_vm._v("Durum*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.state,
+                      expression: "state"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "state" },
+                  domProps: { value: _vm.state },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.state = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-lg", on: { click: _vm.addProject } },
+              [_vm._v("Proje Ekle")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
     !_vm.add ? _c("div", { staticClass: "projects" }, [_vm._m(0)]) : _vm._e()
   ])
 }
@@ -44110,7 +44600,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "project" }, [
       _c("div", { staticClass: "project-title" }, [
-        _vm._v("\n                proje başlığı\n            ")
+        _vm._v("\n                Etkinlik Başlığı\n            ")
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "project-image" }, [
@@ -44156,12 +44646,12 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2be158a0", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-0304d3ba", module.exports)
   }
 }
 
 /***/ }),
-/* 54 */
+/* 57 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
