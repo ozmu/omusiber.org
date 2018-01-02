@@ -7,6 +7,7 @@ use App\Contact;
 use App\Title;
 use App\Text;
 use App\Project;
+use App\Gallery;
 
 class AdminController extends Controller
 {
@@ -82,7 +83,8 @@ class AdminController extends Controller
     }
 
     public function gallery(){
-        return view('admin.gallery');
+        $gallery = Gallery::all();
+        return view('admin.gallery',compact('gallery'));
     }
 
     public function members(){

@@ -429,3 +429,16 @@ div#project-add  div{
     margin: 10px 0;
     padding: 0 15px;
 }
+
+
+/* Gallery */
+
+.gallery .col-md-3.photo {
+    margin: 10px 20px;
+    background: #e1e1e1;
+    padding: 15px;
+}
+
+.gallery .col-md-3.photo i {
+    float: right;
+}

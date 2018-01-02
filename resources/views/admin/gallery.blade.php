@@ -1,5 +1,5 @@
 @extends('layouts.docs')
 
 @section('content')
-gallery
+    <gallery photos="{{ $gallery }}"></gallery>
 @endsection
