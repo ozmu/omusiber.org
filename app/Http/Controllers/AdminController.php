@@ -8,6 +8,7 @@ use App\Title;
 use App\Text;
 use App\Project;
 use App\Gallery;
+use App\Member;
 
 class AdminController extends Controller
 {
@@ -88,7 +89,8 @@ class AdminController extends Controller
     }
 
     public function members(){
-        return view('admin.members');
+        $members = Member::all();
+        return view('admin.members',compact('members'));
     }
 
     public function categories(){
