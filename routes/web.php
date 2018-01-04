@@ -20,6 +20,8 @@ Route::post('/','IndexController@store');
 Route::get('/docs','DocsController@index');
 Auth::routes();
 
+Route::get('projects','IndexController@projects');
+
 Route::get('subscribe','MembersController@newMember');
 Route::post('subscribe','MembersController@newMembertoDB');
 
@@ -29,6 +31,8 @@ Route::group(['prefix' => 'members', 'middleware' => 'admin'],function (){
     Route::get('add','MembersController@addMember');
 });
 
+
+/*  ADMIN   */
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::get('','AdminController@index');
     Route::get('messages','AdminController@messages');
@@ -47,6 +51,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::get('categories','AdminController@categories');
 });
 
+/*  DOCS   */
 Route::group(['prefix' => 'docs'],function (){
     Route::get('add','DocsController@addTool')->middleware('editor');
     Route::post('add','DocsController@store');

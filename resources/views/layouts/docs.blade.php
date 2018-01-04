@@ -142,4 +142,15 @@
 
 
 </body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111259450-1"></script>
+<script>
+    window.csrf_token = {{ csrf_token() }};
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111259450-1');
+</script>
+
 </html>

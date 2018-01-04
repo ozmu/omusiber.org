@@ -220,3 +220,8 @@ a.bttn-unite.bttn-lg.bttn-primary{
     text-align: center;
     width:25%;
 }
+
+#home.content {
+    width:75%;
+    margin:50px auto;
+}

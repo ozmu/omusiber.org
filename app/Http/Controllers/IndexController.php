@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\Title;
 use App\Text;
+use App\Project;
 
 class IndexController extends Controller
 {
@@ -23,5 +24,10 @@ class IndexController extends Controller
            'subject' => $request->input('subject'),
            'message' => $request->input('message'),
         ]);
+    }
+
+    public function projects(){
+        $projects = Project::all();
+        return view('projects',compact('projects'));
     }
 }
