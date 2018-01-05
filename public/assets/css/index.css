@@ -225,3 +225,19 @@ a.bttn-unite.bttn-lg.bttn-primary{
     width:75%;
     margin:50px auto;
 }
+
+#home .content-title {
+    text-align: center;
+}
+
+@media all and (max-width: 340px){
+    .titles {
+        font-size: 42px;
+    }
+}
+
+@media all and (min-width: 341px) and (max-width: 500px){
+    .titles {
+        font-size: 52px;
+    }
+}

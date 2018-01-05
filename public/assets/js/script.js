@@ -428,6 +428,19 @@
 			$optionSet.find('.selected').removeClass('selected');
 			$this.parent().addClass('selected');
 		});
+
+        $('#filters2').on( 'click', 'a.filter', function(e) {
+            e.preventDefault();
+            var filterValue = $(this).attr('data-filter');
+            $grid.isotope({ filter: filterValue });
+            var $this = $(this);
+            if ( $this.parent().hasClass('selected') ) {
+                return false;
+            }
+            var $optionSet = $this.parents('#filters2');
+            $optionSet.find('.selected').removeClass('selected');
+            $this.parent().addClass('selected');
+        });
 	}
 	
 	/* ================ Masonry IsoTope. ================ */
@@ -453,6 +466,19 @@
 			$optionSet.find('.selected').removeClass('selected');
 			$this.parent().addClass('selected');
 		});
+
+        $('#filters2').on( 'click', 'a.filter', function(e) {
+            e.preventDefault();
+            var filterValue = $(this).attr('data-filter');
+            $masonry.isotope({ filter: filterValue });
+            var $this = $(this);
+            if ( $this.parent().hasClass('selected') ) {
+                return false;
+            }
+            var $optionSet = $this.parents('#filters2');
+            $optionSet.find('.selected').removeClass('selected');
+            $this.parent().addClass('selected');
+        });
 	}
 	
 	/* ================ social links copy :after icon. ================ */
@@ -886,6 +912,19 @@
 				$optionSet.find('.active').removeClass('active');
 				$this.parent().addClass('active');
 			});
+
+            $('#filters2').on( 'click', 'a.filter', function(e) {
+                e.preventDefault();
+                var filterValue = $(this).attr('data-filter');
+                $masonry.isotope({ filter: filterValue });
+                var $this = $(this);
+                if ( $this.parent().hasClass('active') ) {
+                    return false;
+                }
+                var $optionSet = $this.parents('#filters2');
+                $optionSet.find('.active').removeClass('active');
+                $this.parent().addClass('active');
+            });
 		}
 
 		if($('.blog-masonry').length){
