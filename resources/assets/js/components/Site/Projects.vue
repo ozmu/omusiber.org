@@ -3,6 +3,9 @@
         <h3 class="uppercase lg-title content-title">
             <span class="titles">Projelerimiz</span>
         </h3>
+        <div v-for="cat in categories">
+            {{ cat }}
+        </div>
         <div class="projects">
                 <div class="md-padding">
                         <div class="row">
@@ -14,6 +17,9 @@
                                         <li><a href="#" class="filter" data-filter=".design"><span>Yarışma</span></a></li>
                                         <li><a href="#" class="filter" data-filter=".develop"><span>Eğitim</span></a></li>
                                         <li><a href="#" class="filter" data-filter=".computers"><span>Sosyal Etkinlik</span></a></li>
+                                        <!--
+                                        <li v-for="category in about()[0]" :data-filter="'.' + category">{{ category }}</li>
+                                        -->
                                     </ul>
                                 </div>
 
@@ -136,8 +142,26 @@
             }
         },
 
+        methods: {
+          about() {
+
+              //return [categories, states];
+          }
+        },
+
         created(){
-            console.log(this.projects)
+            console.log(this.projects);
+        },
+
+        mounted() {
+            /* There is an error. I can't find it. But i will find.*/
+            let categories = [], states = [];
+            for(i=0; i<this.projects.length; i++){
+                categories.push(this.projects[i].category);
+                states.push(this.projects[i].state);
+            }
+            categories = Array.from(new Set(categories));
+            states = Array.from(new Set(states));
         }
 
 

@@ -7,6 +7,8 @@ use App\Contact;
 use App\Title;
 use App\Text;
 use App\Project;
+use Illuminate\Support\Arr;
+use PhpParser\Node\Expr\Array_;
 
 class IndexController extends Controller
 {
