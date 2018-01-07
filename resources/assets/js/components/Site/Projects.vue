@@ -3,27 +3,32 @@
         <h3 class="uppercase lg-title content-title">
             <span class="titles">Projelerimiz</span>
         </h3>
-        <div v-for="cat in categories">
-            {{ cat }}
-        </div>
         <div class="projects">
                 <div class="md-padding">
                         <div class="row">
-                            <div class="col-md-12">
-
+                            <div class="col-md-12" v-show="showAll">
                                 <div class="filter-by style2">
                                     <ul id="filters">
                                         <li class="selected"><a href="#" class="filter" data-filter="*"><span>Tümü</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".design"><span>Yarışma</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".develop"><span>Eğitim</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".computers"><span>Sosyal Etkinlik</span></a></li>
-                                        <!--
-                                        <li v-for="category in about()[0]" :data-filter="'.' + category">{{ category }}</li>
-                                        -->
+                                        <li v-for="category in categories"><a href="#" class="filter" :data-filter="'.' + category.toLowerCase()"><span>{{ category }}</span></a></li>
                                     </ul>
                                 </div>
-
                                 <div class="portfolio grid p-3-cols p-style2" id="grid">
+                                    <div v-for="project in projects" class="portfolio-item" :class="project.category.toLowerCase()">
+                                        <figure>
+                                            <img :alt="project.project_title" :src="project.image_path">
+                                            <figcaption>
+                                                <div class="port-captions">
+                                                    <h4><a href="#">{{ project.project_title }}</a></h4>
+                                                    <p class="description">{{ project.short_description }}</p>
+                                                </div>
+                                                <div class="icon-links">
+                                                    <a href="#" class="link white-bg"><i class="fa fa-link"></i></a>
+                                                    <a href="assets/images/portfolio/grid/1.jpg" class="zoom main-bg" title="Quality Products for Companies"><i class="fa fa-search-plus"></i></a>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
 
                                     <div class="portfolio-item design">
                                         <figure>
@@ -40,90 +45,26 @@
                                             </figcaption>
                                         </figure>
                                     </div>
-                                    <div class="portfolio-item develop">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/2.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">Nature vs. Man</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/2.jpg" class="zoom main-bg" title="Nature vs. Man"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="portfolio-item computers">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/3.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">A Day with Sunshine & Bliss</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/3.jpg" class="zoom main-bg" title="A Day with Sunshine & Bliss"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="portfolio-item develop test1">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/4.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">A Workplace for Champions</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/4.jpg" class="zoom main-bg" title="A Workplace for Champions"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="portfolio-item design test1">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/5.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">Doing it the Chilled Way</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/5.jpg" class="zoom main-bg" title="Doing it the Chilled Way"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="portfolio-item computers test1">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/6.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">Take a Ride in a Luxury Car</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/6.jpg" class="zoom main-bg" title="Take a Ride in a Luxury Car"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
                                 </div>
 
                                 <div class="filter-by style2">
                                     <ul id="filters2">
-                                        <li class="selected"><a href="#" class="filter" data-filter="*"><span>All</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".test1"><span>test1</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".test2"><span>test2</span></a></li>
-                                        <li><a href="#" class="filter" data-filter=".test3"><span>test3</span></a></li>
+                                        <li class="selected"><a href="#" class="filter" data-filter="*"><span>Tümü</span></a></li>
+                                        <li v-for="state in states"><a href="#" class="filter" :data-filter="'.' + state.toLowerCase()"><span>{{ state }}</span></a></li>
                                     </ul>
+                                </div>
+                                <button @click="showAll = !showAll">go project</button>
+                            </div>
+                            <div class="col-md-12" v-show="!showAll">
+                                <button @click="showAll = !showAll">back all</button>
+                                <div class="project-title">
+                                    Project Title
+                                </div>
+                                <div class="project-image">
+                                    Project Image
+                                </div>
+                                <div class="project-description">
+                                    Project long description
                                 </div>
                             </div>
                         </div>
@@ -138,31 +79,28 @@
 
         data(){
             return {
-
+                showAll: true,
+                categories: [],
+                states: [],
             }
         },
 
         methods: {
           about() {
-
-              //return [categories, states];
-          }
+              let i;
+              for(i=0; i<this.projects.length; i++){
+                  this.categories.push(this.projects[i].category);
+                  this.states.push(this.projects[i].state);
+              }
+              this.categories = Array.from(new Set(this.categories));
+              this.states = Array.from(new Set(this.states));
+          },
         },
 
         created(){
             console.log(this.projects);
+            this.about();
         },
-
-        mounted() {
-            /* There is an error. I can't find it. But i will find.*/
-            let categories = [], states = [];
-            for(i=0; i<this.projects.length; i++){
-                categories.push(this.projects[i].category);
-                states.push(this.projects[i].state);
-            }
-            categories = Array.from(new Set(categories));
-            states = Array.from(new Set(states));
-        }
 
 
     }

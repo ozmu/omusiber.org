@@ -45072,94 +45072,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['projects'],
 
     data: function data() {
-        return {};
+        return {
+            showAll: true,
+            categories: [],
+            states: []
+        };
     },
 
 
     methods: {
         about: function about() {
-
-            //return [categories, states];
+            var i = void 0;
+            for (i = 0; i < this.projects.length; i++) {
+                this.categories.push(this.projects[i].category);
+                this.states.push(this.projects[i].state);
+            }
+            this.categories = Array.from(new Set(this.categories));
+            this.states = Array.from(new Set(this.states));
         }
     },
 
     created: function created() {
         console.log(this.projects);
-    },
-    mounted: function mounted() {
-        /* There is an error. I can't find it. But i will find.*/
-        var categories = [],
-            states = [];
-        for (i = 0; i < this.projects.length; i++) {
-            categories.push(this.projects[i].category);
-            states.push(this.projects[i].state);
-        }
-        categories = Array.from(new Set(categories));
-        states = Array.from(new Set(states));
+        this.about();
     }
 });
 
@@ -45171,19 +45111,191 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._l(_vm.categories, function(cat) {
-        return _c("div", [_vm._v("\n        " + _vm._s(cat) + "\n    ")])
-      }),
-      _vm._v(" "),
-      _vm._m(1)
-    ],
-    2
-  )
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "projects" }, [
+      _c("div", { staticClass: "md-padding" }, [
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: _vm.showAll,
+                  expression: "showAll"
+                }
+              ],
+              staticClass: "col-md-12"
+            },
+            [
+              _c("div", { staticClass: "filter-by style2" }, [
+                _c(
+                  "ul",
+                  { attrs: { id: "filters" } },
+                  [
+                    _vm._m(1),
+                    _vm._v(" "),
+                    _vm._l(_vm.categories, function(category) {
+                      return _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "filter",
+                            attrs: {
+                              href: "#",
+                              "data-filter": "." + category.toLowerCase()
+                            }
+                          },
+                          [_c("span", [_vm._v(_vm._s(category))])]
+                        )
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "portfolio grid p-3-cols p-style2",
+                  attrs: { id: "grid" }
+                },
+                [
+                  _vm._l(_vm.projects, function(project) {
+                    return _c(
+                      "div",
+                      {
+                        staticClass: "portfolio-item",
+                        class: project.category.toLowerCase()
+                      },
+                      [
+                        _c("figure", [
+                          _c("img", {
+                            attrs: {
+                              alt: project.project_title,
+                              src: project.image_path
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("figcaption", [
+                            _c("div", { staticClass: "port-captions" }, [
+                              _c("h4", [
+                                _c("a", { attrs: { href: "#" } }, [
+                                  _vm._v(_vm._s(project.project_title))
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("p", { staticClass: "description" }, [
+                                _vm._v(_vm._s(project.short_description))
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(2, true)
+                          ])
+                        ])
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _vm._m(3)
+                ],
+                2
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "filter-by style2" }, [
+                _c(
+                  "ul",
+                  { attrs: { id: "filters2" } },
+                  [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _vm._l(_vm.states, function(state) {
+                      return _c("li", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "filter",
+                            attrs: {
+                              href: "#",
+                              "data-filter": "." + state.toLowerCase()
+                            }
+                          },
+                          [_c("span", [_vm._v(_vm._s(state))])]
+                        )
+                      ])
+                    })
+                  ],
+                  2
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.showAll = !_vm.showAll
+                    }
+                  }
+                },
+                [_vm._v("go project")]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: !_vm.showAll,
+                  expression: "!showAll"
+                }
+              ],
+              staticClass: "col-md-12"
+            },
+            [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.showAll = !_vm.showAll
+                    }
+                  }
+                },
+                [_vm._v("back all")]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-title" }, [
+                _vm._v(
+                  "\n                                Project Title\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-image" }, [
+                _vm._v(
+                  "\n                                Project Image\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-description" }, [
+                _vm._v(
+                  "\n                                Project long description\n                            "
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -45198,447 +45310,101 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "projects" }, [
-      _c("div", { staticClass: "md-padding" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-12" }, [
-            _c("div", { staticClass: "filter-by style2" }, [
-              _c("ul", { attrs: { id: "filters" } }, [
-                _c("li", { staticClass: "selected" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": "*" }
-                    },
-                    [_c("span", [_vm._v("Tümü")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".design" }
-                    },
-                    [_c("span", [_vm._v("Yarışma")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".develop" }
-                    },
-                    [_c("span", [_vm._v("Eğitim")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".computers" }
-                    },
-                    [_c("span", [_vm._v("Sosyal Etkinlik")])]
-                  )
-                ])
+    return _c("li", { staticClass: "selected" }, [
+      _c(
+        "a",
+        { staticClass: "filter", attrs: { href: "#", "data-filter": "*" } },
+        [_c("span", [_vm._v("Tümü")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "icon-links" }, [
+      _c("a", { staticClass: "link white-bg", attrs: { href: "#" } }, [
+        _c("i", { staticClass: "fa fa-link" })
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "zoom main-bg",
+          attrs: {
+            href: "assets/images/portfolio/grid/1.jpg",
+            title: "Quality Products for Companies"
+          }
+        },
+        [_c("i", { staticClass: "fa fa-search-plus" })]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "portfolio-item design" }, [
+      _c("figure", [
+        _c("img", {
+          attrs: {
+            alt: "",
+            src:
+              "http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg"
+          }
+        }),
+        _vm._v(" "),
+        _c("figcaption", [
+          _c("div", { staticClass: "port-captions" }, [
+            _c("h4", [
+              _c("a", { attrs: { href: "portfolio-single.html" } }, [
+                _vm._v("Quality Products for Companies")
               ])
             ]),
             _vm._v(" "),
+            _c("p", { staticClass: "description" }, [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
+              _vm._v(", "),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Development")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "icon-links" }, [
             _c(
-              "div",
+              "a",
               {
-                staticClass: "portfolio grid p-3-cols p-style2",
-                attrs: { id: "grid" }
+                staticClass: "link white-bg",
+                attrs: { href: "portfolio-single.html" }
               },
-              [
-                _c("div", { staticClass: "portfolio-item design" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("Quality Products for Companies")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/1.jpg",
-                              title: "Quality Products for Companies"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "portfolio-item develop" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/2.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("Nature vs. Man")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/2.jpg",
-                              title: "Nature vs. Man"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "portfolio-item computers" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/3.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("A Day with Sunshine & Bliss")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/3.jpg",
-                              title: "A Day with Sunshine & Bliss"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "portfolio-item develop test1" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/4.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("A Workplace for Champions")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/4.jpg",
-                              title: "A Workplace for Champions"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "portfolio-item design test1" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/5.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("Doing it the Chilled Way")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/5.jpg",
-                              title: "Doing it the Chilled Way"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "portfolio-item computers test1" }, [
-                  _c("figure", [
-                    _c("img", {
-                      attrs: {
-                        alt: "",
-                        src:
-                          "http://html.it-rays.net/bookra/assets/images/portfolio/grid/6.jpg"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("figcaption", [
-                      _c("div", { staticClass: "port-captions" }, [
-                        _c("h4", [
-                          _c(
-                            "a",
-                            { attrs: { href: "portfolio-single.html" } },
-                            [_vm._v("Take a Ride in a Luxury Car")]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "description" }, [
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-                          _vm._v(", "),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("Development")
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "icon-links" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "link white-bg",
-                            attrs: { href: "portfolio-single.html" }
-                          },
-                          [_c("i", { staticClass: "fa fa-link" })]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          {
-                            staticClass: "zoom main-bg",
-                            attrs: {
-                              href: "assets/images/portfolio/grid/6.jpg",
-                              title: "Take a Ride in a Luxury Car"
-                            }
-                          },
-                          [_c("i", { staticClass: "fa fa-search-plus" })]
-                        )
-                      ])
-                    ])
-                  ])
-                ])
-              ]
+              [_c("i", { staticClass: "fa fa-link" })]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "filter-by style2" }, [
-              _c("ul", { attrs: { id: "filters2" } }, [
-                _c("li", { staticClass: "selected" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": "*" }
-                    },
-                    [_c("span", [_vm._v("All")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".test1" }
-                    },
-                    [_c("span", [_vm._v("test1")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".test2" }
-                    },
-                    [_c("span", [_vm._v("test2")])]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "filter",
-                      attrs: { href: "#", "data-filter": ".test3" }
-                    },
-                    [_c("span", [_vm._v("test3")])]
-                  )
-                ])
-              ])
-            ])
+            _c(
+              "a",
+              {
+                staticClass: "zoom main-bg",
+                attrs: {
+                  href: "assets/images/portfolio/grid/1.jpg",
+                  title: "Quality Products for Companies"
+                }
+              },
+              [_c("i", { staticClass: "fa fa-search-plus" })]
+            )
           ])
         ])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "selected" }, [
+      _c(
+        "a",
+        { staticClass: "filter", attrs: { href: "#", "data-filter": "*" } },
+        [_c("span", [_vm._v("Tümü")])]
+      )
     ])
   }
 ]
