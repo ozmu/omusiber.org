@@ -241,3 +241,7 @@ a.bttn-unite.bttn-lg.bttn-primary{
         font-size: 52px;
     }
 }
+
+div.portfolio-item{
+    cursor: pointer;
+}

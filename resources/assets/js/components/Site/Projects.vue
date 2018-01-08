@@ -14,33 +14,13 @@
                                     </ul>
                                 </div>
                                 <div class="portfolio grid p-3-cols p-style2" id="grid">
-                                    <div v-for="project in projects" class="portfolio-item" :class="project.category.toLowerCase()">
+                                    <div v-for="project in projects" class="portfolio-item" :class="project.category.toLowerCase()" @click="getProject(project.id)">
                                         <figure>
-                                            <img :alt="project.project_title" :src="project.image_path">
+                                            <img :alt="project.project_title" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg">
                                             <figcaption>
                                                 <div class="port-captions">
                                                     <h4><a href="#">{{ project.project_title }}</a></h4>
                                                     <p class="description">{{ project.short_description }}</p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="#" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/1.jpg" class="zoom main-bg" title="Quality Products for Companies"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </div>
-
-                                    <div class="portfolio-item design">
-                                        <figure>
-                                            <img alt="" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg">
-                                            <figcaption>
-                                                <div class="port-captions">
-                                                    <h4><a href="portfolio-single.html">Quality Products for Companies</a></h4>
-                                                    <p class="description"><a href="#">Design</a>, <a href="#">Development</a></p>
-                                                </div>
-                                                <div class="icon-links">
-                                                    <a href="portfolio-single.html" class="link white-bg"><i class="fa fa-link"></i></a>
-                                                    <a href="assets/images/portfolio/grid/1.jpg" class="zoom main-bg" title="Quality Products for Companies"><i class="fa fa-search-plus"></i></a>
                                                 </div>
                                             </figcaption>
                                         </figure>
@@ -53,19 +33,34 @@
                                         <li v-for="state in states"><a href="#" class="filter" :data-filter="'.' + state.toLowerCase()"><span>{{ state }}</span></a></li>
                                     </ul>
                                 </div>
-                                <button @click="showAll = !showAll">go project</button>
                             </div>
                             <div class="col-md-12" v-show="!showAll">
                                 <button @click="showAll = !showAll">back all</button>
                                 <div class="project-title">
-                                    Project Title
+                                    Project Title {{ project_title }}
+                                </div>
+                                <div class="project-category">
+                                    Project Category {{ project_category }}
                                 </div>
                                 <div class="project-image">
-                                    Project Image
+                                    Project Image {{ project_image }}
+                                </div>
+                                <div class="project-short-description">
+                                    Project short description {{ project_short_description }}
                                 </div>
                                 <div class="project-description">
-                                    Project long description
+                                    Project long description {{ project_description }}
                                 </div>
+                                <div class="project-date">
+                                    Project date {{ project_date }}
+                                </div>
+                                <div class="project-icon">
+                                    Project icon {{ project_icon }}
+                                </div>
+                                <div class="project-state">
+                                    Project state {{ project_state }}
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -82,6 +77,15 @@
                 showAll: true,
                 categories: [],
                 states: [],
+                project_title: '',
+                project_category: '',
+                project_image: '',
+                project_short_description: '',
+                project_description: '',
+                project_date: '',
+                project_icon: '',
+                project_state: ''
+
             }
         },
 
@@ -95,6 +99,20 @@
               this.categories = Array.from(new Set(this.categories));
               this.states = Array.from(new Set(this.states));
           },
+
+          getProject(id){
+              const project = this.projects[id - 1];
+              this.showAll = !this.showAll;
+              this.project_title = project.project_title;
+              this.project_category = project.category;
+              this.project_image = project.image_path;
+              this.project_short_description = project.short_description;
+              this.project_description = project.description;
+              this.project_date = project.date;
+              this.project_icon = project.icon;
+              this.project_state = project.state;
+
+          }
         },
 
         created(){

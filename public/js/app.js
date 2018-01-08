@@ -45067,11 +45067,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['projects'],
@@ -45080,7 +45075,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             showAll: true,
             categories: [],
-            states: []
+            states: [],
+            project_title: '',
+            project_category: '',
+            project_image: '',
+            project_short_description: '',
+            project_description: '',
+            project_date: '',
+            project_icon: '',
+            project_state: ''
+
         };
     },
 
@@ -45094,6 +45098,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             this.categories = Array.from(new Set(this.categories));
             this.states = Array.from(new Set(this.states));
+        },
+        getProject: function getProject(id) {
+            var project = this.projects[id - 1];
+            this.showAll = !this.showAll;
+            this.project_title = project.project_title;
+            this.project_category = project.category;
+            this.project_image = project.image_path;
+            this.project_short_description = project.short_description;
+            this.project_description = project.description;
+            this.project_date = project.date;
+            this.project_icon = project.icon;
+            this.project_state = project.state;
         }
     },
 
@@ -45164,46 +45180,45 @@ var render = function() {
                   staticClass: "portfolio grid p-3-cols p-style2",
                   attrs: { id: "grid" }
                 },
-                [
-                  _vm._l(_vm.projects, function(project) {
-                    return _c(
-                      "div",
-                      {
-                        staticClass: "portfolio-item",
-                        class: project.category.toLowerCase()
-                      },
-                      [
-                        _c("figure", [
-                          _c("img", {
-                            attrs: {
-                              alt: project.project_title,
-                              src: project.image_path
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c("figcaption", [
-                            _c("div", { staticClass: "port-captions" }, [
-                              _c("h4", [
-                                _c("a", { attrs: { href: "#" } }, [
-                                  _vm._v(_vm._s(project.project_title))
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("p", { staticClass: "description" }, [
-                                _vm._v(_vm._s(project.short_description))
+                _vm._l(_vm.projects, function(project) {
+                  return _c(
+                    "div",
+                    {
+                      staticClass: "portfolio-item",
+                      class: project.category.toLowerCase(),
+                      on: {
+                        click: function($event) {
+                          _vm.getProject(project.id)
+                        }
+                      }
+                    },
+                    [
+                      _c("figure", [
+                        _c("img", {
+                          attrs: {
+                            alt: project.project_title,
+                            src:
+                              "http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("figcaption", [
+                          _c("div", { staticClass: "port-captions" }, [
+                            _c("h4", [
+                              _c("a", { attrs: { href: "#" } }, [
+                                _vm._v(_vm._s(project.project_title))
                               ])
                             ]),
                             _vm._v(" "),
-                            _vm._m(2, true)
+                            _c("p", { staticClass: "description" }, [
+                              _vm._v(_vm._s(project.short_description))
+                            ])
                           ])
                         ])
-                      ]
-                    )
-                  }),
-                  _vm._v(" "),
-                  _vm._m(3)
-                ],
-                2
+                      ])
+                    ]
+                  )
+                })
               ),
               _vm._v(" "),
               _c("div", { staticClass: "filter-by style2" }, [
@@ -45211,7 +45226,7 @@ var render = function() {
                   "ul",
                   { attrs: { id: "filters2" } },
                   [
-                    _vm._m(4),
+                    _vm._m(2),
                     _vm._v(" "),
                     _vm._l(_vm.states, function(state) {
                       return _c("li", [
@@ -45231,19 +45246,7 @@ var render = function() {
                   ],
                   2
                 )
-              ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  on: {
-                    click: function($event) {
-                      _vm.showAll = !_vm.showAll
-                    }
-                  }
-                },
-                [_vm._v("go project")]
-              )
+              ])
             ]
           ),
           _vm._v(" "),
@@ -45275,19 +45278,65 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "project-title" }, [
                 _vm._v(
-                  "\n                                Project Title\n                            "
+                  "\n                                Project Title " +
+                    _vm._s(_vm.project_title) +
+                    "\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-category" }, [
+                _vm._v(
+                  "\n                                Project Category " +
+                    _vm._s(_vm.project_category) +
+                    "\n                            "
                 )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "project-image" }, [
                 _vm._v(
-                  "\n                                Project Image\n                            "
+                  "\n                                Project Image " +
+                    _vm._s(_vm.project_image) +
+                    "\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-short-description" }, [
+                _vm._v(
+                  "\n                                Project short description " +
+                    _vm._s(_vm.project_short_description) +
+                    "\n                            "
                 )
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "project-description" }, [
                 _vm._v(
-                  "\n                                Project long description\n                            "
+                  "\n                                Project long description " +
+                    _vm._s(_vm.project_description) +
+                    "\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-date" }, [
+                _vm._v(
+                  "\n                                Project date " +
+                    _vm._s(_vm.project_date) +
+                    "\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-icon" }, [
+                _vm._v(
+                  "\n                                Project icon " +
+                    _vm._s(_vm.project_icon) +
+                    "\n                            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-state" }, [
+                _vm._v(
+                  "\n                                Project state " +
+                    _vm._s(_vm.project_state) +
+                    "\n                            "
                 )
               ])
             ]
@@ -45316,83 +45365,6 @@ var staticRenderFns = [
         { staticClass: "filter", attrs: { href: "#", "data-filter": "*" } },
         [_c("span", [_vm._v("Tümü")])]
       )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "icon-links" }, [
-      _c("a", { staticClass: "link white-bg", attrs: { href: "#" } }, [
-        _c("i", { staticClass: "fa fa-link" })
-      ]),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          staticClass: "zoom main-bg",
-          attrs: {
-            href: "assets/images/portfolio/grid/1.jpg",
-            title: "Quality Products for Companies"
-          }
-        },
-        [_c("i", { staticClass: "fa fa-search-plus" })]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "portfolio-item design" }, [
-      _c("figure", [
-        _c("img", {
-          attrs: {
-            alt: "",
-            src:
-              "http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg"
-          }
-        }),
-        _vm._v(" "),
-        _c("figcaption", [
-          _c("div", { staticClass: "port-captions" }, [
-            _c("h4", [
-              _c("a", { attrs: { href: "portfolio-single.html" } }, [
-                _vm._v("Quality Products for Companies")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "description" }, [
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Design")]),
-              _vm._v(", "),
-              _c("a", { attrs: { href: "#" } }, [_vm._v("Development")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "icon-links" }, [
-            _c(
-              "a",
-              {
-                staticClass: "link white-bg",
-                attrs: { href: "portfolio-single.html" }
-              },
-              [_c("i", { staticClass: "fa fa-link" })]
-            ),
-            _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "zoom main-bg",
-                attrs: {
-                  href: "assets/images/portfolio/grid/1.jpg",
-                  title: "Quality Products for Companies"
-                }
-              },
-              [_c("i", { staticClass: "fa fa-search-plus" })]
-            )
-          ])
-        ])
-      ])
     ])
   },
   function() {
