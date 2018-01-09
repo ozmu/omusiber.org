@@ -14,7 +14,7 @@
                                     </ul>
                                 </div>
                                 <div class="portfolio grid p-3-cols p-style2" id="grid">
-                                    <div v-for="project in projects" class="portfolio-item" :class="project.category.toLowerCase()" @click="getProject(project.id)">
+                                    <div v-for="project in projects" class="portfolio-item" :class="project.category.toLowerCase() + ' ' + project.state.toLowerCase().split(' ').join('-')" @click="getProject(project.id)">
                                         <figure>
                                             <img :alt="project.project_title" src="http://html.it-rays.net/bookra/assets/images/portfolio/grid/1.jpg">
                                             <figcaption>
@@ -30,36 +30,37 @@
                                 <div class="filter-by style2">
                                     <ul id="filters2">
                                         <li class="selected"><a href="#" class="filter" data-filter="*"><span>Tümü</span></a></li>
-                                        <li v-for="state in states"><a href="#" class="filter" :data-filter="'.' + state.toLowerCase()"><span>{{ state }}</span></a></li>
+                                        <li v-for="state in states"><a href="#" class="filter" :data-filter="'.' + state.toLowerCase().split(' ').join('-')"><span>{{ state }}</span></a></li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-md-12" v-show="!showAll">
+                            <div class="col-md-12" v-show="!showAll" id="project-show">
                                 <button @click="showAll = !showAll">back all</button>
                                 <div class="project-title">
                                     Project Title {{ project_title }}
                                 </div>
-                                <div class="project-category">
-                                    Project Category {{ project_category }}
-                                </div>
                                 <div class="project-image">
-                                    Project Image {{ project_image }}
-                                </div>
-                                <div class="project-short-description">
-                                    Project short description {{ project_short_description }}
+                                    <img :src="project_image" alt="image">
                                 </div>
                                 <div class="project-description">
                                     Project long description {{ project_description }}
                                 </div>
-                                <div class="project-date">
-                                    Project date {{ project_date }}
-                                </div>
-                                <div class="project-icon">
-                                    Project icon {{ project_icon }}
-                                </div>
-                                <div class="project-state">
-                                    Project state {{ project_state }}
-                                </div>
+                                <table class="project-meta">
+                                    <tr>
+                                        <td class="project-category">
+                                            {{ project_category }}
+                                        </td>
+                                        <td class="project-date">
+                                            {{ project_date }}
+                                        </td>
+                                        <td class="project-icon">
+                                            <i :class="'fa fa-' + project_icon"></i>
+                                        </td>
+                                        <td class="project-state">
+                                            {{ project_state }}
+                                        </td>
+                                    </tr>
+                                </table>
 
                             </div>
                         </div>

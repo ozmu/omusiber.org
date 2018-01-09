@@ -45067,6 +45067,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['projects'],
@@ -45185,7 +45186,13 @@ var render = function() {
                     "div",
                     {
                       staticClass: "portfolio-item",
-                      class: project.category.toLowerCase(),
+                      class:
+                        project.category.toLowerCase() +
+                        " " +
+                        project.state
+                          .toLowerCase()
+                          .split(" ")
+                          .join("-"),
                       on: {
                         click: function($event) {
                           _vm.getProject(project.id)
@@ -45236,7 +45243,12 @@ var render = function() {
                             staticClass: "filter",
                             attrs: {
                               href: "#",
-                              "data-filter": "." + state.toLowerCase()
+                              "data-filter":
+                                "." +
+                                state
+                                  .toLowerCase()
+                                  .split(" ")
+                                  .join("-")
                             }
                           },
                           [_c("span", [_vm._v(_vm._s(state))])]
@@ -45261,7 +45273,8 @@ var render = function() {
                   expression: "!showAll"
                 }
               ],
-              staticClass: "col-md-12"
+              staticClass: "col-md-12",
+              attrs: { id: "project-show" }
             },
             [
               _c(
@@ -45284,28 +45297,8 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "project-category" }, [
-                _vm._v(
-                  "\n                                Project Category " +
-                    _vm._s(_vm.project_category) +
-                    "\n                            "
-                )
-              ]),
-              _vm._v(" "),
               _c("div", { staticClass: "project-image" }, [
-                _vm._v(
-                  "\n                                Project Image " +
-                    _vm._s(_vm.project_image) +
-                    "\n                            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "project-short-description" }, [
-                _vm._v(
-                  "\n                                Project short description " +
-                    _vm._s(_vm.project_short_description) +
-                    "\n                            "
-                )
+                _c("img", { attrs: { src: _vm.project_image, alt: "image" } })
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "project-description" }, [
@@ -45316,28 +45309,36 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "project-date" }, [
-                _vm._v(
-                  "\n                                Project date " +
-                    _vm._s(_vm.project_date) +
-                    "\n                            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "project-icon" }, [
-                _vm._v(
-                  "\n                                Project icon " +
-                    _vm._s(_vm.project_icon) +
-                    "\n                            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "project-state" }, [
-                _vm._v(
-                  "\n                                Project state " +
-                    _vm._s(_vm.project_state) +
-                    "\n                            "
-                )
+              _c("table", { staticClass: "project-meta" }, [
+                _c("tr", [
+                  _c("td", { staticClass: "project-category" }, [
+                    _vm._v(
+                      "\n                                        " +
+                        _vm._s(_vm.project_category) +
+                        "\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-date" }, [
+                    _vm._v(
+                      "\n                                        " +
+                        _vm._s(_vm.project_date) +
+                        "\n                                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-icon" }, [
+                    _c("i", { class: "fa fa-" + _vm.project_icon })
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-state" }, [
+                    _vm._v(
+                      "\n                                        " +
+                        _vm._s(_vm.project_state) +
+                        "\n                                    "
+                    )
+                  ])
+                ])
               ])
             ]
           )

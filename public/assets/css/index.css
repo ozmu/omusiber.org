@@ -245,3 +245,57 @@ a.bttn-unite.bttn-lg.bttn-primary{
 div.portfolio-item{
     cursor: pointer;
 }
+
+#project-show .project-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+#project-show .project-image img{
+    display: block;
+    margin:0 auto;
+}
+
+#project-show .project-description {
+    margin: 20px 0;
+}
+
+#project-show .project-meta .project-category,#project-show .project-meta .project-date,
+#project-show .project-meta .project-icon,#project-show .project-meta .project-state{
+    width: 25%;
+}
+
+#project-show table.project-meta {
+    margin:0 auto;
+}
+
+#project-show .project-meta tr td{
+    text-align: center;
+}
+
+#project-show button {
+    padding: 10px 25px;
+    background: transparent;
+    color: #e1e1e1;
+    font-size:15px;
+    border: 1px solid #e1e1e1;
+    text-transform: capitalize;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+#project-show button:hover {
+    background: #FFFFFF;
+    color: #000;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+
+}
