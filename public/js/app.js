@@ -1105,6 +1105,7 @@ Vue.component('activities', __webpack_require__(54));
 Vue.component('gallery', __webpack_require__(57));
 Vue.component('members', __webpack_require__(60));
 Vue.component('site-projects', __webpack_require__(63));
+Vue.component('site-activities', __webpack_require__(76));
 
 var app = new Vue({
   el: '#home'
@@ -45395,6 +45396,437 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(77)
+/* template */
+var __vue_template__ = __webpack_require__(78)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Site/Activities.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a47e3622", Component.options)
+  } else {
+    hotAPI.reload("data-v-a47e3622", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['activities'],
+
+    data: function data() {
+        return {};
+    },
+
+
+    methods: {}
+});
+
+/***/ }),
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "activities" }, [
+      _c("h3", { staticClass: "uppercase lg-title content-title" }, [
+        _c("span", { staticClass: "titles" }, [_vm._v("Etkinliklerimiz")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "no-padding" }, [
+        _c("div", { staticClass: "row-eq-height" }, [
+          _c("div", { staticClass: "col-md-5" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-2" }, [
+            _c("div", { staticClass: "center-v-menu" }, [
+              _c(
+                "ul",
+                { staticClass: "nav nav-tabs", attrs: { role: "tablist" } },
+                [
+                  _c(
+                    "li",
+                    { staticClass: "active", attrs: { role: "presentation" } },
+                    [
+                      _c("h4", [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "#vision",
+                              role: "tab",
+                              "data-toggle": "tab"
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "fa fa-eye font-30 main-color clear-icon"
+                            }),
+                            _vm._v("Our Company Vision")
+                          ]
+                        )
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("li", { attrs: { role: "presentation" } }, [
+                    _c("h4", [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "#mission",
+                            role: "tab",
+                            "data-toggle": "tab"
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "fa fa-clock-o font-30 main-color clear-icon"
+                          }),
+                          _vm._v("Our Company Mission")
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { attrs: { role: "presentation" } }, [
+                    _c("h4", [
+                      _c(
+                        "a",
+                        {
+                          attrs: {
+                            href: "#strategy",
+                            role: "tab",
+                            "data-toggle": "tab"
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "fa fa-gears font-30 main-color clear-icon"
+                          }),
+                          _vm._v("Our Company Strategy")
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content" }, [
+          _c(
+            "div",
+            {
+              staticClass: "tab-pane fade in active",
+              attrs: { role: "tabpanel", id: "vision" }
+            },
+            [
+              _c("div", { staticClass: "row-eq-height" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-md-5 md-padding gry-bg pattern-3" },
+                  [
+                    _c("div", { staticClass: "tbl tbl-70" }, [
+                      _c("div", { staticClass: "heading style3" }, [
+                        _c("h3", { staticClass: "uppercase" }, [
+                          _vm._v("Our Company "),
+                          _c("span", { staticClass: "main-color bolder" }, [
+                            _vm._v("Vision")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("It is BOOKRA that change your life style")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "t-justify lg-txt" }, [
+                        _vm._v(
+                          "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                            "
+                        )
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-2" }, [
+                  _c("div", { staticClass: "dash-bord" })
+                ]),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "col-md-5 md-padding",
+                  staticStyle: {
+                    background:
+                      "url('assets/images/bgs/education.jpg') no-repeat 0 0",
+                    "background-size": "cover"
+                  }
+                })
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "tab-pane fade",
+              attrs: { role: "tabpanel", id: "mission" }
+            },
+            [
+              _c("div", { staticClass: "row-eq-height" }, [
+                _c("div", {
+                  staticClass: "col-md-5 md-padding",
+                  staticStyle: {
+                    background:
+                      "url('assets/images/bgs/girl.jpg') no-repeat 0 0",
+                    "background-size": "cover"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-2" }, [
+                  _c("div", { staticClass: "dash-bord" })
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-md-5 md-padding gry-bg pattern-2" },
+                  [
+                    _c("div", { staticClass: "tbl tbl-70" }, [
+                      _c("div", { staticClass: "heading style3" }, [
+                        _c("h3", { staticClass: "uppercase" }, [
+                          _vm._v("Our Company "),
+                          _c("span", { staticClass: "main-color bolder" }, [
+                            _vm._v("Mission")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("It is BOOKRA that change your life style")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "t-justify lg-txt" }, [
+                        _vm._v(
+                          "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                            "
+                        )
+                      ])
+                    ])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "tab-pane fade",
+              attrs: { role: "tabpanel", id: "strategy" }
+            },
+            [
+              _c("div", { staticClass: "row-eq-height" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-md-5 md-padding gry-bg pattern-1" },
+                  [
+                    _c("div", { staticClass: "tbl tbl-70" }, [
+                      _c("div", { staticClass: "heading style3" }, [
+                        _c("h3", { staticClass: "uppercase" }, [
+                          _vm._v("Our Company "),
+                          _c("span", { staticClass: "main-color bolder" }, [
+                            _vm._v("Strategy")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v("It is BOOKRA that change your life style")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", { staticClass: "t-justify lg-txt" }, [
+                        _vm._v(
+                          "\n                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                            "
+                        )
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-2" }, [
+                  _c("div", { staticClass: "dash-bord" })
+                ]),
+                _vm._v(" "),
+                _c("div", {
+                  staticClass: "col-md-5 md-padding",
+                  staticStyle: {
+                    background:
+                      "url('assets/images/blog/large/1.jpg') no-repeat 0 0"
+                  }
+                })
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a47e3622", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

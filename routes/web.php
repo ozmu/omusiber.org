@@ -21,6 +21,7 @@ Route::get('/docs','DocsController@index');
 Auth::routes();
 
 Route::get('projects','IndexController@projects');
+Route::get('activities','IndexController@activities');
 
 Route::get('subscribe','MembersController@newMember');
 Route::post('subscribe','MembersController@newMembertoDB');

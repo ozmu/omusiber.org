@@ -7,6 +7,7 @@ use App\Contact;
 use App\Title;
 use App\Text;
 use App\Project;
+use App\Activity;
 use Illuminate\Support\Arr;
 use PhpParser\Node\Expr\Array_;
 
@@ -30,6 +31,11 @@ class IndexController extends Controller
 
     public function projects(){
         $projects = Project::all();
-        return view('projects',compact('projects'));
+        return view('projects', compact('projects'));
+    }
+
+    public function activities(){
+        $activities = Activity::all();
+        return view('activities', compact('activities'));
     }
 }
