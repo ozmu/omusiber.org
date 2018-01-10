@@ -11,3 +11,39 @@ Organizasyonlarımızda aktif görev almak ve hep beraber daha güçlü bir topl
 ### Hata bildirirseniz seviniriz! :)
 
 Biz kâr amacı gütmeyen gönüllü bir topluluğuz. Kodu açma sebebimiz gözümüzden kaçan yerleri düzeltmenizdir. Bu konuda yardımcı olursanız çok seviniriz.
+
+# Projeyi Edinme
+
+> Öncelikle repository'yi indirmek için:
+
+`git clone https://github.com/ozmu/omusiber.org`
+
+`cd omusiber.org`
+
+> Composer ve npm bağımlılıklarını kurmak için
+
+`composer install`
+
+`npm install`
+
+`npm run dev`
+
+> .env dosyası oluşturma ve veritabanı ayarlarını kaydetme
+
+`cp .env.example .env`
+
+`vi .env`
+
+> Örnek veritabanı ayarı:
+
+`DB_CONNECTION=mysql`
+
+ `DB_HOST=127.0.0.1`
+ 
+ `DB_PORT=3306`
+ 
+ `DB_DATABASE=veritabanim`
+ 
+ `DB_USERNAME=kullaniciadim`
+ 
+ `DB_PASSWORD=sifrem`
