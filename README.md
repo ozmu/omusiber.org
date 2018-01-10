@@ -12,6 +12,8 @@ Organizasyonlarımızda aktif görev almak ve hep beraber daha güçlü bir topl
 
 Biz kâr amacı gütmeyen gönüllü bir topluluğuz. Kodu açma sebebimiz gözümüzden kaçan yerleri düzeltmenizdir. Bu konuda yardımcı olursanız çok seviniriz.
 
+> omusiber.org adresi güncel değildir. Çünkü proje geliştirilme aşamasında, stabil sürüme ulaşmadıkça omusiber.org güncellenmeyecektir.
+
 # Projeyi Edinme
 
 > Öncelikle repository'yi indirmek için:
