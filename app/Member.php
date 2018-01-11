@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
+    protected $fillable = [
+      'name', 'phone', 'email', 'telegram'
+    ];
     public function active(){
         return $this->hasOne('App\ActiveMember');
     }

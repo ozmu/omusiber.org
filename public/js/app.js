@@ -1072,7 +1072,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(66);
+module.exports = __webpack_require__(69);
 
 
 /***/ }),
@@ -1105,7 +1105,7 @@ Vue.component('activities', __webpack_require__(54));
 Vue.component('gallery', __webpack_require__(57));
 Vue.component('members', __webpack_require__(60));
 Vue.component('site-projects', __webpack_require__(63));
-Vue.component('site-activities', __webpack_require__(76));
+Vue.component('site-activities', __webpack_require__(66));
 
 var app = new Vue({
   el: '#home'
@@ -45393,29 +45393,14 @@ if (false) {
 
 /***/ }),
 /* 66 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 67 */,
-/* 68 */,
-/* 69 */,
-/* 70 */,
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(77)
+var __vue_script__ = __webpack_require__(67)
 /* template */
-var __vue_template__ = __webpack_require__(78)
+var __vue_template__ = __webpack_require__(68)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -45455,7 +45440,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 77 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45556,7 +45541,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 78 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45827,6 +45812,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-a47e3622", module.exports)
   }
 }
+
+/***/ }),
+/* 69 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

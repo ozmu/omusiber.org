@@ -19,7 +19,7 @@ class CreateMembersTable extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('role');
-            $table->string('telegram');
+            $table->string('telegram')->nullable();
             $table->timestamps();
         });
     }

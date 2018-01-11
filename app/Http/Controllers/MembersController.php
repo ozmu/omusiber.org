@@ -31,13 +31,13 @@ class MembersController extends Controller
     }
 
     public function newMembertoDB(Request $request){
-        $member = new Member;
-        $member->name = $request->input('questions.0.value');
-        $member->phone = $request->input('questions.1.value');
-        $member->email = $request->input('questions.2.value');
-        $member->telegram = $request->input('questions.3.value');
-        $member->role = "member";
-        $member->save();
+        Member::create([
+           'name' =>  $request->input('questions.0.value'),
+           'phone' => $request->input('questions.1.value'),
+           'email' => $request->input('questions.2.value'),
+           'telegram' => $request->input('questions.3.value'),
+           'role' => 'member'
+        ]);
     }
 
     public function addMember(){

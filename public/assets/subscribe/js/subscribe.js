@@ -42,23 +42,25 @@ var questions = [
 
         // AJAX
 
-        $.ajax({
+        /*$.ajax({
             type:'POST',
-            url:'subscribe',
+            url:'/subscribe',
             data:{questions:questions},
             headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
-        });
+        });*/
 
         // add the h1 at the end with the welcome text
         var h1 = document.createElement('h1');
         h1.className = "main-text";
         h1.appendChild(document.createTextNode('OMUSiber\'e Hoşgeldin! ' + questions[0].value + ' :)'));
         setTimeout(function() {
-            register.parentElement.appendChild(h1)
-            setTimeout(function() {h1.style.opacity = 1}, 50)
-        }, eTime)
+            register.parentElement.appendChild(h1);
+            setTimeout(function() {h1.style.opacity = 1}, 50);
+            setTimeout(function () {h1.style.opacity = 0},5000);
+            setTimeout(function () {window.location.href = '/docs'}, 6000);
+        }, eTime);
 
     }
 
