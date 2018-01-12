@@ -21,8 +21,8 @@ class AdminController extends Controller
         return view('admin.messages',compact('messages'));
     }
 
-    public function deleteMessage($id){
-        return "delete geldi id'si: ".$id;
+    public function deleteMessage(Request $request){
+        return Contact::destroy($request->input('id'));
     }
 
     public function aboutUs(){
