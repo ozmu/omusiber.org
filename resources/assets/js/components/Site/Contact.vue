@@ -102,12 +102,21 @@
                     });
                         this.error = false;
                         this.success = true;
+                        this.name  = '';
+                        this.surname  = '';
+                        this.email  = '';
+                        this.subject  = '';
+                        this.message  = '';
 
                 }
                 else{
                     this.success = false;
                     this.error =  true;
-                    console.log('hata')
+                    var self = this;
+                    setTimeout(function(){
+                        self.error = false;
+                    }, 3000);
+
 
                 }
             }
