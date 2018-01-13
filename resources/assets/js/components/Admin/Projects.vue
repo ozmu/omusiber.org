@@ -59,9 +59,11 @@
         </div>
 
         <div class="projects" v-if="!add">
-            <div class="project" v-for="project in projects">
+            <div class="project" v-for="(project, index) in projects">
+                <i class="fa fa-close" @click="deleteProject(index,project.id)"></i>
+                <i class="fa fa-refresh" @click="updateProject(project)"></i>
                 <div class="project-title">
-                    proje başlığı
+                    {{ project.project_title }}
                 </div>
                 <div class="project-image">
                     <img src="https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg" alt="img">
@@ -69,19 +71,19 @@
                 <table class="project-meta">
                     <tr>
                         <td class="project-icon">ikon</td>
-                        <td class="project-icon">ikon2</td>
+                        <td class="project-icon">{{ project.icon }}</td>
                     </tr>
                     <tr>
                         <td class="project-category">kategori</td>
-                        <td class="project-category">kategori2</td>
+                        <td class="project-category">{{ project.category }}</td>
                     </tr>
                     <tr>
                         <td class="project-date">tarih</td>
-                        <td class="project-date">tarih2</td>
+                        <td class="project-date">{{ project.date }}</td>
                     </tr>
                     <tr>
                         <td class="project-state">durum</td>
-                        <td class="project-state">durum2</td>
+                        <td class="project-state">{{ project.state }}</td>
                     </tr>
                 </table>
             </div>
@@ -114,6 +116,7 @@
                     return;
                 this.createImage(files[0]);
             },
+
             createImage(file) {
                 let reader = new FileReader();
                 reader.onload = (e) => {
@@ -121,6 +124,7 @@
                 };
                 reader.readAsDataURL(file);
             },
+
             addProject(){
                 axios.post('/admin/projects',{
                     name: this.name,
@@ -136,6 +140,14 @@
                     this.error = true;
                     console.log(e)
                 })
+            },
+
+            deleteProject(index,project_id){
+                console.log(project_id)
+            },
+
+            updateProject(project){
+                console.log(project)
             }
         }
     }

@@ -42,9 +42,8 @@ class AdminController extends Controller
     }
 
     public function projects(){
-        $titles = Title::first();
         $projects = Project::all();
-        return view('admin.projects',compact('titles','projects'));
+        return view('admin.projects',compact('projects'));
     }
 
     public function projectsPOST(Request $request){

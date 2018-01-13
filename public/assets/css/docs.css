@@ -430,6 +430,20 @@ div#project-add  div{
     padding: 0 15px;
 }
 
+.projects .fa {
+    font-size: 24px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.projects .fa.fa-close {
+    right: 30px;
+}
+
+.projects .fa.fa-refresh{
+    right: 60px
+}
+
 
 /* Gallery */
 
