@@ -45,6 +45,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::post('about-us','AdminController@aboutUsPOST');
     Route::get('projects','AdminController@projects');
     Route::post('projects','AdminController@projectsPOST');
+    Route::delete('projects','AdminController@deleteProject');
     Route::get('activities','AdminController@activities');
     Route::post('activities','AdminController@activitiesPOST');
     Route::get('gallery','AdminController@gallery');

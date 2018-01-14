@@ -59,7 +59,7 @@
         </div>
 
         <div class="projects" v-if="!add">
-            <div class="project" v-for="(project, index) in projects">
+            <div class="project" v-for="(project, index) in allProjects">
                 <i class="fa fa-close" @click="deleteProject(index,project.id)"></i>
                 <i class="fa fa-refresh" @click="updateProject(project)"></i>
                 <div class="project-title">
@@ -92,6 +92,10 @@
 </template>
 
 <script>
+    import VueSweetalert2 from 'vue-sweetalert2';
+
+    Vue.use(VueSweetalert2);
+
     export default {
         props: ['projects'],
 
@@ -106,7 +110,12 @@
                 add: false,
                 success: false,
                 error: false,
+                allProjects: [],
             }
+        },
+
+        created(){
+            this.allProjects = this.projects;
         },
 
         methods: {
@@ -143,7 +152,34 @@
             },
 
             deleteProject(index,project_id){
-                console.log(project_id)
+                var self = this;
+                this.$swal({
+                    title: 'Emin misin?',
+                    text: "Sildiğin projeyi geri alamazsın!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Evet, sil!',
+                    cancelButtonText: 'Hayır'
+                }).then((result) => {
+                    if (result.value) {
+                        axios.delete('/admin/projects',{
+                            params: {project_id: project_id}
+                        }).then(response => {
+                            if(response.status === 200){
+                                self.$swal(
+                                    'Silindi!',
+                                    'Proje silindi.',
+                                    'success'
+                                );
+                                self.allProjects.splice(index,1);
+                            }
+                        });
+
+                    }
+                });
+
             },
 
             updateProject(project){

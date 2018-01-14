@@ -74,6 +74,10 @@ class AdminController extends Controller
 
     }
 
+    public function deleteProject(Request $request){
+        return Project::destroy($request->input('project_id'));
+    }
+
     public function activities(){
         return view('admin.activities');
     }
