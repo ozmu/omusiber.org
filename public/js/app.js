@@ -44241,6 +44241,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -44252,6 +44264,8 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
     data: function data() {
         return {
             name: '',
+            short_desc: '',
+            description: '',
             image: '',
             icon: '',
             category: '',
@@ -44288,6 +44302,8 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
 
             axios.post('/admin/projects', {
                 name: this.name,
+                short_desc: this.short_desc,
+                long_desc: this.description,
                 image: this.image,
                 icon: this.icon,
                 category: this.category,
@@ -44409,6 +44425,66 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "short_description" } }, [
+                  _vm._v("Kısa Açıklama*")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.short_desc,
+                      expression: "short_desc"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "short_description" },
+                  domProps: { value: _vm.short_desc },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.short_desc = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "description" } }, [
+                  _vm._v("Uzun Açıklama*")
+                ]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.description,
+                      expression: "description"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "description", rows: "3" },
+                  domProps: { value: _vm.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.description = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
               _c(
                 "div",
                 { staticClass: "col-md-6", staticStyle: { margin: "0 25%" } },
@@ -44420,7 +44496,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control",
-                  attrs: { type: "file", id: "image" },
+                  attrs: { type: "file", id: "image", name: "image" },
                   on: { change: _vm.onFileChange }
                 })
               ])

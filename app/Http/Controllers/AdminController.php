@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Contact;
 use App\Title;
 use App\Text;
@@ -49,6 +50,8 @@ class AdminController extends Controller
     public function projectsPOST(Request $request){
         /*$request->validate([
             'title' => 'required',
+            'short_desc' => 'required',
+            'long_desc' => 'required',
             'image' => 'required|image64:jpeg,jpg,png',
             'icon'  => 'required',
             'category' => 'required',
@@ -56,9 +59,17 @@ class AdminController extends Controller
             'state' => 'required'
         ]);*/
 
-        $imageData = $request->input('image');
-        return $imageData;
-/*
+
+        if(Input::hasFile('image')){
+            $file = Input::file('image');
+            $file->move('uploads', $file->getClientOriginalName());
+        }
+
+
+        //$imageData = $request->input('image');
+        //return $imageData;
+
+        /*
         Project::create([
             'title' => $request->input('title'),
             'icon' => $request->input('icon'),
@@ -69,7 +80,6 @@ class AdminController extends Controller
         $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
         Image::make($request->get('image'))->save(public_path('images/').$fileName);
         return response()->json(['error'=>false]);
-
         */
 
     }

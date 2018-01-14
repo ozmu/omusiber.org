@@ -27,12 +27,24 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-12">
+                        <label for="short_description">Kısa Açıklama*</label>
+                        <input type="text" id="short_description" class="form-control" v-model="short_desc">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="description">Uzun Açıklama*</label>
+                        <textarea id="description" class="form-control" v-model="description" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-6" style="margin: 0 25%;">
                         <img :src="image">
                     </div>
                     <div class="col-md-12">
                         <label for="image">Afiş*</label>
-                        <input type="file" class="form-control" id="image" v-on:change="onFileChange">
+                        <input type="file" class="form-control" id="image" name="image" v-on:change="onFileChange">
                     </div>
                 </div>
                 <div class="row">
@@ -102,6 +114,8 @@
         data(){
             return {
                 name: '',
+                short_desc: '',
+                description: '',
                 image: '',
                 icon: '',
                 category: '',
@@ -137,6 +151,8 @@
             addProject(){
                 axios.post('/admin/projects',{
                     name: this.name,
+                    short_desc: this.short_desc,
+                    long_desc: this.description,
                     image: this.image,
                     icon: this.icon,
                     category: this.category,
