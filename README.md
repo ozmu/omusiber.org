@@ -16,36 +16,36 @@ Biz kâr amacı gütmeyen gönüllü bir topluluğuz. Kodu açma sebebimiz göz�
 
 # Projeyi Edinme
 
-> Öncelikle repository'yi indirmek için:
+Öncelikle repository'yi indirmek için:
 
-`git clone https://github.com/ozmu/omusiber.org`
+    $ git clone https://github.com/ozmu/omusiber.org
+    $ cd omusiber.org
 
-`cd omusiber.org`
+Composer ve npm bağımlılıklarını kurmak için
 
-> Composer ve npm bağımlılıklarını kurmak için
+    $ composer install
+    $ npm install
+    $ npm run dev
 
-`composer install`
+.env dosyası oluşturma ve veritabanı ayarlarını kaydetme
 
-`npm install`
+    $ cp .env.example .env
+    $ vi .env
 
-`npm run dev`
+Örnek veritabanı ayarı:
 
-> .env dosyası oluşturma ve veritabanı ayarlarını kaydetme
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=veritabanim
+    DB_USERNAME=kullaniciadim
+    DB_PASSWORD=sifrem
+    
+Migrate etmek için:
 
-`cp .env.example .env`
+    $ php artisan migrate
+    
+Artisan kullanarak projeyi ayaklandırmak:
 
-`vi .env`
-
-> Örnek veritabanı ayarı:
-
-`DB_CONNECTION=mysql`
-
- `DB_HOST=127.0.0.1`
- 
- `DB_PORT=3306`
- 
- `DB_DATABASE=veritabanim`
- 
- `DB_USERNAME=kullaniciadim`
- 
- `DB_PASSWORD=sifrem`
+    $ php artisan serve
+    
