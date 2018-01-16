@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Activity;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Contact;
 use App\Title;
@@ -10,7 +11,7 @@ use App\Text;
 use App\Project;
 use App\Gallery;
 use App\Member;
-use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -50,48 +51,38 @@ class AdminController extends Controller
     }
 
     public function projectsPOST(Request $request){
-        /*$request->validate([
+        /*
+        $request->validate([
             'title' => 'required',
             'short_desc' => 'required',
             'long_desc' => 'required',
-            'image' => 'required|image64:jpeg,jpg,png',
             'icon'  => 'required',
             'category' => 'required',
             'date' => 'required',
             'state' => 'required'
         ]);*/
 
-        /*
-        if($request->hasFile('image')){
-            $file = $request->file('image');
-            $file->move('uploads', $file->getClientOriginalName());
-            return "evet var";
+        $img_path = '';
+
+        if(Input::hasFile('image')){
+            $img = Input::file('image');
+            $img_path = str_replace(' ','',strtolower($request->input('name'))) . '.' . $img->getClientOriginalExtension();
+            $img->move('assets/images/projects', $img_path);
         }
-        return "yok";
-       */
 
-        $image = $request->input('image');
-        $img = Image::make($image);
-        return $img;
+        $img_path = 'assets/images/projects/' . $img_path;
 
-
-
-
-        //$imageData = $request->input('image');
-        //return $imageData;
-
-        /*
         Project::create([
-            'title' => $request->input('title'),
+            'project_title' => $request->input('name'),
+            'image_path' => $img_path,
             'icon' => $request->input('icon'),
             'category' => $request->input('category'),
             'date' => $request->input('date'),
             'state' => $request->input('state'),
+            'short_description' => $request->input('short_desc'),
+            'description' => $request->input('long_desc'),
         ]);
-        $fileName = Carbon::now()->timestamp . '_' . uniqid() . '.' . explode('/', explode(':', substr($imageData, 0, strpos($imageData, ';')))[1])[1];
-        Image::make($request->get('image'))->save(public_path('images/').$fileName);
-        return response()->json(['error'=>false]);
-        */
+
 
     }
 

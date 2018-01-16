@@ -78,23 +78,31 @@
                     {{ project.project_title }}
                 </div>
                 <div class="project-image">
-                    <img src="https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg" alt="img">
+                    <img :src="'/' + project.image_path" alt="img">
+                </div>
+                <div class="project-short-desc">
+                    <h1>Kısa Açıklama</h1>
+                    <div>{{ project.short_description }}</div>
+                </div>
+                <div class="project-description">
+                    <h1>Açıklama</h1>
+                    <div>{{ project.description }}</div>
                 </div>
                 <table class="project-meta">
                     <tr>
-                        <td class="project-icon">ikon</td>
+                        <td class="project-icon">İkon</td>
                         <td class="project-icon">{{ project.icon }}</td>
                     </tr>
                     <tr>
-                        <td class="project-category">kategori</td>
+                        <td class="project-category">Kategori</td>
                         <td class="project-category">{{ project.category }}</td>
                     </tr>
                     <tr>
-                        <td class="project-date">tarih</td>
+                        <td class="project-date">Tarih</td>
                         <td class="project-date">{{ project.date }}</td>
                     </tr>
                     <tr>
-                        <td class="project-state">durum</td>
+                        <td class="project-state">Durum</td>
                         <td class="project-state">{{ project.state }}</td>
                     </tr>
                 </table>
@@ -149,16 +157,23 @@
             },
 
             addProject(){
-                axios.post('/admin/projects',{
-                    name: this.name,
-                    short_desc: this.short_desc,
-                    long_desc: this.description,
-                    image: this.image,
-                    icon: this.icon,
-                    category: this.category,
-                    date: this.date,
-                    state: this.state,
-                }).then((response) => {
+                let formData = new FormData();
+                let imagefile = document.querySelector('#image');
+                formData.append('image', imagefile.files[0]);
+                formData.append('name', this.name);
+                formData.append('short_desc', this.short_desc);
+                formData.append('long_desc', this.description);
+                formData.append('icon', this.icon);
+                formData.append('category', this.category);
+                formData.append('date', this.date);
+                formData.append('state', this.state);
+
+
+                const headers = {
+                    'Content-Type': 'multipart/form-data'
+                };
+
+                axios.post('/admin/projects', formData, headers).then((response) => {
                     this.success = true;
                     console.log(response);
                 }).catch((e) => {

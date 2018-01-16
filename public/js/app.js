@@ -44269,6 +44269,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -44316,16 +44324,22 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
         addProject: function addProject() {
             var _this2 = this;
 
-            axios.post('/admin/projects', {
-                name: this.name,
-                short_desc: this.short_desc,
-                long_desc: this.description,
-                image: this.image,
-                icon: this.icon,
-                category: this.category,
-                date: this.date,
-                state: this.state
-            }).then(function (response) {
+            var formData = new FormData();
+            var imagefile = document.querySelector('#image');
+            formData.append('image', imagefile.files[0]);
+            formData.append('name', this.name);
+            formData.append('short_desc', this.short_desc);
+            formData.append('long_desc', this.description);
+            formData.append('icon', this.icon);
+            formData.append('category', this.category);
+            formData.append('date', this.date);
+            formData.append('state', this.state);
+
+            var headers = {
+                'Content-Type': 'multipart/form-data'
+            };
+
+            axios.post('/admin/projects', formData, headers).then(function (response) {
                 _this2.success = true;
                 console.log(response);
             }).catch(function (e) {
@@ -47114,11 +47128,27 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _vm._m(0, true),
+              _c("div", { staticClass: "project-image" }, [
+                _c("img", {
+                  attrs: { src: "/" + project.image_path, alt: "img" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-short-desc" }, [
+                _c("h1", [_vm._v("Kısa Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(project.short_description))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-description" }, [
+                _c("h1", [_vm._v("Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(project.description))])
+              ]),
               _vm._v(" "),
               _c("table", { staticClass: "project-meta" }, [
                 _c("tr", [
-                  _c("td", { staticClass: "project-icon" }, [_vm._v("ikon")]),
+                  _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
                   _vm._v(" "),
                   _c("td", { staticClass: "project-icon" }, [
                     _vm._v(_vm._s(project.icon))
@@ -47127,7 +47157,7 @@ var render = function() {
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", { staticClass: "project-category" }, [
-                    _vm._v("kategori")
+                    _vm._v("Kategori")
                   ]),
                   _vm._v(" "),
                   _c("td", { staticClass: "project-category" }, [
@@ -47136,7 +47166,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("tr", [
-                  _c("td", { staticClass: "project-date" }, [_vm._v("tarih")]),
+                  _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
                   _vm._v(" "),
                   _c("td", { staticClass: "project-date" }, [
                     _vm._v(_vm._s(project.date))
@@ -47144,7 +47174,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("tr", [
-                  _c("td", { staticClass: "project-state" }, [_vm._v("durum")]),
+                  _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
                   _vm._v(" "),
                   _c("td", { staticClass: "project-state" }, [
                     _vm._v(_vm._s(project.state))
@@ -47157,22 +47187,7 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "project-image" }, [
-      _c("img", {
-        attrs: {
-          src:
-            "https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg",
-          alt: "img"
-        }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

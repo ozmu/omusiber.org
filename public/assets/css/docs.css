@@ -446,12 +446,15 @@ div#project-add  div, div#activity-add div{
 
 /* Activities */
 
-.activities .activity .activity-short-desc,.activities .activity .activity-description {
+.activities .activity .activity-short-desc,.activities .activity .activity-description,
+.projects .project .project-short-desc,.projects .project .project-description
+{
     margin: 20px 0;
 }
 
 
-.activities .activity .activity-short-desc div,.activities .activity .activity-description div {
+.activities .activity .activity-short-desc div,.activities .activity .activity-description div,
+.projects .project .project-short-desc div,.projects .project .project-description div{
     text-align: center;
 }
 

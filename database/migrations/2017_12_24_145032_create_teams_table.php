@@ -32,6 +32,7 @@ class CreateTeamsTable extends Migration
             $table->string('instagram')->nullable();
             $table->string('github')->nullable();
             $table->string('linkedin')->nullable();
+            $table->boolean('is_active');
             $table->timestamps();
         });
     }
