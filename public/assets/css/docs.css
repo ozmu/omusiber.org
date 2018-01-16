@@ -177,7 +177,7 @@ ul.categories li:hover {
     margin:20px 0;
 }
 
-.add-tool,.add-project {
+.add-tool,.add-project, .add-activity {
     margin:0 auto;
     background-color: #d0d0d0;
     padding:20px;
@@ -188,7 +188,7 @@ ul.categories li:hover {
     text-transform: uppercase;
 }
 
-.add-project {
+.add-project, .add-activity {
     width: 30%;
     cursor: pointer;
 }
@@ -379,7 +379,7 @@ div#edit div {
 div#edit div textarea {
     overflow-y: hidden;
 }
-div#edit button.btn,div#project-add button.btn {
+div#edit button.btn,div#project-add button.btn, div#activity-add button.btn {
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -389,59 +389,70 @@ div#edit button.btn,div#project-add button.btn {
 
 /* Projects */
 
-.projects {
+.projects, .activities {
     margin: 40px 0;
 }
 
-.projects .project {
+.projects .project, .activities .activity {
     background: #e1e1e1;
     padding: 20px;
     margin:20px 0;
 }
 
-.projects .project .project-title {
+.projects .project .project-title, .activities .activity .activity-title {
     font-size: 22px;
     text-transform: capitalize;
     font-weight: 700;
     text-align: center;
 }
 
-.projects .project .project-image img{
+.projects .project .project-image img, .activities .activity .activity-image img{
     height: 275px;
     margin-top: 35px;
     margin-bottom: 30px;
 }
 
-.projects .project table{
+.projects .project table, .activities .activity table{
     width: auto;
     margin:0 auto;
 }
 
-.projects .project table tr:nth-child(odd){
+.projects .project table tr:nth-child(odd), .activities .activity table tr:nth-child(odd){
     background: #9de0f7;
 }
 
-.projects .project table td {
+.projects .project table td, .activities .activity table td {
     padding:10px;
 }
 
-div#project-add  div{
+div#project-add  div, div#activity-add div{
     margin: 10px 0;
     padding: 0 15px;
 }
 
-.projects .fa {
+.projects .fa, .activities .fa {
     font-size: 24px;
     position: absolute;
     cursor: pointer;
 }
 
-.projects .fa.fa-close {
+.projects .fa.fa-close, .activities .fa.fa-close {
     right: 30px;
 }
 
-.projects .fa.fa-refresh{
+.projects .fa.fa-refresh, .activities .fa.fa-refresh{
     right: 60px
+}
+
+/* Activities */
+
+.activities .activity .activity-short-desc,.activities .activity .activity-description {
+    margin: 20px 0;
+}
+
+
+.activities .activity .activity-short-desc div,.activities .activity .activity-description div {
+    text-align: center;
 }
 
 

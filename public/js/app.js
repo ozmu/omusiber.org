@@ -47327,22 +47327,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['projects'],
+    props: ['activities'],
 
     data: function data() {
         return {
-            name: '',
+            activity_title: '',
+            location: '',
+            short_desc: '',
+            description: '',
             image: '',
-            icon: '',
+            from: '',
             category: '',
             date: '',
             state: '',
+            allActivities: [],
             add: false,
             success: false,
             error: false
         };
+    },
+    created: function created() {
+        this.allActivities = this.activities;
     },
 
 
@@ -47361,13 +47398,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             };
             reader.readAsDataURL(file);
         },
-        addActivities: function addActivities() {
+        addActivity: function addActivity() {
             var _this2 = this;
 
             axios.post('/admin/activities', {
-                name: this.name,
+                activity_title: this.activity_title,
+                location: this.location,
+                short_desc: this.short_desc,
+                description: this.description,
                 image: this.image,
-                icon: this.icon,
+                from: this.from,
                 category: this.category,
                 date: this.date,
                 state: this.state
@@ -47377,6 +47417,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }).catch(function () {
                 _this2.error = true;
             });
+        },
+        deleteActivity: function deleteActivity(index, activity_id) {
+            var self = this;
+            this.$swal({
+                title: 'Emin misin?',
+                text: "Sildiğin etkinliği geri alamazsın!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, sil!',
+                cancelButtonText: 'Hayır'
+            }).then(function (result) {
+                if (result.value) {
+                    axios.delete('/admin/activities', {
+                        params: { activity_id: activity_id }
+                    }).then(function (response) {
+                        if (response.status === 200) {
+                            self.$swal('Silindi!', 'Etkinlik silindi.', 'success');
+                            self.allActivities.splice(index, 1);
+                        }
+                    });
+                }
+            });
+        },
+        updateActivity: function updateActivity(activity) {
+            console.log(activity);
         }
     }
 });
@@ -47414,7 +47481,7 @@ var render = function() {
       ? _c(
           "div",
           {
-            staticClass: "add-project",
+            staticClass: "add-activity",
             on: {
               click: function($event) {
                 _vm.add = !_vm.add
@@ -47427,11 +47494,11 @@ var render = function() {
     _vm._v(" "),
     _vm.add
       ? _c("div", [
-          _c("div", { attrs: { id: "project-add" } }, [
+          _c("div", { attrs: { id: "activity-add" } }, [
             _c("div", { staticClass: "row" }, [
               _c("div", { staticClass: "col-md-12" }, [
                 _c("label", { attrs: { for: "title" } }, [
-                  _vm._v("Proje Adı*")
+                  _vm._v("Etkinlik Başlığı*")
                 ]),
                 _vm._v(" "),
                 _c("input", {
@@ -47439,19 +47506,19 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.name,
-                      expression: "name"
+                      value: _vm.activity_title,
+                      expression: "activity_title"
                     }
                   ],
                   staticClass: "form-control",
                   attrs: { type: "text", id: "title" },
-                  domProps: { value: _vm.name },
+                  domProps: { value: _vm.activity_title },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.name = $event.target.value
+                      _vm.activity_title = $event.target.value
                     }
                   }
                 })
@@ -47477,9 +47544,35 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-3" }, [
-                _c("label", { attrs: { for: "icon" } }, [
-                  _vm._v("İkon(Font Awesome)")
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("label", { attrs: { for: "location" } }, [_vm._v("Konum*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.location,
+                      expression: "location"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "location" },
+                  domProps: { value: _vm.location },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.location = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-6" }, [
+                _c("label", { attrs: { for: "short_description" } }, [
+                  _vm._v("Kısa Açıklama*")
                 ]),
                 _vm._v(" "),
                 _c("input", {
@@ -47487,19 +47580,84 @@ var render = function() {
                     {
                       name: "model",
                       rawName: "v-model",
-                      value: _vm.icon,
-                      expression: "icon"
+                      value: _vm.short_desc,
+                      expression: "short_desc"
                     }
                   ],
                   staticClass: "form-control",
-                  attrs: { id: "icon", type: "text" },
-                  domProps: { value: _vm.icon },
+                  attrs: { type: "text", id: "short_description" },
+                  domProps: { value: _vm.short_desc },
                   on: {
                     input: function($event) {
                       if ($event.target.composing) {
                         return
                       }
-                      _vm.icon = $event.target.value
+                      _vm.short_desc = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "description" } }, [
+                  _vm._v("Açıklama*")
+                ]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.description,
+                      expression: "description"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    name: "description",
+                    id: "description",
+                    cols: "30",
+                    rows: "3"
+                  },
+                  domProps: { value: _vm.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.description = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-3" }, [
+                _c("label", { attrs: { for: "from" } }, [
+                  _vm._v("Düzenleyen*")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.from,
+                      expression: "from"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { id: "from", type: "text" },
+                  domProps: { value: _vm.from },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.from = $event.target.value
                     }
                   }
                 })
@@ -47588,14 +47746,112 @@ var render = function() {
             _vm._v(" "),
             _c(
               "button",
-              { staticClass: "btn btn-lg", on: { click: _vm.addProject } },
-              [_vm._v("Proje Ekle")]
+              { staticClass: "btn btn-lg", on: { click: _vm.addActivity } },
+              [_vm._v("Etkinlik Ekle")]
             )
           ])
         ])
       : _vm._e(),
     _vm._v(" "),
-    !_vm.add ? _c("div", { staticClass: "projects" }, [_vm._m(0)]) : _vm._e()
+    !_vm.add
+      ? _c(
+          "div",
+          { staticClass: "activities" },
+          _vm._l(_vm.allActivities, function(activity, index) {
+            return _c("div", { staticClass: "activity" }, [
+              _c("i", {
+                staticClass: "fa fa-close",
+                on: {
+                  click: function($event) {
+                    _vm.deleteActivity(index, activity.id)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "fa fa-refresh",
+                on: {
+                  click: function($event) {
+                    _vm.updateActivity(activity)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "activity-title" }, [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(activity.activity_title) +
+                    "\n            "
+                )
+              ]),
+              _vm._v(" "),
+              _vm._m(0, true),
+              _vm._v(" "),
+              _c("div", { staticClass: "activity-short-desc" }, [
+                _c("h1", [_vm._v("Kısa Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(activity.short_description))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "activity-description" }, [
+                _c("h1", [_vm._v("Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(activity.description))])
+              ]),
+              _vm._v(" "),
+              _c("table", { staticClass: "activity-meta" }, [
+                _c("tr", [
+                  _c("td", { staticClass: "activity-from" }, [
+                    _vm._v("Düzenleyen")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "activity-from" }, [
+                    _vm._v(_vm._s(activity.from))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "activity-category" }, [
+                    _vm._v("Kategori")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "activity-category" }, [
+                    _vm._v(_vm._s(activity.category))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "activity-date" }, [_vm._v("Tarih")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "activity-date" }, [
+                    _vm._v(_vm._s(activity.date))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "activity-state" }, [
+                    _vm._v("Durum")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "activity-state" }, [
+                    _vm._v(_vm._s(activity.state))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "activity-state" }, [
+                    _vm._v("Mekan")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "activity-state" }, [
+                    _vm._v(_vm._s(activity.location))
+                  ])
+                ])
+              ])
+            ])
+          })
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -47603,46 +47859,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "project" }, [
-      _c("div", { staticClass: "project-title" }, [
-        _vm._v("\n                Etkinlik Başlığı\n            ")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "project-image" }, [
-        _c("img", {
-          attrs: {
-            src:
-              "https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg",
-            alt: "img"
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("table", { staticClass: "project-meta" }, [
-        _c("tr", [
-          _c("td", { staticClass: "project-icon" }, [_vm._v("ikon")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "project-icon" }, [_vm._v("ikon2")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { staticClass: "project-category" }, [_vm._v("kategori")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "project-category" }, [_vm._v("kategori2")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { staticClass: "project-date" }, [_vm._v("tarih")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "project-date" }, [_vm._v("tarih2")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", { staticClass: "project-state" }, [_vm._v("durum")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "project-state" }, [_vm._v("durum2")])
-        ])
-      ])
+    return _c("div", { staticClass: "activity-image" }, [
+      _c("img", {
+        attrs: {
+          src:
+            "https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg",
+          alt: "img"
+        }
+      })
     ])
   }
 ]

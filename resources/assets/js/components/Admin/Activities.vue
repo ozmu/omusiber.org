@@ -14,16 +14,16 @@
             </div>
         </div>
 
-        <div class="add-project" v-if="!add" @click="add = !add">
+        <div class="add-activity" v-if="!add" @click="add = !add">
             Etkinlik Ekle
         </div>
 
         <div v-if="add">
-            <div id="project-add">
+            <div id="activity-add">
                 <div class="row">
                     <div class="col-md-12">
-                        <label for="title">Proje Adı*</label>
-                        <input type="text" id="title" class="form-control" v-model="name">
+                        <label for="title">Etkinlik Başlığı*</label>
+                        <input type="text" id="title" class="form-control" v-model="activity_title">
                     </div>
                 </div>
                 <div class="row">
@@ -36,9 +36,25 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-md-6">
+                        <label for="location">Konum*</label>
+                        <input type="text" id="location" class="form-control" v-model="location">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="short_description">Kısa Açıklama*</label>
+                        <input type="text" id="short_description" class="form-control" v-model="short_desc">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="description">Açıklama*</label>
+                        <textarea name="description" id="description" cols="30" rows="3" class="form-control" v-model="description"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-3">
-                        <label for="icon">İkon(Font Awesome)</label>
-                        <input id="icon" type="text" class="form-control" v-model="icon">
+                        <label for="from">Düzenleyen*</label>
+                        <input id="from" type="text" class="form-control" v-model="from">
                     </div>
                     <div class="col-md-3">
                         <label for="category">Kategori*</label>
@@ -54,34 +70,48 @@
                     </div>
                 </div>
 
-                <button class="btn btn-lg" @click="addProject">Proje Ekle</button>
+                <button class="btn btn-lg" @click="addActivity">Etkinlik Ekle</button>
             </div>
         </div>
 
-        <div class="projects" v-if="!add">
-            <div class="project">
-                <div class="project-title">
-                    Etkinlik Başlığı
+        <div class="activities" v-if="!add">
+            <div class="activity" v-for="(activity, index) in allActivities">
+                <i class="fa fa-close" @click="deleteActivity(index,activity.id)"></i>
+                <i class="fa fa-refresh" @click="updateActivity(activity)"></i>
+                <div class="activity-title">
+                    {{ activity.activity_title }}
                 </div>
-                <div class="project-image">
+                <div class="activity-image">
                     <img src="https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg" alt="img">
                 </div>
-                <table class="project-meta">
+                <div class="activity-short-desc">
+                    <h1>Kısa Açıklama</h1>
+                    <div>{{ activity.short_description }}</div>
+                </div>
+                <div class="activity-description">
+                    <h1>Açıklama</h1>
+                    <div>{{ activity.description }}</div>
+                </div>
+                <table class="activity-meta">
                     <tr>
-                        <td class="project-icon">ikon</td>
-                        <td class="project-icon">ikon2</td>
+                        <td class="activity-from">Düzenleyen</td>
+                        <td class="activity-from">{{ activity.from }}</td>
                     </tr>
                     <tr>
-                        <td class="project-category">kategori</td>
-                        <td class="project-category">kategori2</td>
+                        <td class="activity-category">Kategori</td>
+                        <td class="activity-category">{{ activity.category }}</td>
                     </tr>
                     <tr>
-                        <td class="project-date">tarih</td>
-                        <td class="project-date">tarih2</td>
+                        <td class="activity-date">Tarih</td>
+                        <td class="activity-date">{{ activity.date }}</td>
                     </tr>
                     <tr>
-                        <td class="project-state">durum</td>
-                        <td class="project-state">durum2</td>
+                        <td class="activity-state">Durum</td>
+                        <td class="activity-state">{{ activity.state }}</td>
+                    </tr>
+                    <tr>
+                        <td class="activity-state">Mekan</td>
+                        <td class="activity-state">{{ activity.location }}</td>
                     </tr>
                 </table>
             </div>
@@ -91,20 +121,28 @@
 
 <script>
     export default {
-        props: ['projects'],
+        props: ['activities'],
 
         data(){
             return {
-                name: '',
+                activity_title: '',
+                location: '',
+                short_desc: '',
+                description: '',
                 image: '',
-                icon: '',
+                from: '',
                 category: '',
                 date: '',
                 state: '',
+                allActivities: [],
                 add: false,
                 success: false,
                 error: false,
             }
+        },
+
+        created() {
+            this.allActivities = this.activities;
         },
 
         methods: {
@@ -121,11 +159,14 @@
                 };
                 reader.readAsDataURL(file);
             },
-            addActivities(){
+            addActivity(){
                 axios.post('/admin/activities',{
-                    name: this.name,
+                    activity_title: this.activity_title,
+                    location: this.location,
+                    short_desc: this.short_desc,
+                    description: this.description,
                     image: this.image,
-                    icon: this.icon,
+                    from: this.from,
                     category: this.category,
                     date: this.date,
                     state: this.state,
@@ -135,6 +176,41 @@
                 }).catch(() => {
                     this.error = true;
                 })
+            },
+
+            deleteActivity(index,activity_id){
+                var self = this;
+                this.$swal({
+                    title: 'Emin misin?',
+                    text: "Sildiğin etkinliği geri alamazsın!",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Evet, sil!',
+                    cancelButtonText: 'Hayır'
+                }).then((result) => {
+                    if (result.value) {
+                        axios.delete('/admin/activities',{
+                            params: {activity_id: activity_id}
+                        }).then(response => {
+                            if(response.status === 200){
+                                self.$swal(
+                                    'Silindi!',
+                                    'Etkinlik silindi.',
+                                    'success'
+                                );
+                                self.allActivities.splice(index,1);
+                            }
+                        });
+
+                    }
+                });
+
+            },
+
+            updateActivity(activity){
+                console.log(activity)
             }
         }
     }

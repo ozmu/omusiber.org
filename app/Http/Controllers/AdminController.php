@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Activity;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Input;
 use App\Contact;
 use App\Title;
 use App\Text;
 use App\Project;
 use App\Gallery;
 use App\Member;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -59,11 +61,20 @@ class AdminController extends Controller
             'state' => 'required'
         ]);*/
 
-
-        if(Input::hasFile('image')){
-            $file = Input::file('image');
+        /*
+        if($request->hasFile('image')){
+            $file = $request->file('image');
             $file->move('uploads', $file->getClientOriginalName());
+            return "evet var";
         }
+        return "yok";
+       */
+
+        $image = $request->input('image');
+        $img = Image::make($image);
+        return $img;
+
+
 
 
         //$imageData = $request->input('image');
@@ -89,11 +100,16 @@ class AdminController extends Controller
     }
 
     public function activities(){
-        return view('admin.activities');
+        $activities = Activity::all();
+        return view('admin.activities',compact('activities'));
     }
 
     public function activitiesPOST(Request $request){
-        return "test";
+        return $request;
+    }
+
+    public function deleteActivity(Request $request){
+        return Activity::destroy($request->input('activity_id'));
     }
 
     public function gallery(){
