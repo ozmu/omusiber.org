@@ -15,16 +15,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-
-    {!! Assets::css() !!}
-
     <!-- Plugins CSS files -->
-    <!--
     <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/assets.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{secure_asset('assets/css/shortcodes.css')}}">
-    -->
+
 
 
     @stack('styles')
@@ -138,15 +134,13 @@
 
 <!-- general script file -->
 
-{!! Assets::js() !!}
 
-
-<!--
 <script type="text/javascript" src="{{secure_asset('js/app.js')}}"></script>
+<script type="text/javascript" src="{{secure_asset('assets/js/jquery-1.12.0.min.js')}}"></script>
 <script type="text/javascript" src="{{secure_asset('assets/js/assets.js')}}"></script>
 @stack('scripts')
 <script type="text/javascript" src="{{secure_asset('assets/js/script.js')}}"></script>
--->
+
 
 </body>
 <!-- Global site tag (gtag.js) - Google Analytics -->

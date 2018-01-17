@@ -86,7 +86,7 @@ return [
 		 *
 		 * @var bool|string
 		 */
-		'pipeline' => true,
+		'pipeline' => false,
 
 		/**
 		 * Directory for storing pipelined assets.

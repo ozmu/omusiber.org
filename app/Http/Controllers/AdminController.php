@@ -51,17 +51,6 @@ class AdminController extends Controller
     }
 
     public function projectsPOST(Request $request){
-        /*
-        $request->validate([
-            'title' => 'required',
-            'short_desc' => 'required',
-            'long_desc' => 'required',
-            'icon'  => 'required',
-            'category' => 'required',
-            'date' => 'required',
-            'state' => 'required'
-        ]);*/
-
         $img_path = '';
 
         if(Input::hasFile('image')){
@@ -96,7 +85,27 @@ class AdminController extends Controller
     }
 
     public function activitiesPOST(Request $request){
-        return $request;
+        $img_path = '';
+
+        if(Input::hasFile('image')){
+            $img = Input::file('image');
+            $img_path = str_replace(' ','',strtolower($request->input('name'))) . '.' . $img->getClientOriginalExtension();
+            $img->move('assets/images/activities', $img_path);
+        }
+
+        $img_path = 'assets/images/activities/' . $img_path;
+
+        Activity::create([
+            'activity_title' => $request->input('name'),
+            'image_path' => $img_path,
+            'from' => $request->input('from'),
+            'location' => $request->input('location'),
+            'category' => $request->input('category'),
+            'date' => $request->input('date'),
+            'state' => $request->input('state'),
+            'short_description' => $request->input('short_desc'),
+            'description' => $request->input('long_desc'),
+        ]);
     }
 
     public function deleteActivity(Request $request){

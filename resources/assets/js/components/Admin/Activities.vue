@@ -82,7 +82,7 @@
                     {{ activity.activity_title }}
                 </div>
                 <div class="activity-image">
-                    <img src="https://pbs.twimg.com/profile_images/825049984626221056/mAG1IJGY_400x400.jpg" alt="img">
+                    <img :src="'/' + activity.image_path" alt="img">
                 </div>
                 <div class="activity-short-desc">
                     <h1>Kısa Açıklama</h1>
@@ -160,21 +160,29 @@
                 reader.readAsDataURL(file);
             },
             addActivity(){
-                axios.post('/admin/activities',{
-                    activity_title: this.activity_title,
-                    location: this.location,
-                    short_desc: this.short_desc,
-                    description: this.description,
-                    image: this.image,
-                    from: this.from,
-                    category: this.category,
-                    date: this.date,
-                    state: this.state,
-                }).then((response) => {
+                let formData = new FormData();
+                let imagefile = document.querySelector('#image');
+                formData.append('image', imagefile.files[0]);
+                formData.append('name', this.activity_title);
+                formData.append('short_desc', this.short_desc);
+                formData.append('long_desc', this.description);
+                formData.append('location', this.location);
+                formData.append('from', this.from);
+                formData.append('category', this.category);
+                formData.append('date', this.date);
+                formData.append('state', this.state);
+
+
+                const headers = {
+                    'Content-Type': 'multipart/form-data'
+                };
+
+                axios.post('/admin/activities', formData, headers).then((response) => {
                     this.success = true;
                     console.log(response);
-                }).catch(() => {
+                }).catch((e) => {
                     this.error = true;
+                    console.log(e)
                 })
             },
 
