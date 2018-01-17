@@ -22,6 +22,17 @@ class DocsController extends Controller
         if(Auth::check() && User::find(Auth::id())->is_admin == 1){
             $isAdmin = true;
         }
+
+        \Assets::add([
+            'assets/css/assets.css',
+            'assets/css/style.css',
+            'assets/css/shortcodes.css',
+            'js/app.js',
+            'assets/js/assets.js',
+            'assets/js/script.js',
+            'assets/js/docs.js',
+        ]);
+
         return view('documents.index',compact('datas'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
     }
 
