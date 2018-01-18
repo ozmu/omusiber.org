@@ -47895,6 +47895,10 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(87)
+}
 var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(69)
@@ -47903,7 +47907,7 @@ var __vue_template__ = __webpack_require__(70)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -47956,16 +47960,127 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['photos'],
 
     data: function data() {
-        return {};
+        return {
+            allPhotos: [],
+            description: '',
+            image: '',
+            error: false,
+            success: false,
+            add: false
+
+        };
+    },
+    created: function created() {
+        this.allPhotos = this.photos;
     },
 
 
-    methods: {}
+    methods: {
+        onFileChange: function onFileChange(e) {
+            var files = e.target.files || e.dataTransfer.files;
+            if (!files.length) return;
+            this.createImage(files[0]);
+        },
+        createImage: function createImage(file) {
+            var _this = this;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                _this.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        },
+        addPhoto: function addPhoto() {
+            var _this2 = this;
+
+            var formData = new FormData();
+            var imagefile = document.querySelector('#image');
+            formData.append('image', imagefile.files[0]);
+            formData.append('description', this.description);
+
+            var headers = {
+                'Content-Type': 'multipart/form-data'
+            };
+
+            axios.post('/admin/gallery', formData, headers).then(function (response) {
+                _this2.success = true;
+                console.log(response);
+            }).catch(function (e) {
+                _this2.error = true;
+                console.log(e);
+            });
+        },
+        deletePhoto: function deletePhoto(index, photo_id) {
+            var self = this;
+            this.$swal({
+                title: 'Emin misin?',
+                text: "Sildiğin fotoğrafı geri alamazsın!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, sil!',
+                cancelButtonText: 'Hayır'
+            }).then(function (result) {
+                if (result.value) {
+                    axios.delete('/admin/gallery', {
+                        params: { photo_id: photo_id }
+                    }).then(function (response) {
+                        if (response.status === 200) {
+                            self.$swal('Silindi!', 'Fotoğraf silindi.', 'success');
+                            self.allPhotos.splice(index, 1);
+                        }
+                    });
+                }
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -47976,21 +48091,135 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "gallery" },
-    _vm._l(_vm.photos, function(photo, index) {
-      return _c("div", { staticClass: "col-md-3 photo" }, [
-        _c("i", { staticClass: "fa" }, [_vm._v("x")]),
-        _vm._v(" "),
-        _c("img", { attrs: { src: photo.image_path, alt: index } }),
-        _vm._v(" "),
-        _c("div", { staticClass: "img-description" }, [
-          _vm._v("\n            " + _vm._s(photo.description) + "\n        ")
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "heading" }, [
+      _vm._v("\n        Galeri Düzenle\n    ")
+    ]),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "add-error row" }, [
+          _c("div", { staticClass: " alert alert-danger" }, [
+            _vm._v("\n            Lütfen formu eksiksiz doldurunuz!\n        ")
+          ])
         ])
-      ])
-    })
-  )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.success
+      ? _c("div", { staticClass: "row add-success" }, [
+          _c("div", { staticClass: " alert alert-success" }, [
+            _vm._v("\n            Güncellendi!\n        ")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add
+      ? _c(
+          "div",
+          {
+            staticClass: "add-photo",
+            on: {
+              click: function($event) {
+                _vm.add = !_vm.add
+              }
+            }
+          },
+          [_vm._v("\n        Fotoğraf Ekle\n    ")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.add
+      ? _c("div", [
+          _c("div", { attrs: { id: "photo-add" } }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "description" } }, [
+                  _vm._v("Açıklama*")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.description,
+                      expression: "description"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "description" },
+                  domProps: { value: _vm.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.description = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-6", staticStyle: { margin: "0 25%" } },
+                [_c("img", { attrs: { src: _vm.image } })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "image" } }, [_vm._v("Fotoğraf*")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file", id: "image", name: "image" },
+                  on: { change: _vm.onFileChange }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-lg", on: { click: _vm.addPhoto } },
+              [_vm._v("Fotoğraf Ekle")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add
+      ? _c("div", { staticClass: "gallery" }, [
+          _c(
+            "div",
+            { staticClass: "row" },
+            _vm._l(_vm.allPhotos, function(photo, index) {
+              return _c("div", { staticClass: "col-md-6 photo" }, [
+                _c("i", {
+                  staticClass: "fa fa-close",
+                  on: {
+                    click: function($event) {
+                      _vm.deletePhoto(index, photo.id)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: { src: "/" + photo.image_path, alt: index }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "img-description" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(photo.description) +
+                      "\n                "
+                  )
+                ])
+              ])
+            })
+          )
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49054,6 +49283,52 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(88);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(49)("3b0cf320", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1a2eaf8c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Gallery.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1a2eaf8c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Gallery.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(10)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.photo.col-md-6 {\n    background: #e1e1e1;\n    padding: 20px;\n}\n.photo.col-md-6:nth-child(odd){\n    border-right: 1px solid #000;\n    border-bottom: 2px solid #000;\n}\n.photo.col-md-6:nth-child(even){\n    border-left: 1px solid #000;\n    border-bottom: 2px solid #000;\n}\n.photo .fa.fa-close {\n    cursor: pointer;\n    font-size: 16px;\n    position: absolute;\n    top: 5px;\n    right: 5px;\n}\n.add-photo {\n    margin: 0 auto;\n    background-color: #d0d0d0;\n    padding: 20px;\n    text-align: center;\n    width: 30%;\n    cursor: pointer;\n    display: block;\n    font-size: 16px;\n    text-transform: uppercase;\n}\n.gallery {\n    margin:40px 0;\n}\n#photo-add button {\n    display: block;\n    margin: 0 auto;\n    margin-bottom: 50px;\n    width: 25%;\n}\n#photo-add div.row {\n    margin-bottom: 20px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

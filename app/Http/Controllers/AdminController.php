@@ -13,6 +13,7 @@ use App\Gallery;
 use App\Member;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Image;
 
 class AdminController extends Controller
 {
@@ -115,6 +116,32 @@ class AdminController extends Controller
     public function gallery(){
         $gallery = Gallery::all();
         return view('admin.gallery',compact('gallery'));
+    }
+
+    public function galleryPOST(Request $request){
+        $img_path = '';
+
+        if(Input::hasFile('image')){
+            $img = Input::file('image');
+            $img_path = str_replace(' ','',strtolower($request->input('name'))) . '.' . $img->getClientOriginalExtension();
+            Image::make($img)->resize(80, 80)->save('assets/images/gallery/thumb' .$img_path);
+            $img->move('assets/images/gallery', $img_path);
+        }
+
+        $img_path = 'assets/images/gallery/' . $img_path;
+        $img_thumb_path = 'assets/images/gallery/thumb';
+
+        /*
+        Gallery::create([
+           'description' => $request->input('description'),
+           'image_path' => $img_path,
+           'thumb_path' =>
+        ]);
+        */
+    }
+
+    public function deletePhoto(Request $request){
+        return $request;
     }
 
     public function members(){

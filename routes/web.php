@@ -50,6 +50,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::post('activities','AdminController@activitiesPOST');
     Route::delete('activities', 'AdminController@deleteActivity');
     Route::get('gallery','AdminController@gallery');
+    Route::post('gallery','AdminController@galleryPOST');
+    Route::delete('gallery','AdminController@deletePhoto');
     Route::get('members','AdminController@members');
     Route::get('categories','AdminController@categories');
 });
