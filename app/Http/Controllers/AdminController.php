@@ -10,6 +10,7 @@ use App\Title;
 use App\Text;
 use App\Project;
 use App\Gallery;
+use App\Category;
 use App\Member;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
@@ -150,6 +151,7 @@ class AdminController extends Controller
     }
 
     public function categories(){
-        return view('admin.categories');
+        $categories = Category::all();
+        return view('admin.categories',compact('categories'));
     }
 }
