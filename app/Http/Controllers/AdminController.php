@@ -147,6 +147,7 @@ class AdminController extends Controller
 
     public function members(){
         $members = Member::all();
+
         return view('admin.members',compact('members'));
     }
 

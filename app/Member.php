@@ -37,7 +37,6 @@ class Member extends Model
         if(sizeof($this->inCompetitionCommittee()->get())){
             $committees = $committees->merge($this->inCompetitionCommittee()->get());
         }
-
         return $committees;
     }
 }
