@@ -26,6 +26,7 @@ Vue.component('members', require('./components/Admin/Members.vue'));
 Vue.component('categories', require('./components/Admin/Categories.vue'));
 Vue.component('site-projects',require('./components/Site/Projects.vue'));
 Vue.component('site-activities',require('./components/Site/Activities.vue'));
+Vue.component('docs',require('./components/Docs/Index.vue'));
 
 const app = new Vue({
     el: '#home'

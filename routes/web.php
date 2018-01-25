@@ -16,8 +16,6 @@ use App\Doc;
 
 Route::get('/', 'IndexController@index');
 Route::post('/','IndexController@store');
-
-Route::get('/docs','DocsController@index');
 Auth::routes();
 
 Route::get('projects','IndexController@projects');
@@ -58,6 +56,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
 
 /*  DOCS   */
 Route::group(['prefix' => 'docs'],function (){
+    Route::get('','DocsController@index');
     Route::get('add','DocsController@addTool')->middleware('editor');
     Route::post('add','DocsController@store');
     Route::get('add-category','DocsController@addCategory')->middleware('editor');

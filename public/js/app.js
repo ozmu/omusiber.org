@@ -1375,7 +1375,7 @@ function applyToTag (styleElement, obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(85);
+module.exports = __webpack_require__(88);
 
 
 /***/ }),
@@ -1410,6 +1410,7 @@ Vue.component('members', __webpack_require__(73));
 Vue.component('categories', __webpack_require__(76));
 Vue.component('site-projects', __webpack_require__(79));
 Vue.component('site-activities', __webpack_require__(82));
+Vue.component('docs', __webpack_require__(85));
 
 var app = new Vue({
   el: '#home'
@@ -49479,6 +49480,151 @@ if (false) {
 
 /***/ }),
 /* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(86)
+/* template */
+var __vue_template__ = __webpack_require__(87)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Docs/Index.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-ff32b598", Component.options)
+  } else {
+    hotAPI.reload("data-v-ff32b598", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['datas'],
+
+    data: function data() {
+        return {};
+    }
+});
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "accordion toggle bottom-border", attrs: { id: "acc" } },
+    _vm._l(_vm.datas, function(data) {
+      return _c("div", { staticClass: "panel" }, [
+        _c("h5", { staticClass: "acc-head" }, [
+          _c(
+            "a",
+            {
+              staticClass: "collapsed",
+              attrs: {
+                href: "#" + data.id,
+                "data-toggle": "collapse",
+                "data-parent": "#acc"
+              }
+            },
+            [
+              _c("i", { class: "main-color fa fa-" + data.icon }),
+              _vm._v(_vm._s(data.categoryName))
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "acc-body collapse", attrs: { id: data.id } },
+          [
+            _c("div", { staticClass: "acc-content" }, [
+              _c(
+                "ul",
+                { staticClass: "tools" },
+                _vm._l(data.tools, function(tool) {
+                  return _c("li", [
+                    _c("a", { attrs: { href: "/docs/tool/" + tool.tool } }, [
+                      _vm._v(_vm._s(tool.toolName))
+                    ])
+                  ])
+                })
+              )
+            ])
+          ]
+        )
+      ])
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-ff32b598", module.exports)
+  }
+}
+
+/***/ }),
+/* 88 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -33,7 +33,8 @@ class DocsController extends Controller
             'assets/js/docs.js',
         ]);
 
-        return view('documents.index',compact('datas'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
+        return $datas->with('tools');
+        //return view('documents.index',compact('datas'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
     }
 
     public function displayTool($tool){

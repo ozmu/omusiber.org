@@ -1,6 +1,8 @@
 @extends('layouts.docs')
 
 @section('content')
+    <docs :datas="{{ $datas }}"></docs>
+    <!--
     <div id="acc" class="accordion toggle bottom-border">
         @foreach($datas as $data)
             <div class="panel">
@@ -20,6 +22,7 @@
             </div>
         @endforeach
     </div>
+    -->
     <div class="clearfix"></div>
 
 @endsection
