@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class DocsController extends Controller
 {
     public function index(){
-        $datas = Category::all();
+        $datas = Category::with('tools')->get();
         $isEditor = false;
         $isAdmin = false;
         if(Auth::check() && User::find(Auth::id())->is_editor == 1){
@@ -33,8 +33,7 @@ class DocsController extends Controller
             'assets/js/docs.js',
         ]);
 
-        return $datas->with('tools');
-        //return view('documents.index',compact('datas'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
+        return view('documents.index',compact('datas'))->with('isEditor',$isEditor)->with('isAdmin',$isAdmin);
     }
 
     public function displayTool($tool){
