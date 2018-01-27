@@ -1,5 +1,7 @@
 # OMUSiber | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu
 
+OMUSiber, 2015 yılında Ondokuz Mayıs Üniversitesi'nden birkaç arkadaşın toplanıp kurduğu Karadeniz'in en büyük Siber Güvenlik Topluluğudur.
+
 Biz, OMUSiber olarak üniversitemizde, şehrimizde ve ülkemizde insanların bilgi güvenliği konusunda bilinç kazanması için uğraşıyoruz.
 
 Bunun için seminerler, konferanslar, eğitimler, yarışmalar düzenliyoruz.
