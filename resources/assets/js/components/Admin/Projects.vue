@@ -70,7 +70,44 @@
             </div>
         </div>
 
-        <div class="projects" v-if="!add">
+        <div v-if="update" class="projects">
+            <div class="project">
+                <div class="project-title">
+                    {{ current.project_title }}
+                </div>
+                <div class="project-image">
+                    <img :src="'/' + current.image" alt="img">
+                </div>
+                <div class="project-short-desc">
+                    <h1>Kısa Açıklama</h1>
+                    <div>{{ current.short_description }}</div>
+                </div>
+                <div class="project-description">
+                    <h1>Açıklama</h1>
+                    <div>{{ current.description }}</div>
+                </div>
+                <table class="project-meta">
+                    <tr>
+                        <td class="project-icon">İkon</td>
+                        <td class="project-icon">{{ current.icon }}</td>
+                    </tr>
+                    <tr>
+                        <td class="project-category">Kategori</td>
+                        <td class="project-category">{{ current.category }}</td>
+                    </tr>
+                    <tr>
+                        <td class="project-date">Tarih</td>
+                        <td class="project-date">{{ current.date }}</td>
+                    </tr>
+                    <tr>
+                        <td class="project-state">Durum</td>
+                        <td class="project-state">{{ current.state }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="projects" v-if="!add && !update">
             <div class="project" v-for="(project, index) in allProjects">
                 <i class="fa fa-close" @click="deleteProject(index,project.id)"></i>
                 <i class="fa fa-refresh" @click="updateProject(project)"></i>
@@ -130,9 +167,20 @@
                 date: '',
                 state: '',
                 add: false,
+                update: false,
                 success: false,
                 error: false,
                 allProjects: [],
+                current: {
+                    project_title: '',
+                    short_description: '',
+                    description: '',
+                    image: '',
+                    icon: '',
+                    category: '',
+                    date: '',
+                    state: ''
+                }
             }
         },
 
@@ -214,7 +262,16 @@
             },
 
             updateProject(project){
-                console.log(project)
+                this.current.project_title = project.project_title;
+                this.current.short_description = project.short_description;
+                this.current.description = project.description;
+                this.current.image = project.image_path;
+                this.current.icon = project.icon;
+                this.current.category = project.category;
+                this.current.date = project.date;
+                this.current.state = project.state;
+
+                this.update = true;
             }
         }
     }

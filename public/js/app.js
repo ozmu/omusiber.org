@@ -44279,6 +44279,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -44298,9 +44335,20 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
             date: '',
             state: '',
             add: false,
+            update: false,
             success: false,
             error: false,
-            allProjects: []
+            allProjects: [],
+            current: {
+                project_title: '',
+                short_description: '',
+                description: '',
+                image: '',
+                icon: '',
+                category: '',
+                date: '',
+                state: ''
+            }
         };
     },
     created: function created() {
@@ -44374,7 +44422,16 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
             });
         },
         updateProject: function updateProject(project) {
-            console.log(project);
+            this.current.project_title = project.project_title;
+            this.current.short_description = project.short_description;
+            this.current.description = project.description;
+            this.current.image = project.image_path;
+            this.current.icon = project.icon;
+            this.current.category = project.category;
+            this.current.date = project.date;
+            this.current.state = project.state;
+
+            this.update = true;
         }
     }
 });
@@ -47098,7 +47155,73 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    !_vm.add
+    _vm.update
+      ? _c("div", { staticClass: "projects" }, [
+          _c("div", { staticClass: "project" }, [
+            _c("div", { staticClass: "project-title" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.current.project_title) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-image" }, [
+              _c("img", { attrs: { src: "/" + _vm.current.image, alt: "img" } })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-short-desc" }, [
+              _c("h1", [_vm._v("Kısa Açıklama")]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.current.short_description))])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-description" }, [
+              _c("h1", [_vm._v("Açıklama")]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.current.description))])
+            ]),
+            _vm._v(" "),
+            _c("table", { staticClass: "project-meta" }, [
+              _c("tr", [
+                _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-icon" }, [
+                  _vm._v(_vm._s(_vm.current.icon))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-category" }, [
+                  _vm._v("Kategori")
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-category" }, [
+                  _vm._v(_vm._s(_vm.current.category))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-date" }, [
+                  _vm._v(_vm._s(_vm.current.date))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-state" }, [
+                  _vm._v(_vm._s(_vm.current.state))
+                ])
+              ])
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add && !_vm.update
       ? _c(
           "div",
           { staticClass: "projects" },
