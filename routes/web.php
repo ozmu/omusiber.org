@@ -36,6 +36,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::get('','AdminController@index');
     Route::get('messages','AdminController@messages');
     Route::delete('messages','AdminController@deleteMessage');
+    Route::get('team', 'AdminController@team');
     Route::get('users','UserController@index');
     Route::get('users/{id}','UserController@edit');
     Route::post('users/{id}','UserController@update');

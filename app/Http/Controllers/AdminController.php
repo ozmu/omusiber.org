@@ -27,6 +27,10 @@ class AdminController extends Controller
         return view('admin.messages',compact('messages'));
     }
 
+    public function team(){
+        return view('admin.team');
+    }
+
     public function deleteMessage(Request $request){
         return Contact::destroy($request->input('id'));
     }
