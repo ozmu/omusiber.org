@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Activity;
+use App\Team;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Contact;
@@ -28,7 +29,8 @@ class AdminController extends Controller
     }
 
     public function team(){
-        return view('admin.team');
+        $team = Team::all();
+        return view('admin.team', compact('team'));
     }
 
     public function deleteMessage(Request $request){
