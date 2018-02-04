@@ -50419,17 +50419,21 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(103)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(92)
 /* template */
-var __vue_template__ = __webpack_require__(93)
+var __vue_template__ = __webpack_require__(105)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-723359da"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -50468,6 +50472,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__ = __webpack_require__(58);
 //
 //
 //
@@ -50476,35 +50481,852 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['team'],
 
     data: function data() {
         return {
-            people: this.team
+            people: this.team,
+            name: '',
+            image: '',
+            facebook: '',
+            twitter: '',
+            instagram: '',
+            github: '',
+            linkedin: '',
+            state: '',
+            add: false,
+            update: false,
+            success: false,
+            error: false,
+            allProjects: [],
+            current: {
+                project_title: '',
+                short_description: '',
+                description: '',
+                image: '',
+                icon: '',
+                category: '',
+                date: '',
+                state: ''
+            }
         };
     },
 
 
-    methods: {}
+    methods: {
+        onFileChange: function onFileChange(e) {
+            var files = e.target.files || e.dataTransfer.files;
+            if (!files.length) return;
+            this.createImage(files[0]);
+        },
+        createImage: function createImage(file) {
+            var _this = this;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                _this.image = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        },
+        addPerson: function addPerson() {
+            var _this2 = this;
+
+            var formData = new FormData();
+            var imagefile = document.querySelector('#image');
+            formData.append('image', imagefile.files[0]);
+            formData.append('name', this.name);
+            formData.append('short_desc', this.short_desc);
+            formData.append('long_desc', this.description);
+            formData.append('icon', this.icon);
+            formData.append('category', this.category);
+            formData.append('date', this.date);
+            formData.append('state', this.state);
+
+            var headers = {
+                'Content-Type': 'multipart/form-data'
+            };
+
+            axios.post('/admin/projects', formData, headers).then(function (response) {
+                _this2.success = true;
+                console.log(response);
+            }).catch(function (e) {
+                _this2.error = true;
+                console.log(e);
+            });
+        },
+        deleteProject: function deleteProject(index, project_id) {
+            var self = this;
+            this.$swal({
+                title: 'Emin misin?',
+                text: "Sildiğin projeyi geri alamazsın!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, sil!',
+                cancelButtonText: 'Hayır'
+            }).then(function (result) {
+                if (result.value) {
+                    axios.delete('/admin/projects', {
+                        params: { project_id: project_id }
+                    }).then(function (response) {
+                        if (response.status === 200) {
+                            self.$swal('Silindi!', 'Proje silindi.', 'success');
+                            self.allProjects.splice(index, 1);
+                        }
+                    });
+                }
+            });
+        },
+        updateProject: function updateProject(project) {
+            this.current.project_title = project.project_title;
+            this.current.short_description = project.short_description;
+            this.current.description = project.description;
+            this.current.image = project.image_path;
+            this.current.icon = project.icon;
+            this.current.category = project.category;
+            this.current.date = project.date;
+            this.current.state = project.state;
+
+            this.update = true;
+        }
+    }
 });
 
 /***/ }),
-/* 93 */
+/* 93 */,
+/* 94 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(104);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(11)("468f3c16", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-723359da\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Team.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-723359da\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Team.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "team" } },
-    _vm._l(_vm.people, function(person, index) {
-      return _c("div", [_vm._v("\n        " + _vm._s(person) + "\n    ")])
-    })
-  )
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "heading" }, [
+      _vm._v("\n        Yönetim(Takım) Düzenleme\n    ")
+    ]),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "add-error row" }, [
+          _c("div", { staticClass: " alert alert-danger" }, [
+            _vm._v("\n            Lütfen formu eksiksiz doldurunuz!\n        ")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.success
+      ? _c("div", { staticClass: "row add-success" }, [
+          _c("div", { staticClass: " alert alert-success" }, [
+            _vm._v("\n            Güncellendi!\n        ")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add
+      ? _c(
+          "div",
+          {
+            staticClass: "add-project",
+            on: {
+              click: function($event) {
+                _vm.add = !_vm.add
+              }
+            }
+          },
+          [_vm._v("\n        Üye Ekle\n    ")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.add
+      ? _c("div", [
+          _c("div", { attrs: { id: "person-add" } }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "title" } }, [_vm._v(" Adı*")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "title" },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "role" } }, [_vm._v("Rolü*")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.role,
+                        expression: "role"
+                      }
+                    ],
+                    attrs: { name: "role", id: "role" },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.role = $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      }
+                    }
+                  },
+                  [
+                    _c("option", { attrs: { value: "kurucu" } }, [
+                      _vm._v("Kurucu")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "baskan" } }, [
+                      _vm._v("Başkan")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "baskanyrd" } }, [
+                      _vm._v("Başkan Yardımcısı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "sekbaskani" } }, [
+                      _vm._v("Sosyal Etkinlikler Komitesi Başkanı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "eykbaskani" } }, [
+                      _vm._v("Eğlence ve Yarışma Komitesi Başkanı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "ekbaskani" } }, [
+                      _vm._v("Eğitim Komitesi Başkanı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "sosyalmedya" } }, [
+                      _vm._v("Sosyal Medya Yöneticisi")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "sekbaskanyrd" } }, [
+                      _vm._v("Sosyal Etkinlikler Komitesi Başkan Yardımcısı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "eykbaskanyrd" } }, [
+                      _vm._v("Eğlence ve Yarışma Komitesi Başkan Yardımcısı")
+                    ]),
+                    _vm._v(" "),
+                    _c("option", { attrs: { value: "ekbaskanyrd" } }, [
+                      _vm._v("Eğitim Komitesi Başkan Yardımcısı")
+                    ])
+                  ]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row socials" }, [
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "facebook" } }, [
+                  _vm._v("Facebook")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.facebook,
+                      expression: "facebook"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "facebook" },
+                  domProps: { value: _vm.facebook },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.facebook = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "twitter" } }, [_vm._v("Twitter")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.twitter,
+                      expression: "twitter"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "twitter" },
+                  domProps: { value: _vm.twitter },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.twitter = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "instagram" } }, [
+                  _vm._v("Instagram")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.instagram,
+                      expression: "instagram"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "instagram" },
+                  domProps: { value: _vm.instagram },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.instagram = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "github" } }, [_vm._v("Github")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.github,
+                      expression: "github"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "github" },
+                  domProps: { value: _vm.github },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.github = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "linkedin" } }, [
+                  _vm._v("Linkedin")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.linkedin,
+                      expression: "linkedin"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "linkedin" },
+                  domProps: { value: _vm.linkedin },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.linkedin = $event.target.value
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-2" }, [
+                _c("label", { attrs: { for: "isactive" } }, [
+                  _vm._v("Aktif mi?")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.isactive,
+                      expression: "isactive"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "checkbox", id: "isactive" },
+                  domProps: {
+                    checked: Array.isArray(_vm.isactive)
+                      ? _vm._i(_vm.isactive, null) > -1
+                      : _vm.isactive
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.isactive,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 && (_vm.isactive = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.isactive = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.isactive = $$c
+                      }
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-6", staticStyle: { margin: "0 25%" } },
+                [_c("img", { attrs: { src: _vm.image } })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("label", { attrs: { for: "image" } }, [_vm._v("Fotoğraf*")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file", id: "image", name: "image" },
+                  on: { change: _vm.onFileChange }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-lg", on: { click: _vm.addPerson } },
+              [_vm._v("Üye Ekle")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.update
+      ? _c("div", { staticClass: "projects" }, [
+          _c("div", { staticClass: "project" }, [
+            _c("div", { staticClass: "project-title" }, [
+              _vm._v(
+                "\n                " +
+                  _vm._s(_vm.current.project_title) +
+                  "\n            "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-image" }, [
+              _c("img", { attrs: { src: "/" + _vm.current.image, alt: "img" } })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-short-desc" }, [
+              _c("h1", [_vm._v("Kısa Açıklama")]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.current.short_description))])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "project-description" }, [
+              _c("h1", [_vm._v("Açıklama")]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(_vm.current.description))])
+            ]),
+            _vm._v(" "),
+            _c("table", { staticClass: "project-meta" }, [
+              _c("tr", [
+                _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-icon" }, [
+                  _vm._v(_vm._s(_vm.current.icon))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-category" }, [
+                  _vm._v("Kategori")
+                ]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-category" }, [
+                  _vm._v(_vm._s(_vm.current.category))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-date" }, [
+                  _vm._v(_vm._s(_vm.current.date))
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "project-state" }, [
+                  _vm._v(_vm._s(_vm.current.state))
+                ])
+              ])
+            ])
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.add && !_vm.update
+      ? _c(
+          "div",
+          { staticClass: "projects" },
+          _vm._l(_vm.allProjects, function(project, index) {
+            return _c("div", { staticClass: "project" }, [
+              _c("i", {
+                staticClass: "fa fa-close",
+                on: {
+                  click: function($event) {
+                    _vm.deleteProject(index, project.id)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("i", {
+                staticClass: "fa fa-refresh",
+                on: {
+                  click: function($event) {
+                    _vm.updateProject(project)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-title" }, [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(project.project_title) +
+                    "\n            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-image" }, [
+                _c("img", {
+                  attrs: { src: "/" + project.image_path, alt: "img" }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-short-desc" }, [
+                _c("h1", [_vm._v("Kısa Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(project.short_description))])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "project-description" }, [
+                _c("h1", [_vm._v("Açıklama")]),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(project.description))])
+              ]),
+              _vm._v(" "),
+              _c("table", { staticClass: "project-meta" }, [
+                _c("tr", [
+                  _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-icon" }, [
+                    _vm._v(_vm._s(project.icon))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "project-category" }, [
+                    _vm._v("Kategori")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-category" }, [
+                    _vm._v(_vm._s(project.category))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-date" }, [
+                    _vm._v(_vm._s(project.date))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "project-state" }, [
+                    _vm._v(_vm._s(project.state))
+                  ])
+                ])
+              ])
+            ])
+          })
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -50515,12 +51337,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-723359da", module.exports)
   }
 }
-
-/***/ }),
-/* 94 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
