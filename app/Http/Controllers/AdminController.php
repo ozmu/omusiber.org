@@ -33,6 +33,67 @@ class AdminController extends Controller
         return view('admin.team', compact('team'));
     }
 
+    public function teamPOST(Request $request){
+        $img_path = '';
+
+        if(Input::hasFile('image')){
+            $img = Input::file('image');
+            $img_path = str_replace(' ','',strtolower($request->input('name'))) . '.' . $img->getClientOriginalExtension();
+            $img->move('assets/images/team', $img_path);
+        }
+
+        $img_path = 'assets/images/team/' . $img_path;
+
+        $role = $request->input('role');
+
+        switch ($role){
+            case "kurucu":
+                $teamRole = "Kurucu";
+                break;
+            case "baskan":
+                $teamRole = "Başkan";
+                break;
+            case "baskanyrd":
+                $teamRole = "Başkan Yrd.";
+                break;
+            case "sekbaskani":
+                $teamRole = "Sosyal Etkinlikler Komitesi Başkanı";
+                break;
+            case "eykbaskani":
+                $teamRole = "Eğlence ve Yarışma Komitesi Başkanı";
+                break;
+            case "ekbaskani":
+                $teamRole = "Eğitim Komitesi Başkanı";
+                break;
+            case "sosyalmedya":
+                $teamRole = "Sosyal Medya Yöneticisi";
+                break;
+            case "sekbaskanyrd":
+                $teamRole = "Sosyal Etkinlikler Komitesi Başkan Yardımcısı";
+                break;
+            case "eykbaskanyrd":
+                $teamRole = "Eğlence ve Yarışma Komitesi Başkan Yardımcısı";
+                break;
+            case "ekbaskanyrd":
+                $teamRole = "Eğitim Komitesi Başkan Yardımcısı";
+                break;
+        }
+
+        $isActive = $request->input('isactive') == "true" ? true : false;
+
+        Team::create([
+            'name' => $request->input('name'),
+            'role' => $teamRole,
+            'facebook' => $request->input('facebook'),
+            'twitter' => $request->input('twitter'),
+            'instagram' => $request->input('instagram'),
+            'github' => $request->input('github'),
+            'linkedin' => $request->input('linkedin'),
+            'is_active' => $isActive,
+            'image_path' => $img_path,
+        ]);
+    }
+
     public function deleteMessage(Request $request){
         return Contact::destroy($request->input('id'));
     }

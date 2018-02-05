@@ -172,6 +172,7 @@
         data(){
             return {
                 people: this.team,
+                role: '',
                 name: '',
                 image: '',
                 facebook: '',
@@ -179,7 +180,7 @@
                 instagram: '',
                 github: '',
                 linkedin: '',
-                state: '',
+                isactive: false,
                 add: false,
                 update: false,
                 success: false,
@@ -219,19 +220,21 @@
                 let imagefile = document.querySelector('#image');
                 formData.append('image', imagefile.files[0]);
                 formData.append('name', this.name);
-                formData.append('short_desc', this.short_desc);
-                formData.append('long_desc', this.description);
-                formData.append('icon', this.icon);
-                formData.append('category', this.category);
-                formData.append('date', this.date);
-                formData.append('state', this.state);
+                formData.append('role', this.role);
+                formData.append('facebook', this.facebook);
+                formData.append('twitter', this.twitter);
+                formData.append('instagram', this.instagram);
+                formData.append('github', this.github);
+                formData.append('linkedin', this.linkedin);
+                formData.append('isactive', this.isactive);
+                formData.append('image', imagefile.files[0]);
 
 
                 const headers = {
                     'Content-Type': 'multipart/form-data'
                 };
 
-                axios.post('/admin/projects', formData, headers).then((response) => {
+                axios.post('/admin/team', formData, headers).then((response) => {
                     this.success = true;
                     console.log(response);
                 }).catch((e) => {
@@ -291,6 +294,11 @@
 <style scoped>
     div.row {
         margin:20px 0;
+    }
+
+    button.btn.btn-lg {
+        display: block;
+        margin: 0 auto;
     }
 
 </style>
