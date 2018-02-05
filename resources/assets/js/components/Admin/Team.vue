@@ -120,40 +120,44 @@
             </div>
         </div>
 
-        <div class="projects" v-if="!add && !update">
-            <div class="project" v-for="(project, index) in allProjects">
-                <i class="fa fa-close" @click="deleteProject(index,project.id)"></i>
-                <i class="fa fa-refresh" @click="updateProject(project)"></i>
-                <div class="project-title">
-                    {{ project.project_title }}
+        <div class="teams" v-if="!add && !update">
+            <div class="team" v-for="(person, index) in people">
+                <i class="fa fa-close" @click="deletePerson(index,person.id)"></i>
+                <i class="fa fa-refresh" @click="updatePerson(person)"></i>
+                <div class="team-title">
+                    {{ person.name }}
                 </div>
-                <div class="project-image">
-                    <img :src="'/' + project.image_path" alt="img">
+                <div class="person-image">
+                    <img :src="'/' + person.image_path" alt="img">
                 </div>
-                <div class="project-short-desc">
-                    <h1>Kısa Açıklama</h1>
-                    <div>{{ project.short_description }}</div>
-                </div>
-                <div class="project-description">
-                    <h1>Açıklama</h1>
-                    <div>{{ project.description }}</div>
+                <div class="person-role">
+                    <h1>Rolü</h1>
+                    <div>{{ person.role }}</div>
                 </div>
                 <table class="project-meta">
                     <tr>
-                        <td class="project-icon">İkon</td>
-                        <td class="project-icon">{{ project.icon }}</td>
+                        <td>Facebook</td>
+                        <td>{{ person.facebook }}</td>
                     </tr>
                     <tr>
-                        <td class="project-category">Kategori</td>
-                        <td class="project-category">{{ project.category }}</td>
+                        <td>Twitter</td>
+                        <td>{{ person.twitter }}</td>
                     </tr>
                     <tr>
-                        <td class="project-date">Tarih</td>
-                        <td class="project-date">{{ project.date }}</td>
+                        <td>Instagram</td>
+                        <td>{{ person.instagram }}</td>
                     </tr>
                     <tr>
-                        <td class="project-state">Durum</td>
-                        <td class="project-state">{{ project.state }}</td>
+                        <td>Github</td>
+                        <td>{{ person.github }}</td>
+                    </tr>
+                    <tr>
+                        <td>Linkedin</td>
+                        <td>{{ person.linkedin }}</td>
+                    </tr>
+                    <tr>
+                        <td>Aktif mi?</td>
+                        <td>{{ person.is_active }}</td>
                     </tr>
                 </table>
             </div>
@@ -243,7 +247,7 @@
                 })
             },
 
-            deleteProject(index,project_id){
+            deletePerson(index,project_id){
                 var self = this;
                 this.$swal({
                     title: 'Emin misin?',
@@ -274,7 +278,7 @@
 
             },
 
-            updateProject(project){
+            updatePerson(project){
                 this.current.project_title = project.project_title;
                 this.current.short_description = project.short_description;
                 this.current.description = project.description;

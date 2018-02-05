@@ -393,35 +393,35 @@ div#edit button.btn,div#project-add button.btn, div#activity-add button.btn {
     margin: 40px 0;
 }
 
-.projects .project, .activities .activity {
+.projects .project, .activities .activity, .teams .team {
     background: #e1e1e1;
     padding: 20px;
     margin:20px 0;
 }
 
-.projects .project .project-title, .activities .activity .activity-title {
+.projects .project .project-title, .activities .activity .activity-title, .teams .team .team-title {
     font-size: 22px;
     text-transform: capitalize;
     font-weight: 700;
     text-align: center;
 }
 
-.projects .project .project-image img, .activities .activity .activity-image img{
+.projects .project .project-image img, .activities .activity .activity-image img, .teams .team img{
     height: 275px;
     margin-top: 35px;
     margin-bottom: 30px;
 }
 
-.projects .project table, .activities .activity table{
+.projects .project table, .activities .activity table, .teams .team table{
     width: auto;
     margin:0 auto;
 }
 
-.projects .project table tr:nth-child(odd), .activities .activity table tr:nth-child(odd){
+.projects .project table tr:nth-child(odd), .activities .activity table tr:nth-child(odd), .teams .team table tr:nth-child(odd){
     background: #9de0f7;
 }
 
-.projects .project table td, .activities .activity table td {
+.projects .project table td, .activities .activity table td, .teams .team table td{
     padding:10px;
 }
 
@@ -430,17 +430,17 @@ div#project-add  div, div#activity-add div{
     padding: 0 15px;
 }
 
-.projects .fa, .activities .fa {
+.projects .fa, .activities .fa, .teams .fa {
     font-size: 24px;
     position: absolute;
     cursor: pointer;
 }
 
-.projects .fa.fa-close, .activities .fa.fa-close {
+.projects .fa.fa-close, .activities .fa.fa-close, .teams .fa.fa-close {
     right: 30px;
 }
 
-.projects .fa.fa-refresh, .activities .fa.fa-refresh{
+.projects .fa.fa-refresh, .activities .fa.fa-refresh, .teams .fa.fa-refresh{
     right: 60px
 }
 

@@ -50676,6 +50676,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -50758,7 +50762,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
                 console.log(e);
             });
         },
-        deleteProject: function deleteProject(index, project_id) {
+        deletePerson: function deletePerson(index, project_id) {
             var self = this;
             this.$swal({
                 title: 'Emin misin?',
@@ -50782,7 +50786,7 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
                 }
             });
         },
-        updateProject: function updateProject(project) {
+        updatePerson: function updatePerson(project) {
             this.current.project_title = project.project_title;
             this.current.short_description = project.short_description;
             this.current.description = project.description;
@@ -51228,14 +51232,14 @@ var render = function() {
     !_vm.add && !_vm.update
       ? _c(
           "div",
-          { staticClass: "projects" },
-          _vm._l(_vm.allProjects, function(project, index) {
-            return _c("div", { staticClass: "project" }, [
+          { staticClass: "teams" },
+          _vm._l(_vm.people, function(person, index) {
+            return _c("div", { staticClass: "team" }, [
               _c("i", {
                 staticClass: "fa fa-close",
                 on: {
                   click: function($event) {
-                    _vm.deleteProject(index, project.id)
+                    _vm.deletePerson(index, person.id)
                   }
                 }
               }),
@@ -51244,70 +51248,64 @@ var render = function() {
                 staticClass: "fa fa-refresh",
                 on: {
                   click: function($event) {
-                    _vm.updateProject(project)
+                    _vm.updatePerson(person)
                   }
                 }
               }),
               _vm._v(" "),
-              _c("div", { staticClass: "project-title" }, [
+              _c("div", { staticClass: "team-title" }, [
                 _vm._v(
-                  "\n                " +
-                    _vm._s(project.project_title) +
-                    "\n            "
+                  "\n                " + _vm._s(person.name) + "\n            "
                 )
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "project-image" }, [
+              _c("div", { staticClass: "person-image" }, [
                 _c("img", {
-                  attrs: { src: "/" + project.image_path, alt: "img" }
+                  attrs: { src: "/" + person.image_path, alt: "img" }
                 })
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "project-short-desc" }, [
-                _c("h1", [_vm._v("Kısa Açıklama")]),
+              _c("div", { staticClass: "person-role" }, [
+                _c("h1", [_vm._v("Rolü")]),
                 _vm._v(" "),
-                _c("div", [_vm._v(_vm._s(project.short_description))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "project-description" }, [
-                _c("h1", [_vm._v("Açıklama")]),
-                _vm._v(" "),
-                _c("div", [_vm._v(_vm._s(project.description))])
+                _c("div", [_vm._v(_vm._s(person.role))])
               ]),
               _vm._v(" "),
               _c("table", { staticClass: "project-meta" }, [
                 _c("tr", [
-                  _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
+                  _c("td", [_vm._v("Facebook")]),
                   _vm._v(" "),
-                  _c("td", { staticClass: "project-icon" }, [
-                    _vm._v(_vm._s(project.icon))
-                  ])
+                  _c("td", [_vm._v(_vm._s(person.facebook))])
                 ]),
                 _vm._v(" "),
                 _c("tr", [
-                  _c("td", { staticClass: "project-category" }, [
-                    _vm._v("Kategori")
-                  ]),
+                  _c("td", [_vm._v("Twitter")]),
                   _vm._v(" "),
-                  _c("td", { staticClass: "project-category" }, [
-                    _vm._v(_vm._s(project.category))
-                  ])
+                  _c("td", [_vm._v(_vm._s(person.twitter))])
                 ]),
                 _vm._v(" "),
                 _c("tr", [
-                  _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
+                  _c("td", [_vm._v("Instagram")]),
                   _vm._v(" "),
-                  _c("td", { staticClass: "project-date" }, [
-                    _vm._v(_vm._s(project.date))
-                  ])
+                  _c("td", [_vm._v(_vm._s(person.instagram))])
                 ]),
                 _vm._v(" "),
                 _c("tr", [
-                  _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
+                  _c("td", [_vm._v("Github")]),
                   _vm._v(" "),
-                  _c("td", { staticClass: "project-state" }, [
-                    _vm._v(_vm._s(project.state))
-                  ])
+                  _c("td", [_vm._v(_vm._s(person.github))])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Linkedin")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(person.linkedin))])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("Aktif mi?")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(person.is_active))])
                 ])
               ])
             ])
