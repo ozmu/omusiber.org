@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="add-project" v-if="!add" @click="add = !add">
+        <div class="add-project" v-if="!add && !update" @click="add = !add">
             Üye Ekle
         </div>
 
@@ -74,42 +74,47 @@
             </div>
         </div>
 
-        <div v-if="update" class="projects">
-            <div class="project">
-                <div class="project-title">
+        <div v-if="update" class="teams">
+            <div class="team">
+                <div class="team-title">
                     {{ current.name }}
                 </div>
-                <div class="project-image">
+                <div class="person-image">
                     <img :src="'/' + current.image" alt="img">
                 </div>
-                <div class="project-short-desc">
+                <div class="person-role">
                     <h1>Rolü</h1>
                     <select name="role" id="roleUpdate">
-                        <option :value="current.role" selected></option>
+                        <option :value="index" v-for="(personRole, index) in roles" :selected="personRole == current.role">{{ personRole }}</option>
                     </select>
                 </div>
-                <div class="project-description">
-                    <h1>Açıklama</h1>
-                    <div>{{ current.description }}</div>
-                </div>
-                <table class="project-meta">
+                <table class="person-meta">
                     <tr>
-                        <td class="project-icon">İkon</td>
-                        <td class="project-icon">{{ current.icon }}</td>
+                        <td>Facebook</td>
+                        <td>{{ current.facebook }}</td>
                     </tr>
                     <tr>
-                        <td class="project-category">Kategori</td>
-                        <td class="project-category">{{ current.category }}</td>
+                        <td>Twitter</td>
+                        <td>{{ current.twitter }}</td>
                     </tr>
                     <tr>
-                        <td class="project-date">Tarih</td>
-                        <td class="project-date">{{ current.date }}</td>
+                        <td>Instagram</td>
+                        <td>{{ current.instagram }}</td>
                     </tr>
                     <tr>
-                        <td class="project-state">Durum</td>
-                        <td class="project-state">{{ current.state }}</td>
+                        <td>Github</td>
+                        <td>{{ current.github }}</td>
+                    </tr>
+                    <tr>
+                        <td>Linkedin</td>
+                        <td>{{ current.linkedin }}</td>
+                    </tr>
+                    <tr>
+                        <td>Aktif mi?</td>
+                        <td>{{ current.isactive }}</td>
                     </tr>
                 </table>
+                <button class="btn btn-lg update-person" @click="updatePersonPOST(person)">Güncelle</button>
             </div>
         </div>
 
@@ -292,9 +297,13 @@
                 this.current.instagram = person.instagram;
                 this.current.linkedin = person.linkedin;
                 this.current.github = person.github;
-                this.current.isactive = person.isactive;
+                this.current.isactive = person.is_active;
 
                 this.update = true;
+            },
+
+            updatePersonPOST(person){
+                console.log(person)
             }
         }
     }
@@ -306,9 +315,18 @@
         margin:20px 0;
     }
 
-    button.btn.btn-lg {
+    button.btn.btn-lg, select#roleUpdate {
         display: block;
         margin: 0 auto;
+    }
+
+    select#roleUpdate {
+        margin-bottom:15px;
+    }
+
+    button.btn.btn-lg.update-person {
+        margin-top: 20px;
+        background: #fff;
     }
 
 </style>

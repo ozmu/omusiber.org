@@ -50501,7 +50501,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\nbutton.btn.btn-lg[data-v-723359da] {\n    display: block;\n    margin: 0 auto;\n}\n\n", ""]);
+exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\nbutton.btn.btn-lg[data-v-723359da], select#roleUpdate[data-v-723359da] {\n    display: block;\n    margin: 0 auto;\n}\nselect#roleUpdate[data-v-723359da] {\n    margin-bottom:15px;\n}\nbutton.btn.btn-lg.update-person[data-v-723359da] {\n    margin-top: 20px;\n    background: #fff;\n}\n\n", ""]);
 
 // exports
 
@@ -50513,6 +50513,11 @@ exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\nbu
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__ = __webpack_require__(12);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -50800,9 +50805,12 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
             this.current.instagram = person.instagram;
             this.current.linkedin = person.linkedin;
             this.current.github = person.github;
-            this.current.isactive = person.isactive;
+            this.current.isactive = person.is_active;
 
             this.update = true;
+        },
+        updatePersonPOST: function updatePersonPOST(person) {
+            console.log(person);
         }
     }
 });
@@ -50836,7 +50844,7 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    !_vm.add
+    !_vm.add && !_vm.update
       ? _c(
           "div",
           {
@@ -51134,9 +51142,9 @@ var render = function() {
       : _vm._e(),
     _vm._v(" "),
     _vm.update
-      ? _c("div", { staticClass: "projects" }, [
-          _c("div", { staticClass: "project" }, [
-            _c("div", { staticClass: "project-title" }, [
+      ? _c("div", { staticClass: "teams" }, [
+          _c("div", { staticClass: "team" }, [
+            _c("div", { staticClass: "team-title" }, [
               _vm._v(
                 "\n                " +
                   _vm._s(_vm.current.name) +
@@ -51144,62 +51152,81 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "project-image" }, [
+            _c("div", { staticClass: "person-image" }, [
               _c("img", { attrs: { src: "/" + _vm.current.image, alt: "img" } })
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "project-short-desc" }, [
+            _c("div", { staticClass: "person-role" }, [
               _c("h1", [_vm._v("Rolü")]),
               _vm._v(" "),
-              _c("select", { attrs: { name: "role", id: "roleUpdate" } }, [
-                _c("option", {
-                  attrs: { selected: "" },
-                  domProps: { value: _vm.current.role }
+              _c(
+                "select",
+                { attrs: { name: "role", id: "roleUpdate" } },
+                _vm._l(_vm.roles, function(personRole, index) {
+                  return _c(
+                    "option",
+                    {
+                      domProps: {
+                        value: index,
+                        selected: personRole == _vm.current.role
+                      }
+                    },
+                    [_vm._v(_vm._s(personRole))]
+                  )
                 })
+              )
+            ]),
+            _vm._v(" "),
+            _c("table", { staticClass: "person-meta" }, [
+              _c("tr", [
+                _c("td", [_vm._v("Facebook")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.facebook))])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [_vm._v("Twitter")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.twitter))])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [_vm._v("Instagram")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.instagram))])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [_vm._v("Github")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.github))])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [_vm._v("Linkedin")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.linkedin))])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [_vm._v("Aktif mi?")]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(_vm.current.isactive))])
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "project-description" }, [
-              _c("h1", [_vm._v("Açıklama")]),
-              _vm._v(" "),
-              _c("div", [_vm._v(_vm._s(_vm.current.description))])
-            ]),
-            _vm._v(" "),
-            _c("table", { staticClass: "project-meta" }, [
-              _c("tr", [
-                _c("td", { staticClass: "project-icon" }, [_vm._v("İkon")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "project-icon" }, [
-                  _vm._v(_vm._s(_vm.current.icon))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", { staticClass: "project-category" }, [
-                  _vm._v("Kategori")
-                ]),
-                _vm._v(" "),
-                _c("td", { staticClass: "project-category" }, [
-                  _vm._v(_vm._s(_vm.current.category))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", { staticClass: "project-date" }, [_vm._v("Tarih")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "project-date" }, [
-                  _vm._v(_vm._s(_vm.current.date))
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", { staticClass: "project-state" }, [_vm._v("Durum")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "project-state" }, [
-                  _vm._v(_vm._s(_vm.current.state))
-                ])
-              ])
-            ])
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-lg update-person",
+                on: {
+                  click: function($event) {
+                    _vm.updatePersonPOST(_vm.person)
+                  }
+                }
+              },
+              [_vm._v("Güncelle")]
+            )
           ])
         ])
       : _vm._e(),
