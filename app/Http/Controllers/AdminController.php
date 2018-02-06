@@ -94,6 +94,10 @@ class AdminController extends Controller
         ]);
     }
 
+    public function deleteTeam(Request $request){
+        return Team::destroy($request->input('person_id'));
+    }
+
     public function deleteMessage(Request $request){
         return Contact::destroy($request->input('id'));
     }

@@ -50673,13 +50673,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -50704,16 +50697,28 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
             update: false,
             success: false,
             error: false,
-            allProjects: [],
             current: {
-                project_title: '',
-                short_description: '',
-                description: '',
+                name: '',
+                role: '',
                 image: '',
-                icon: '',
-                category: '',
-                date: '',
-                state: ''
+                facebook: '',
+                twitter: '',
+                instagram: '',
+                github: '',
+                linkedin: '',
+                isactive: false
+            },
+            roles: {
+                kurucu: "Kurucu",
+                baskan: "Başkan",
+                baskanyrd: "Başkan Yardımcısı",
+                sekbaskani: "Sosyal Etkinlikler Komitesi Başkanı",
+                eykbaskani: "Eğlence ve Yarışma Komitesi Başkanı",
+                ekbaskani: "Eğitim Komitesi Başkanı",
+                sosyalmedya: "Sosyal Medya Yöneticisi",
+                sekbaskanyrd: "Sosyal Etkinlikler Komitesi Başkan Yardımcısı",
+                eykbaskanyrd: "Eğlence Yarışma Komitesi Başkan Yardımcısı",
+                ekbaskanyrd: "Eğitim Komitesi Başkan Yardımcısı"
             }
         };
     },
@@ -50762,11 +50767,11 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
                 console.log(e);
             });
         },
-        deletePerson: function deletePerson(index, project_id) {
+        deletePerson: function deletePerson(index, person_id) {
             var self = this;
             this.$swal({
                 title: 'Emin misin?',
-                text: "Sildiğin projeyi geri alamazsın!",
+                text: "Sildiğin üyeyi geri alamazsın!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
@@ -50775,26 +50780,27 @@ Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_sweetalert2__["a" /* default */]);
                 cancelButtonText: 'Hayır'
             }).then(function (result) {
                 if (result.value) {
-                    axios.delete('/admin/projects', {
-                        params: { project_id: project_id }
+                    axios.delete('/admin/team', {
+                        params: { person_id: person_id }
                     }).then(function (response) {
                         if (response.status === 200) {
-                            self.$swal('Silindi!', 'Proje silindi.', 'success');
-                            self.allProjects.splice(index, 1);
+                            self.$swal('Silindi!', 'Üye silindi.', 'success');
+                            self.people.splice(index, 1);
                         }
                     });
                 }
             });
         },
-        updatePerson: function updatePerson(project) {
-            this.current.project_title = project.project_title;
-            this.current.short_description = project.short_description;
-            this.current.description = project.description;
-            this.current.image = project.image_path;
-            this.current.icon = project.icon;
-            this.current.category = project.category;
-            this.current.date = project.date;
-            this.current.state = project.state;
+        updatePerson: function updatePerson(person) {
+            this.current.name = person.name;
+            this.current.role = person.role;
+            this.current.image = person.image;
+            this.current.facebook = person.facebook;
+            this.current.twitter = person.twitter;
+            this.current.instagram = person.instagram;
+            this.current.linkedin = person.linkedin;
+            this.current.github = person.github;
+            this.current.isactive = person.isactive;
 
             this.update = true;
         }
@@ -50908,47 +50914,11 @@ var render = function() {
                       }
                     }
                   },
-                  [
-                    _c("option", { attrs: { value: "kurucu" } }, [
-                      _vm._v("Kurucu")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "baskan" } }, [
-                      _vm._v("Başkan")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "baskanyrd" } }, [
-                      _vm._v("Başkan Yardımcısı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "sekbaskani" } }, [
-                      _vm._v("Sosyal Etkinlikler Komitesi Başkanı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "eykbaskani" } }, [
-                      _vm._v("Eğlence ve Yarışma Komitesi Başkanı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "ekbaskani" } }, [
-                      _vm._v("Eğitim Komitesi Başkanı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "sosyalmedya" } }, [
-                      _vm._v("Sosyal Medya Yöneticisi")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "sekbaskanyrd" } }, [
-                      _vm._v("Sosyal Etkinlikler Komitesi Başkan Yardımcısı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "eykbaskanyrd" } }, [
-                      _vm._v("Eğlence ve Yarışma Komitesi Başkan Yardımcısı")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "ekbaskanyrd" } }, [
-                      _vm._v("Eğitim Komitesi Başkan Yardımcısı")
+                  _vm._l(_vm.roles, function(personRole, index) {
+                    return _c("option", { domProps: { value: index } }, [
+                      _vm._v(_vm._s(personRole))
                     ])
-                  ]
+                  })
                 )
               ])
             ]),
@@ -51169,7 +51139,7 @@ var render = function() {
             _c("div", { staticClass: "project-title" }, [
               _vm._v(
                 "\n                " +
-                  _vm._s(_vm.current.project_title) +
+                  _vm._s(_vm.current.name) +
                   "\n            "
               )
             ]),
@@ -51179,9 +51149,14 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "project-short-desc" }, [
-              _c("h1", [_vm._v("Kısa Açıklama")]),
+              _c("h1", [_vm._v("Rolü")]),
               _vm._v(" "),
-              _c("div", [_vm._v(_vm._s(_vm.current.short_description))])
+              _c("select", { attrs: { name: "role", id: "roleUpdate" } }, [
+                _c("option", {
+                  attrs: { selected: "" },
+                  domProps: { value: _vm.current.role }
+                })
+              ])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "project-description" }, [

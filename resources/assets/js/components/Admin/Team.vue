@@ -30,16 +30,7 @@
                     <div class="col-md-12">
                         <label for="role">Rolü*</label>
                         <select name="role" id="role" v-model="role">
-                            <option value="kurucu">Kurucu</option>
-                            <option value="baskan">Başkan</option>
-                            <option value="baskanyrd">Başkan Yardımcısı</option>
-                            <option value="sekbaskani">Sosyal Etkinlikler Komitesi Başkanı</option>
-                            <option value="eykbaskani">Eğlence ve Yarışma Komitesi Başkanı</option>
-                            <option value="ekbaskani">Eğitim Komitesi Başkanı</option>
-                            <option value="sosyalmedya">Sosyal Medya Yöneticisi</option>
-                            <option value="sekbaskanyrd">Sosyal Etkinlikler Komitesi Başkan Yardımcısı</option>
-                            <option value="eykbaskanyrd">Eğlence ve Yarışma Komitesi Başkan Yardımcısı</option>
-                            <option value="ekbaskanyrd">Eğitim Komitesi Başkan Yardımcısı</option>
+                            <option :value="index" v-for="(personRole, index) in roles">{{ personRole }}</option>
                         </select>
                     </div>
                 </div>
@@ -86,14 +77,16 @@
         <div v-if="update" class="projects">
             <div class="project">
                 <div class="project-title">
-                    {{ current.project_title }}
+                    {{ current.name }}
                 </div>
                 <div class="project-image">
                     <img :src="'/' + current.image" alt="img">
                 </div>
                 <div class="project-short-desc">
-                    <h1>Kısa Açıklama</h1>
-                    <div>{{ current.short_description }}</div>
+                    <h1>Rolü</h1>
+                    <select name="role" id="roleUpdate">
+                        <option :value="current.role" selected></option>
+                    </select>
                 </div>
                 <div class="project-description">
                     <h1>Açıklama</h1>
@@ -189,16 +182,28 @@
                 update: false,
                 success: false,
                 error: false,
-                allProjects: [],
                 current: {
-                    project_title: '',
-                    short_description: '',
-                    description: '',
+                    name: '',
+                    role: '',
                     image: '',
-                    icon: '',
-                    category: '',
-                    date: '',
-                    state: ''
+                    facebook: '',
+                    twitter: '',
+                    instagram: '',
+                    github: '',
+                    linkedin: '',
+                    isactive: false,
+                },
+                roles: {
+                    kurucu: "Kurucu",
+                    baskan: "Başkan",
+                    baskanyrd: "Başkan Yardımcısı",
+                    sekbaskani: "Sosyal Etkinlikler Komitesi Başkanı",
+                    eykbaskani: "Eğlence ve Yarışma Komitesi Başkanı",
+                    ekbaskani: "Eğitim Komitesi Başkanı",
+                    sosyalmedya: "Sosyal Medya Yöneticisi",
+                    sekbaskanyrd: "Sosyal Etkinlikler Komitesi Başkan Yardımcısı",
+                    eykbaskanyrd: "Eğlence Yarışma Komitesi Başkan Yardımcısı",
+                    ekbaskanyrd: "Eğitim Komitesi Başkan Yardımcısı"
                 }
             }
         },
@@ -247,11 +252,11 @@
                 })
             },
 
-            deletePerson(index,project_id){
+            deletePerson(index,person_id){
                 var self = this;
                 this.$swal({
                     title: 'Emin misin?',
-                    text: "Sildiğin projeyi geri alamazsın!",
+                    text: "Sildiğin üyeyi geri alamazsın!",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -260,16 +265,16 @@
                     cancelButtonText: 'Hayır'
                 }).then((result) => {
                     if (result.value) {
-                        axios.delete('/admin/projects',{
-                            params: {project_id: project_id}
+                        axios.delete('/admin/team',{
+                            params: {person_id: person_id}
                         }).then(response => {
                             if(response.status === 200){
                                 self.$swal(
                                     'Silindi!',
-                                    'Proje silindi.',
+                                    'Üye silindi.',
                                     'success'
                                 );
-                                self.allProjects.splice(index,1);
+                                self.people.splice(index,1);
                             }
                         });
 
@@ -278,15 +283,16 @@
 
             },
 
-            updatePerson(project){
-                this.current.project_title = project.project_title;
-                this.current.short_description = project.short_description;
-                this.current.description = project.description;
-                this.current.image = project.image_path;
-                this.current.icon = project.icon;
-                this.current.category = project.category;
-                this.current.date = project.date;
-                this.current.state = project.state;
+            updatePerson(person){
+                this.current.name = person.name;
+                this.current.role = person.role;
+                this.current.image = person.image;
+                this.current.facebook = person.facebook;
+                this.current.twitter = person.twitter;
+                this.current.instagram = person.instagram;
+                this.current.linkedin = person.linkedin;
+                this.current.github = person.github;
+                this.current.isactive = person.isactive;
 
                 this.update = true;
             }

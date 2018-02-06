@@ -38,6 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'admin'],function(){
     Route::delete('messages','AdminController@deleteMessage');
     Route::get('team', 'AdminController@team');
     Route::post('team', 'AdminController@teamPOST');
+    Route::delete('team', 'AdminController@deleteTeam');
     Route::get('users','UserController@index');
     Route::get('users/{id}','UserController@edit');
     Route::post('users/{id}','UserController@update');
