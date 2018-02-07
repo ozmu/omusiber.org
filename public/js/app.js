@@ -50501,7 +50501,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\nbutton.btn.btn-lg[data-v-723359da], select#roleUpdate[data-v-723359da] {\n    display: block;\n    margin: 0 auto;\n}\nselect#roleUpdate[data-v-723359da] {\n    margin-bottom:15px;\n}\nbutton.btn.btn-lg.update-person[data-v-723359da] {\n    margin-top: 20px;\n    background: #fff;\n}\n\n", ""]);
+exports.push([module.i, "\ndiv.row[data-v-723359da] {\n    margin:20px 0;\n}\nbutton.btn.btn-lg[data-v-723359da], select#roleUpdate[data-v-723359da] {\n    display: block;\n    margin: 0 auto;\n}\nselect#roleUpdate[data-v-723359da] {\n    margin-bottom:15px;\n}\nbutton.btn.btn-lg.update-person[data-v-723359da] {\n    margin-top: 20px;\n    background: #fff;\n}\ndiv.person-role[data-v-723359da] {\n    margin: 20px 0;\n    text-align: center;\n}\n\n", ""]);
 
 // exports
 
