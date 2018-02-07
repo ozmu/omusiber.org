@@ -1434,6 +1434,7 @@ Vue.component('example', __webpack_require__(42));
 Vue.component('contact', __webpack_require__(45));
 Vue.component('messages', __webpack_require__(48));
 Vue.component('about-us', __webpack_require__(54));
+Vue.component('about', __webpack_require__(88));
 Vue.component('projects', __webpack_require__(57));
 Vue.component('activities', __webpack_require__(65));
 Vue.component('gallery', __webpack_require__(68));
@@ -49873,111 +49874,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['about_title', 'about_text', 'team'],
+    props: ['header', 'content', 'team'],
     data: function data() {
         return {};
     }
@@ -49994,15 +49893,43 @@ var render = function() {
   return _c("div", { attrs: { id: "about-us" } }, [
     _c("div", { staticClass: "heading main centered" }, [
       _c("h3", { staticClass: "uppercase lg-title" }, [
-        _c("span", { staticClass: "titles" }, [_vm._v(_vm._s(_vm.about_title))])
+        _c("span", { staticClass: "titles" }, [_vm._v(_vm._s(_vm.header))])
       ]),
       _vm._v(" "),
       _c("p", { staticClass: "text-color" }, [
-        _vm._v("\n            " + _vm._s(_vm.about_text) + "\n        ")
+        _vm._v("\n            " + _vm._s(_vm.content) + "\n        ")
       ])
     ]),
     _vm._v(" "),
-    _vm._m(0)
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "row teammates" },
+        _vm._l(_vm.team, function(person) {
+          return _c("div", { staticClass: "col-md-3 col-md-offset-3" }, [
+            _c("div", { staticClass: "team-box box-1" }, [
+              _vm._m(0, true),
+              _vm._v(" "),
+              _c("div", { staticClass: "team-details t-center" }, [
+                _c("div", { staticClass: "chairman" }, [
+                  _c("h4", { staticClass: "team-name" }, [
+                    _vm._v(_vm._s(person.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("h5", { staticClass: "uppercase main-color" }, [
+                    _vm._v(_vm._s(person.role))
+                  ])
+                ]),
+                _vm._v(" "),
+                _vm._m(1, true)
+              ]),
+              _vm._v(" "),
+              _vm._m(2, true)
+            ])
+          ])
+        })
+      )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -50010,397 +49937,66 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row teammates" }, [
-        _c("div", { staticClass: "col-md-3 col-md-offset-3" }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [_vm._v("Emre Engin")]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("Kurucu")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Facebook"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                )
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3 " }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [
-                  _vm._v("Muhammet Öztürk")
-                ]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("Başkan")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "https://twitter.com/ozturkmuhammeet",
-                      target: "_blank",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href:
-                        "https://www.linkedin.com/in/muhammet-ozturk-49a425111/",
-                      target: "_blank",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "https://www.github.com/ozmu/",
-                      target: "_blank",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "github"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-github ic-github" })]
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
+    return _c("div", { staticClass: "team-img" }, [
+      _c("img", { attrs: { alt: "", src: "" } }),
       _vm._v(" "),
-      _c("div", { staticClass: "row teammates" }, [
-        _c("div", { staticClass: "col-md-3 " }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [_vm._v("Emre Engin")]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("1. Başkan")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Facebook"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                )
-              ])
-            ])
-          ])
-        ]),
+      _c("span")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "person-info" }, [
+      _c("h5", { staticClass: "uppercase main-color" }, [
+        _vm._v("Python,Linux,PHP")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "team-socials" }, [
+      _c("div", { staticClass: "social-list tbl" }, [
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "#",
+              "data-toggle": "tooltip",
+              "data-placement": "top",
+              "data-original-title": "Facebook"
+            }
+          },
+          [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [
-                  _vm._v("Salih Can Özel")
-                ]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("2. Başkan")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Facebook"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                )
-              ])
-            ])
-          ])
-        ]),
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "#",
+              "data-toggle": "tooltip",
+              "data-placement": "top",
+              "data-original-title": "Twitter"
+            }
+          },
+          [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [_vm._v("Sinan Şahin")]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("3. Başkan")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Facebook"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                )
-              ])
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-3" }, [
-          _c("div", { staticClass: "team-box box-1" }, [
-            _c("div", { staticClass: "team-img" }, [
-              _c("img", { attrs: { alt: "", src: "" } }),
-              _vm._v(" "),
-              _c("span")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-details t-center" }, [
-              _c("div", { staticClass: "chairman" }, [
-                _c("h4", { staticClass: "team-name" }, [
-                  _vm._v("Umut Can Purtul")
-                ]),
-                _vm._v(" "),
-                _c("h5", { staticClass: "uppercase main-color" }, [
-                  _vm._v("4. Başkan")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "team-socials" }, [
-              _c("div", { staticClass: "social-list tbl" }, [
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Facebook"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-facebook ic-facebook" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Twitter"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-twitter ic-twitter" })]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  {
-                    attrs: {
-                      href: "#",
-                      "data-toggle": "tooltip",
-                      "data-placement": "top",
-                      "data-original-title": "Linkedin"
-                    }
-                  },
-                  [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
-                )
-              ])
-            ])
-          ])
-        ])
+        _c(
+          "a",
+          {
+            attrs: {
+              href: "#",
+              "data-toggle": "tooltip",
+              "data-placement": "top",
+              "data-original-title": "Linkedin"
+            }
+          },
+          [_c("i", { staticClass: "fa fa-linkedin ic-linkedin" })]
+        )
       ])
     ])
   }

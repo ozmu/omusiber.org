@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Contact;
 use App\Title;
 use App\Text;
+use App\Team;
 use App\Project;
 use App\Activity;
 use Illuminate\Support\Arr;
@@ -16,7 +17,8 @@ class IndexController extends Controller
     public function index(){
         $titles = Title::first();
         $texts = Text::first();
-        return view('index',compact('titles','texts'));
+        $team = Team::where('is_active', 1)->get();
+        return view('index',compact('titles','texts','team'));
     }
 
     public function store(Request $request){

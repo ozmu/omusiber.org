@@ -19,6 +19,7 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('contact', require('./components/Site/Contact.vue'));
 Vue.component('messages', require('./components/Admin/Messages.vue'));
 Vue.component('about-us', require('./components/Admin/AboutUs.vue'));
+Vue.component('about', require('./components/Site/About.vue'));
 Vue.component('projects', require('./components/Admin/Projects.vue'));
 Vue.component('activities', require('./components/Admin/Activities.vue'));
 Vue.component('gallery', require('./components/Admin/Gallery.vue'));
