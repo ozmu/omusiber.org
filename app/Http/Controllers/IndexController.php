@@ -9,6 +9,7 @@ use App\Text;
 use App\Team;
 use App\Project;
 use App\Activity;
+use App\Gallery;
 use Illuminate\Support\Arr;
 use PhpParser\Node\Expr\Array_;
 
@@ -18,7 +19,8 @@ class IndexController extends Controller
         $titles = Title::first();
         $texts = Text::first();
         $team = Team::where('is_active', 1)->get();
-        return view('index',compact('titles','texts','team'));
+        $gallery = Gallery::all();
+        return view('index',compact('titles','texts', 'team', 'gallery'));
     }
 
     public function store(Request $request){

@@ -1491,6 +1491,7 @@ Vue.component('members', __webpack_require__(79));
 Vue.component('categories', __webpack_require__(82));
 Vue.component('site-projects', __webpack_require__(85));
 Vue.component('site-activities', __webpack_require__(88));
+Vue.component('site-gallery', __webpack_require__(106));
 Vue.component('docs', __webpack_require__(91));
 Vue.component('about', __webpack_require__(12));
 Vue.component('team', __webpack_require__(94));
@@ -51541,6 +51542,196 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(107)
+/* template */
+var __vue_template__ = __webpack_require__(108)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Site/Gallery.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fde29780", Component.options)
+  } else {
+    hotAPI.reload("data-v-fde29780", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 107 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['header', 'images'],
+    data: function data() {
+        return {
+            allImages: this.images
+        };
+    },
+
+
+    methods: {}
+});
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "gallery" } }, [
+    _c("div", { staticClass: "heading main centered" }, [
+      _c("h3", { staticClass: "uppercase lg-title" }, [
+        _c("span", { staticClass: "titles" }, [_vm._v(_vm._s(_vm.header))])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "md-padding" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12" }, [
+            _c(
+              "div",
+              {
+                staticClass: "camera_wrap camera-slider lg-slider-cam",
+                attrs: {
+                  "data-hide-pagination": "",
+                  "data-hide-play-pause": "",
+                  "data-height": "500px",
+                  "data-fx": "simpleFade"
+                }
+              },
+              _vm._l(_vm.allImages, function(image) {
+                return _c(
+                  "div",
+                  {
+                    attrs: {
+                      "data-thumb": image.image_path,
+                      "data-src": image.image_path
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "camera_caption fadeFromBottom" },
+                      [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(image.description) +
+                            "\n                            "
+                        )
+                      ]
+                    )
+                  ]
+                )
+              })
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-fde29780", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

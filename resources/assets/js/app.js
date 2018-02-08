@@ -28,6 +28,7 @@ Vue.component('members', require('./components/Admin/Members.vue'));
 Vue.component('categories', require('./components/Admin/Categories.vue'));
 Vue.component('site-projects',require('./components/Site/Projects.vue'));
 Vue.component('site-activities',require('./components/Site/Activities.vue'));
+Vue.component('site-gallery',require('./components/Site/Gallery.vue'));
 Vue.component('docs',require('./components/Docs/Index.vue'));
 Vue.component('about',require('./components/Site/About.vue'));
 Vue.component('team',require('./components/Admin/Team.vue'));
