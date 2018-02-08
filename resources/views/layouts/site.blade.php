@@ -37,7 +37,7 @@
 
 
 <!-- Content start -->
-    <div class="pageContent">
+    <div class="pageContent" id="home">
         @yield('content')
     </div>
     <!-- Content end -->

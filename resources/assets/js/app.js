@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('home', require('./components/Site/Home.vue'));
 Vue.component('contact', require('./components/Site/Contact.vue'));
 Vue.component('messages', require('./components/Admin/Messages.vue'));
 Vue.component('about-us', require('./components/Admin/AboutUs.vue'));
