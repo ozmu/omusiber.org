@@ -4,9 +4,9 @@
             <div id="welcome" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.6">
                 <ul>
                     <li data-index="rs-972" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="{&quot;revslider-weather-addon&quot; : { &quot;type&quot; : &quot;&quot; ,&quot;name&quot; : &quot;&quot; ,&quot;woeid&quot; : &quot;&quot; ,&quot;unit&quot; : &quot;&quot; }}" data-description="">
-
+                    
                         <img src="//revolutioncdn-themepunchgbr.netdna-ssl.com/wp-content/uploads/revslider/techco-header/Hello-World.jpg" alt="" title="TechCo One-Page WordPress Theme" data-bgposition="center center" data-bgfit="cover" data-bgparallax="4" class="rev-slidebg" data-no-retina>
-
+                        
                         <!-- Bg video -->
                         <div class="rs-background-video-layer"
                              data-forcerewind="on"

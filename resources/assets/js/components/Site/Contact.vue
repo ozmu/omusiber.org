@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group m-t-2">
                                 <button @click="sendMessage" class="btn rect-angles btn-gry-border btn-lg" type="submit" value="submit">
-                                    <i class="fa fa-crop"></i></span></span></span>Send Message</button>
+                                    <i class="fa fa-crop"></i></span></span></span>Gönder</button>
                             </div>
 
                         </div>
