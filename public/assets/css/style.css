@@ -5758,3 +5758,7 @@ button#member-submit {
 .form-error {
 	background: #c12020;
 }
+
+.team-box.box-1 .team-img {
+	height: 250px;
+}

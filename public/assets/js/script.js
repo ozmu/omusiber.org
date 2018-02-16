@@ -10,7 +10,7 @@
 		$bodyclass			= 'bg1',		// for boxed layout only, available values: patterns : 'bg1','bg2','bg3','bg4','bg5','bg6','bg7','bg8','bg9','bg10' & background images: 'bg11','bg12','bg13'.
 		$rtl				= '0',			// 0 is false and 1 is true.
 		$loadin 			= '1',			// 0 is false and 1 is true.
-		$loaderStyle		= 'circles',			// '' is Default, and the other values are : 'circles', 'spin_Square' ,'large_dots' ,'line_with_Dots' ,'cp-round' ,'cp-pinwheel'  ,'cp-balls' ,'cp-bubble' ,'cp-flip' ,'cp-hue' ,'cp-skeleton' ,'cp-eclipse' ,'cp-boxes' ,'cp-morph'
+		$loaderStyle		= 'spin_Square',			// '' is Default, and the other values are : 'circles', 'spin_Square' ,'large_dots' ,'line_with_Dots' ,'cp-round' ,'cp-pinwheel'  ,'cp-balls' ,'cp-bubble' ,'cp-flip' ,'cp-hue' ,'cp-skeleton' ,'cp-eclipse' ,'cp-boxes' ,'cp-morph'
 		$sticky 			= '1',			// 0 is false and 1 is true.
 		$totop 				= '1';			// 0 is false and 1 is true.
 		
