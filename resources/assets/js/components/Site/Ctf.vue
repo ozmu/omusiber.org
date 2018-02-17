@@ -7,17 +7,84 @@
             </div>
             <div class="sponsor">PoineTR</div>
         </header>
-        <div class="announcement">
+        <div class="announcement" v-if="!sss">
             <h1>OMUCTF'18</h1>
-            <h3>OMUSiber'in düzenlediği eğlenceli bir CTF</h3>
+            <h3>En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF</h3>
             <h3 class="italic">Henüz kayıtlar başlamamıştır!</h3>
+            <a href="#" class="btn btn-sm sss" @click="sss = !sss">Sık Sorulan Sorular</a>
+        </div>
+        <div class="sss" v-if="sss">
+            <a href="#" class="btn btn-sm sss back" @click="sss = !sss">Geri</a>
+            <h1>Sık Sorulan Sorular</h1>
+            <div class="container">
+                <div class="soru">
+                    <h3>CTF Nedir?</h3>
+                    <p>CTF, insanların siber güvenlik bilgilerini test ettiği yarışmalardır.</p>
+                </div>
+                <div class="soru">
+                    <h3>OMUCTF'18 Nedir?</h3>
+                    <p>OMUSiber tarafından düzenlenmiş en büyük çaplı CTF'dir. Organizasyonda ayrıca poineTR'nin de emeği çok büyüktür.</p>
+                </div>
+                <div class="soru">
+                    <h3>CTF'in asıl amacı ne ?</h3>
+                    <p>Asıl amaç her şeyden önce öğrenmek. Fakat bunun dışında gerçekten eğlenmek ve offline ctf zamanı gerçekleşecek olan konferansta birbirinden önemli isimlerle tanışma fırsatı bulmaktır.</p>
+                </div>
+                <div class="soru">
+                    <h3>Kaç kişilik ekiple katılabilirim?</h3>
+                    <p>Yarışmaya en fazla 3 kişilik ekiple katılabilirsiniz. İsterseniz bireysel katılım da gösterebilirsiniz.</p>
+                </div>
+                <div class="soru">
+                    <h3>Yarışma süresi ne kadar?</h3>
+                    <p>İlk aşama, tam olarak 9 Mart'ı 10 Mart'a bağlayan gece yani 10 Mart 00.00'da başlayacak ve 23.59'a kadar devam edecektir.</p>
+                </div>
+                <div class="soru">
+                    <h3>Şehir dışından katılabilir miyim?</h3>
+                    <p>Elbette. İlk aşama online olduğu için istediğiniz şehirden katılabilirsiniz.</p>
+                </div>
+                <div class="soru">
+                    <h3>İlk aşamadan kastınız nedir?</h3>
+                    <p>CTF iki aşamadan oluşuyor. İlk aşama online gerçekleşecek, ilk aşamada finale kalan Samsun dışından ilk 5 takımı Samsun'a davet edeceğiz ve 
+                        Samsun'da olan ilk 3 takım ile birlikte Nisan ayının sonlarına doğru düzenlediğimiz konferans'ın akşamında offline yarışma fırsatı bulacaklar. Ayrıca, Samsun'un güzel mekânlarında bu 8 takım için 
+                        güzel eğlenceler hazırlayacağız. :)
+                    </p>
+                </div>
+                <div class="soru">
+                    <h3>Ödüller neler?</h3>
+                    <p>Ödüller henüz belirlenmedi.</p>
+                </div>
+                <div class="soru">
+                    <h3>İlk aşamada 1. olarak dereceye girip offline CTF'e katılmaya hak kazandım, 5. olarak dereceye girmiş takımla eşit mi başlayacağım offline CTF'e ?</h3>
+                    <p>Elbette hayır. Aldığınız puanlar ikinci aşama olan offline ctf için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır.</p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
+<script>
+export default {
+  data(){
+      return {
+          sss: false,
+      }
+  }
+}
+</script>
+
+
 <style>
     @import url('https://fonts.googleapis.com/css?family=Asap+Condensed:600i,700');
 
+    ::-webkit-scrollbar
+    {
+        width: 0px;
+    }
+    ::-webkit-scrollbar-track-piece
+    {
+        background-color: transparent;
+        -webkit-border-radius: 6px;
+    }
+    
     body {
     background: #fafafa;
     display: flex;
@@ -81,31 +148,14 @@
     transform: translateY(-50%);
     }
 
-    .logo:before {
-    right: 158px;
-    width: 40%;
-    }
-    .logo:after {
-    left: 158px;
-    width: 55%;
-    }
-
     .logo span {
-    /*border: solid currentColor;
-    border-width: 0 3px 3px 0;
-    position: absolute;
-    top: -22px;
-    width: 69px;
-    height: 70px;
-    left: 50%;
-    transform: translateX(-58%) rotate(58deg) skew(0deg, -30deg);*/
     display: block;
     position: absolute;
     width: 100%;
     top: calc(50% - 1px);
     }
 
-    .announcement {
+    .announcement, div.sss {
     position: relative;
     border: 3px solid currentColor;
     border-top: 0;
@@ -118,7 +168,7 @@
     }
 
     .announcement:before,
-    .announcement:after {
+    .announcement:after, div.sss::before, div.sss::after {
     content: '';
     position: absolute;
     top: 0px;
@@ -126,10 +176,10 @@
     height: 0;
     width: 15px;
     }
-    .announcement:before {
+    .announcement:before, div.sss::before {
     left: -3px;
     }
-    .announcement:after {
+    .announcement:after, div.sss::after {
     right: -3px;
     }
 
@@ -175,4 +225,52 @@
     h3.italic {
         font-size: 18px;
     }
+
+    div.sss .container {
+        max-height: 300px;
+        margin: 0 15%;
+        overflow-y: auto;
+    }
+
+    a.sss {
+        border: 3px solid #e0c94d;
+        padding: 15px;
+        margin: 20px;
+        transition: all ease .6s;
+    }
+
+    a.sss:hover {
+        background: #752233;
+        border-color: #fff;
+        transition: all ease .6s;
+    }
+
+    a.back {
+        left: 0;
+        top: 0;
+        position: absolute;
+    }
+
+    div.sss .soru {
+        margin: 20px 0;
+    }
+
+    div.sss .soru h3,div.sss .soru p {
+        width: 100%;
+        text-align: left;
+    }
+
+    div.sss .soru h3 {
+        font-size: 22px;
+    }
+
+    div.sss .soru h3::before {
+        content: '* ';
+    }
+
+    div.sss .soru p {
+        font-size: 14px;
+        text-transform: initial;
+    }
+
 </style>

@@ -51730,7 +51730,7 @@ function injectStyle (ssrContext) {
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(113)
 /* template */
 var __vue_template__ = __webpack_require__(105)
 /* template functional */
@@ -51806,7 +51806,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Asap+Condensed:600i,700);", ""]);
 
 // module
-exports.push([module.i, "\nbody {\nbackground: #fafafa;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\ntext-transform: uppercase;\nfont-family: 'Asap Condensed', sans-serif;\n}\nh1 {\nfont-size: 60px;\n}\nh3 {\nfont-size: 26px;\n}\n.italic {\nfont-style: italic;\n}\n.card {\nposition: relative;\nmargin: auto;\nheight: 100%;\nwidth: 100%;\ntext-align: center;\nbackground: -webkit-gradient(linear, left top, left bottom, from(#E96874), color-stop(#6E3663), to(#2B0830));\nbackground: linear-gradient(#E96874, #6E3663, #2B0830);\nborder-radius: 2px;\n-webkit-box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\n        box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\ncolor: #fff;\npadding: 30px;\n}\n.card header {\nposition: absolute;\ntop: 31px;\nleft: 0;\nwidth: 100%;\npadding: 0 10%;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\ndisplay: grid;\ngrid-template-columns: 1fr 1fr 1fr;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.card header > *:first-child {\ntext-align: left;\n}\n.card header > *:last-child {\ntext-align: right;\n}\n.logo {\nfont-size: 24px;\nposition: relative;\n}\n.logo:before,\n.logo:after {\ncontent: '';\nposition: absolute;\ntop: 50%;\nborder-top: 3px solid currentColor;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\n}\n.logo:before {\nright: 158px;\nwidth: 40%;\n}\n.logo:after {\nleft: 158px;\nwidth: 55%;\n}\n.logo span {\n/*border: solid currentColor;\nborder-width: 0 3px 3px 0;\nposition: absolute;\ntop: -22px;\nwidth: 69px;\nheight: 70px;\nleft: 50%;\ntransform: translateX(-58%) rotate(58deg) skew(0deg, -30deg);*/\ndisplay: block;\nposition: absolute;\nwidth: 100%;\ntop: calc(50% - 1px);\n}\n.announcement {\nposition: relative;\nborder: 3px solid currentColor;\nborder-top: 0;\nwidth: 100%;\nheight: 100%;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\n-webkit-box-orient: vertical;\n-webkit-box-direction: normal;\n    -ms-flex-direction: column;\n        flex-direction: column;\n-webkit-box-pack: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.announcement:before,\n.announcement:after {\ncontent: '';\nposition: absolute;\ntop: 0px;\nborder-top: 3px solid currentColor;\nheight: 0;\nwidth: 15px;\n}\n.announcement:before {\nleft: -3px;\n}\n.announcement:after {\nright: -3px;\n}\n* {\n-webkit-box-sizing: border-box;\n        box-sizing: border-box;\nmargin: 0;\npadding: 0;\n}\nhtml, body {\nheight: 100%;\n}\na,\na:visited,\na:focus,\na:active,\na:link {\ntext-decoration: none;\noutline: 0;\n}\na {\ncolor: currentColor;\n-webkit-transition: .2s ease-in-out;\ntransition: .2s ease-in-out;\n}\nh1, h2, h3, h4 {\nmargin: .15em 0;\n}\nul {\npadding: 0;\nlist-style: none;\n}\nimg {\nvertical-align: middle;\nheight: auto;\nwidth: 20%;\n}\nh3.italic {\n    font-size: 18px;\n}\n", ""]);
+exports.push([module.i, "\n::-webkit-scrollbar\n{\n    width: 0px;\n}\n::-webkit-scrollbar-track-piece\n{\n    background-color: transparent;\n    -webkit-border-radius: 6px;\n}\nbody {\nbackground: #fafafa;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\ntext-transform: uppercase;\nfont-family: 'Asap Condensed', sans-serif;\n}\nh1 {\nfont-size: 60px;\n}\nh3 {\nfont-size: 26px;\n}\n.italic {\nfont-style: italic;\n}\n.card {\nposition: relative;\nmargin: auto;\nheight: 100%;\nwidth: 100%;\ntext-align: center;\nbackground: -webkit-gradient(linear, left top, left bottom, from(#E96874), color-stop(#6E3663), to(#2B0830));\nbackground: linear-gradient(#E96874, #6E3663, #2B0830);\nborder-radius: 2px;\n-webkit-box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\n        box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\ncolor: #fff;\npadding: 30px;\n}\n.card header {\nposition: absolute;\ntop: 31px;\nleft: 0;\nwidth: 100%;\npadding: 0 10%;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\ndisplay: grid;\ngrid-template-columns: 1fr 1fr 1fr;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.card header > *:first-child {\ntext-align: left;\n}\n.card header > *:last-child {\ntext-align: right;\n}\n.logo {\nfont-size: 24px;\nposition: relative;\n}\n.logo:before,\n.logo:after {\ncontent: '';\nposition: absolute;\ntop: 50%;\nborder-top: 3px solid currentColor;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\n}\n.logo span {\ndisplay: block;\nposition: absolute;\nwidth: 100%;\ntop: calc(50% - 1px);\n}\n.announcement, div.sss {\nposition: relative;\nborder: 3px solid currentColor;\nborder-top: 0;\nwidth: 100%;\nheight: 100%;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\n-webkit-box-orient: vertical;\n-webkit-box-direction: normal;\n    -ms-flex-direction: column;\n        flex-direction: column;\n-webkit-box-pack: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.announcement:before,\n.announcement:after, div.sss::before, div.sss::after {\ncontent: '';\nposition: absolute;\ntop: 0px;\nborder-top: 3px solid currentColor;\nheight: 0;\nwidth: 15px;\n}\n.announcement:before, div.sss::before {\nleft: -3px;\n}\n.announcement:after, div.sss::after {\nright: -3px;\n}\n* {\n-webkit-box-sizing: border-box;\n        box-sizing: border-box;\nmargin: 0;\npadding: 0;\n}\nhtml, body {\nheight: 100%;\n}\na,\na:visited,\na:focus,\na:active,\na:link {\ntext-decoration: none;\noutline: 0;\n}\na {\ncolor: currentColor;\n-webkit-transition: .2s ease-in-out;\ntransition: .2s ease-in-out;\n}\nh1, h2, h3, h4 {\nmargin: .15em 0;\n}\nul {\npadding: 0;\nlist-style: none;\n}\nimg {\nvertical-align: middle;\nheight: auto;\nwidth: 20%;\n}\nh3.italic {\n    font-size: 18px;\n}\ndiv.sss .container {\n    max-height: 300px;\n    margin: 0 15%;\n    overflow-y: auto;\n}\na.sss {\n    border: 3px solid #e0c94d;\n    padding: 15px;\n    margin: 20px;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.sss:hover {\n    background: #752233;\n    border-color: #fff;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.back {\n    left: 0;\n    top: 0;\n    position: absolute;\n}\ndiv.sss .soru {\n    margin: 20px 0;\n}\ndiv.sss .soru h3,div.sss .soru p {\n    width: 100%;\n    text-align: left;\n}\ndiv.sss .soru h3 {\n    font-size: 22px;\n}\ndiv.sss .soru h3::before {\n    content: '* ';\n}\ndiv.sss .soru p {\n    font-size: 14px;\n    text-transform: initial;\n}\n\n", ""]);
 
 // exports
 
@@ -51819,33 +51819,171 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "card" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    !_vm.sss
+      ? _c("div", { staticClass: "announcement" }, [
+          _c("h1", [_vm._v("OMUCTF'18")]),
+          _vm._v(" "),
+          _c("h3", [
+            _vm._v(
+              "En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF"
+            )
+          ]),
+          _vm._v(" "),
+          _c("h3", { staticClass: "italic" }, [
+            _vm._v("Henüz kayıtlar başlamamıştır!")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-sm sss",
+              attrs: { href: "#" },
+              on: {
+                click: function($event) {
+                  _vm.sss = !_vm.sss
+                }
+              }
+            },
+            [_vm._v("Sık Sorulan Sorular")]
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.sss
+      ? _c("div", { staticClass: "sss" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-sm sss back",
+              attrs: { href: "#" },
+              on: {
+                click: function($event) {
+                  _vm.sss = !_vm.sss
+                }
+              }
+            },
+            [_vm._v("Geri")]
+          ),
+          _vm._v(" "),
+          _c("h1", [_vm._v("Sık Sorulan Sorular")]),
+          _vm._v(" "),
+          _vm._m(1)
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card" }, [
-      _c("header", [
-        _c("time", { attrs: { datetime: "2018-05-15T19:00" } }, [
-          _vm._v("10 Mart 2018")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "logo" }, [
-          _c("img", { attrs: { src: "assets/images/logo.png" } })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sponsor" }, [_vm._v("PoineTR")])
+    return _c("header", [
+      _c("time", { attrs: { datetime: "2018-05-15T19:00" } }, [
+        _vm._v("10 Mart 2018")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "announcement" }, [
-        _c("h1", [_vm._v("OMUCTF'18")]),
+      _c("div", { staticClass: "logo" }, [
+        _c("img", { attrs: { src: "assets/images/logo.png" } })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "sponsor" }, [_vm._v("PoineTR")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("CTF Nedir?")]),
         _vm._v(" "),
-        _c("h3", [_vm._v("OMUSiber'in düzenlediği eğlenceli bir CTF")]),
+        _c("p", [
+          _vm._v(
+            "CTF, insanların siber güvenlik bilgilerini test ettiği yarışmalardır."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("OMUCTF'18 Nedir?")]),
         _vm._v(" "),
-        _c("h3", { staticClass: "italic" }, [
-          _vm._v("Henüz kayıtlar başlamamıştır!")
+        _c("p", [
+          _vm._v(
+            "OMUSiber tarafından düzenlenmiş en büyük çaplı CTF'dir. Organizasyonda ayrıca poineTR'nin de emeği çok büyüktür."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("CTF'in asıl amacı ne ?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Asıl amaç her şeyden önce öğrenmek. Fakat bunun dışında gerçekten eğlenmek ve offline ctf zamanı gerçekleşecek olan konferansta birbirinden önemli isimlerle tanışma fırsatı bulmaktır."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Kaç kişilik ekiple katılabilirim?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Yarışmaya en fazla 3 kişilik ekiple katılabilirsiniz. İsterseniz bireysel katılım da gösterebilirsiniz."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Yarışma süresi ne kadar?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "İlk aşama, tam olarak 9 Mart'ı 10 Mart'a bağlayan gece yani 10 Mart 00.00'da başlayacak ve 23.59'a kadar devam edecektir."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Şehir dışından katılabilir miyim?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Elbette. İlk aşama online olduğu için istediğiniz şehirden katılabilirsiniz."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("İlk aşamadan kastınız nedir?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "CTF iki aşamadan oluşuyor. İlk aşama online gerçekleşecek, ilk aşamada finale kalan Samsun dışından ilk 5 takımı Samsun'a davet edeceğiz ve \n                      Samsun'da olan ilk 3 takım ile birlikte Nisan ayının sonlarına doğru düzenlediğimiz konferans'ın akşamında offline yarışma fırsatı bulacaklar. Ayrıca, Samsun'un güzel mekânlarında bu 8 takım için \n                      güzel eğlenceler hazırlayacağız. :)\n                  "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Ödüller neler?")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Ödüller henüz belirlenmedi.")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [
+          _vm._v(
+            "İlk aşamada 1. olarak dereceye girip offline CTF'e katılmaya hak kazandım, 5. olarak dereceye girmiş takımla eşit mi başlayacağım offline CTF'e ?"
+          )
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Elbette hayır. Aldığınız puanlar ikinci aşama olan offline ctf için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır."
+          )
         ])
       ])
     ])
@@ -51865,6 +52003,90 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            sss: false
+        };
+    }
+});
 
 /***/ })
 /******/ ]);
