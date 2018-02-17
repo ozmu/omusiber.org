@@ -51806,7 +51806,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Asap+Condensed:600i,700);", ""]);
 
 // module
-exports.push([module.i, "\n::-webkit-scrollbar\n{\n    width: 0px;\n}\n::-webkit-scrollbar-track-piece\n{\n    background-color: transparent;\n    -webkit-border-radius: 6px;\n}\nbody {\nbackground: #fafafa;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\ntext-transform: uppercase;\nfont-family: 'Asap Condensed', sans-serif;\n}\nh1 {\nfont-size: 60px;\n}\nh3 {\nfont-size: 26px;\n}\n.italic {\nfont-style: italic;\n}\n.card {\nposition: relative;\nmargin: auto;\nheight: 100%;\nwidth: 100%;\ntext-align: center;\nbackground: -webkit-gradient(linear, left top, left bottom, from(#E96874), color-stop(#6E3663), to(#2B0830));\nbackground: linear-gradient(#E96874, #6E3663, #2B0830);\nborder-radius: 2px;\n-webkit-box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\n        box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\ncolor: #fff;\npadding: 30px;\n}\n.card header {\nposition: absolute;\ntop: 31px;\nleft: 0;\nwidth: 100%;\npadding: 0 10%;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\ndisplay: grid;\ngrid-template-columns: 1fr 1fr 1fr;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.card header > *:first-child {\ntext-align: left;\n}\n.card header > *:last-child {\ntext-align: right;\n}\n.logo {\nfont-size: 24px;\nposition: relative;\n}\n.logo:before,\n.logo:after {\ncontent: '';\nposition: absolute;\ntop: 50%;\nborder-top: 3px solid currentColor;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\n}\n.logo span {\ndisplay: block;\nposition: absolute;\nwidth: 100%;\ntop: calc(50% - 1px);\n}\n.announcement, div.sss {\nposition: relative;\nborder: 3px solid currentColor;\nborder-top: 0;\nwidth: 100%;\nheight: 100%;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\n-webkit-box-orient: vertical;\n-webkit-box-direction: normal;\n    -ms-flex-direction: column;\n        flex-direction: column;\n-webkit-box-pack: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.announcement:before,\n.announcement:after, div.sss::before, div.sss::after {\ncontent: '';\nposition: absolute;\ntop: 0px;\nborder-top: 3px solid currentColor;\nheight: 0;\nwidth: 15px;\n}\n.announcement:before, div.sss::before {\nleft: -3px;\n}\n.announcement:after, div.sss::after {\nright: -3px;\n}\n* {\n-webkit-box-sizing: border-box;\n        box-sizing: border-box;\nmargin: 0;\npadding: 0;\n}\nhtml, body {\nheight: 100%;\n}\na,\na:visited,\na:focus,\na:active,\na:link {\ntext-decoration: none;\noutline: 0;\n}\na {\ncolor: currentColor;\n-webkit-transition: .2s ease-in-out;\ntransition: .2s ease-in-out;\n}\nh1, h2, h3, h4 {\nmargin: .15em 0;\n}\nul {\npadding: 0;\nlist-style: none;\n}\nimg {\nvertical-align: middle;\nheight: auto;\nwidth: 20%;\n}\nh3.italic {\n    font-size: 18px;\n}\ndiv.sss .container {\n    max-height: 300px;\n    margin: 0 15%;\n    overflow-y: auto;\n}\na.sss {\n    border: 3px solid #e0c94d;\n    padding: 15px;\n    margin: 20px;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.sss:hover {\n    background: #752233;\n    border-color: #fff;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.back {\n    left: 0;\n    top: 0;\n    position: absolute;\n}\ndiv.sss .soru {\n    margin: 20px 0;\n}\ndiv.sss .soru h3,div.sss .soru p {\n    width: 100%;\n    text-align: left;\n}\ndiv.sss .soru h3 {\n    font-size: 22px;\n}\ndiv.sss .soru h3::before {\n    content: '* ';\n}\ndiv.sss .soru p {\n    font-size: 14px;\n    text-transform: initial;\n}\n\n", ""]);
+exports.push([module.i, "\n::-webkit-scrollbar\n{\n    width: 0px;\n}\n::-webkit-scrollbar-track-piece\n{\n    background-color: transparent;\n    -webkit-border-radius: 6px;\n}\nbody {\nbackground: #fafafa;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\ntext-transform: uppercase;\nfont-family: 'Asap Condensed', sans-serif;\n}\nh1 {\nfont-size: 60px;\n}\nh3 {\nfont-size: 26px;\n}\n.italic {\nfont-style: italic;\n}\n.card {\nposition: relative;\nmargin: auto;\nheight: 100%;\nwidth: 100%;\ntext-align: center;\nbackground: -webkit-gradient(linear, left top, left bottom, from(#E96874), color-stop(#6E3663), to(#2B0830));\nbackground: linear-gradient(#E96874, #6E3663, #2B0830);\nborder-radius: 2px;\n-webkit-box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\n        box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);\ncolor: #fff;\npadding: 30px;\n}\n.card header {\nposition: absolute;\ntop: 31px;\nleft: 0;\nwidth: 100%;\npadding: 0 10%;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\ndisplay: grid;\ngrid-template-columns: 1fr 1fr 1fr;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.card header > *:first-child {\ntext-align: left;\n}\n.card header > *:last-child {\ntext-align: right;\n}\n.logo {\nfont-size: 24px;\nposition: relative;\n}\n.logo:before,\n.logo:after {\ncontent: '';\nposition: absolute;\ntop: 50%;\nborder-top: 3px solid currentColor;\n-webkit-transform: translateY(-50%);\n        transform: translateY(-50%);\n}\n.logo span {\ndisplay: block;\nposition: absolute;\nwidth: 100%;\ntop: calc(50% - 1px);\n}\n.announcement, div.sss {\nposition: relative;\nborder: 3px solid currentColor;\nborder-top: 0;\nwidth: 100%;\nheight: 100%;\ndisplay: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;\n-webkit-box-orient: vertical;\n-webkit-box-direction: normal;\n    -ms-flex-direction: column;\n        flex-direction: column;\n-webkit-box-pack: center;\n    -ms-flex-pack: center;\n        justify-content: center;\n-webkit-box-align: center;\n    -ms-flex-align: center;\n        align-items: center;\n}\n.announcement:before,\n.announcement:after, div.sss::before, div.sss::after {\ncontent: '';\nposition: absolute;\ntop: 0px;\nborder-top: 3px solid currentColor;\nheight: 0;\nwidth: 15px;\n}\n.announcement:before, div.sss::before {\nleft: -3px;\n}\n.announcement:after, div.sss::after {\nright: -3px;\n}\n* {\n-webkit-box-sizing: border-box;\n        box-sizing: border-box;\nmargin: 0;\npadding: 0;\n}\nhtml, body {\nheight: 100%;\n}\na,\na:visited,\na:focus,\na:active,\na:link {\ntext-decoration: none;\noutline: 0;\n}\na {\ncolor: currentColor;\n-webkit-transition: .2s ease-in-out;\ntransition: .2s ease-in-out;\n}\nh1, h2, h3, h4 {\nmargin: .15em 0;\n}\nul {\npadding: 0;\nlist-style: none;\n}\nimg {\nvertical-align: middle;\nmargin-top: 20px;\nheight: auto;\nwidth: 20%;\n}\nh3.italic {\n    font-size: 18px;\n}\ndiv.sss .container {\n    max-height: 300px;\n    margin: 0 15%;\n    overflow-y: auto;\n}\na.sss {\n    border: 3px solid #e0c94d;\n    padding: 15px;\n    margin: 20px;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.sss:hover {\n    background: #752233;\n    border-color: #fff;\n    -webkit-transition: all ease .6s;\n    transition: all ease .6s;\n}\na.back {\n    left: 0;\n    top: 0;\n    position: absolute;\n}\ndiv.sss .soru {\n    margin: 20px 0;\n}\ndiv.sss .soru h3,div.sss .soru p {\n    width: 100%;\n    text-align: left;\n}\ndiv.sss .soru h3 {\n    font-size: 22px;\n}\ndiv.sss .soru h3::before {\n    content: '* ';\n}\ndiv.sss .soru p {\n    font-size: 14px;\n    text-transform: initial;\n}\n\n", ""]);
 
 // exports
 
@@ -51823,33 +51823,40 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     !_vm.sss
-      ? _c("div", { staticClass: "announcement" }, [
-          _c("h1", [_vm._v("OMUCTF'18")]),
-          _vm._v(" "),
-          _c("h3", [
-            _vm._v(
-              "En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF"
-            )
-          ]),
-          _vm._v(" "),
-          _c("h3", { staticClass: "italic" }, [
-            _vm._v("Henüz kayıtlar başlamamıştır!")
-          ]),
-          _vm._v(" "),
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-sm sss",
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  _vm.sss = !_vm.sss
+      ? _c(
+          "div",
+          { staticClass: "announcement" },
+          [
+            _c("h1", [_vm._v("OMUCTF'18")]),
+            _vm._v(" "),
+            _c("h3", [
+              _vm._v(
+                "En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF"
+              )
+            ]),
+            _vm._v(" "),
+            _c("h3", { staticClass: "italic" }, [
+              _vm._v("Henüz kayıtlar başlamamıştır!")
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-sm sss",
+                attrs: { href: "#" },
+                on: {
+                  click: function($event) {
+                    _vm.sss = !_vm.sss
+                  }
                 }
-              }
-            },
-            [_vm._v("Sık Sorulan Sorular")]
-          )
-        ])
+              },
+              [_vm._v("Sık Sorulan Sorular")]
+            ),
+            _vm._v(" "),
+            _c("Countdown", { attrs: { date: "Mar 10, 2018" } })
+          ],
+          1
+        )
       : _vm._e(),
     _vm._v(" "),
     _vm.sss
@@ -52016,6 +52023,9 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Countdown_vue__);
+//
 //
 //
 //
@@ -52080,13 +52090,228 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    components: { Countdown: __WEBPACK_IMPORTED_MODULE_0__Countdown_vue___default.a },
     data: function data() {
         return {
             sss: false
         };
     }
 });
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(115)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(117)
+/* template */
+var __vue_template__ = __webpack_require__(118)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Countdown.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4042e26a", Component.options)
+  } else {
+    hotAPI.reload("data-v-4042e26a", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(116);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("4f27134d", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4042e26a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Countdown.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4042e26a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Countdown.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(undefined);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);", ""]);
+
+// module
+exports.push([module.i, "\n.block {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    margin: 20px;\n}\n.text {\n    color: #1abc9c;\n    font-size: 40px;\n    font-family: 'Roboto Condensed', serif;\n    font-weight: 400;\n    margin-top:10px;\n    margin-bottom: 10px;\n    text-align: center;\n}\n.digit {\n    color: #ecf0f1;\n    font-size: 60px;\n    font-weight: 100;\n    font-family: 'Roboto', serif;\n    margin: 10px;\n    text-align: center;\n}\n\n/*\n@media all and (min-width: 576px) and (max-width:768px){\n    .digit {\n        font-size: 40px;\n    }\n    .text {\n        font-size: 30px;\n    }\n}\n\n@media all and (max-width:576px){\n    .digit {\n        font-size: 24px;\n    }\n    .text {\n        font-size: 15px;\n    }\n}*/\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    ready: function ready() {
+        var _this = this;
+
+        window.setInterval(function () {
+            _this.now = Math.trunc(new Date().getTime() / 1000);
+        }, 1000);
+    },
+
+
+    props: {
+        date: {
+            type: Number,
+            coerce: function coerce(str) {
+                return Math.trunc(Date.parse(str) / 1000);
+            }
+        }
+    },
+
+    data: function data() {
+        return {
+            now: Math.trunc(new Date().getTime() / 1000)
+        };
+    },
+
+
+    computed: {
+        seconds: function seconds() {
+            return (this.date - this.now) % 60;
+        },
+        minutes: function minutes() {
+            return Math.trunc((this.date - this.now) / 60) % 60;
+        },
+        hours: function hours() {
+            return Math.trunc((this.date - this.now) / 60 / 60) % 24;
+        },
+        days: function days() {
+            return Math.trunc((this.date - this.now) / 60 / 60 / 24);
+        }
+    }
+});
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "block" }, [
+      _c("p", { staticClass: "digit" }, [
+        _vm._v(_vm._s(_vm._f("two_digits")(_vm.days)))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text" }, [_vm._v("Days")])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "block" }, [
+      _c("p", { staticClass: "digit" }, [
+        _vm._v(_vm._s(_vm._f("two_digits")(_vm.hours)))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text" }, [_vm._v("Hours")])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "block" }, [
+      _c("p", { staticClass: "digit" }, [
+        _vm._v(_vm._s(_vm._f("two_digits")(_vm.minutes)))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text" }, [_vm._v("Minutes")])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "block" }, [
+      _c("p", { staticClass: "digit" }, [
+        _vm._v(_vm._s(_vm._f("two_digits")(_vm.seconds)))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "text" }, [_vm._v("Seconds")])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4042e26a", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

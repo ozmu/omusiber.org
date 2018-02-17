@@ -12,6 +12,7 @@
             <h3>En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF</h3>
             <h3 class="italic">Henüz kayıtlar başlamamıştır!</h3>
             <a href="#" class="btn btn-sm sss" @click="sss = !sss">Sık Sorulan Sorular</a>
+            <Countdown date="Mar 10, 2018"></Countdown>            
         </div>
         <div class="sss" v-if="sss">
             <a href="#" class="btn btn-sm sss back" @click="sss = !sss">Geri</a>
@@ -62,7 +63,9 @@
 </template>
 
 <script>
+import Countdown from '../Countdown.vue';
 export default {
+  components: { Countdown },
   data(){
       return {
           sss: false,
@@ -218,6 +221,7 @@ export default {
 
     img {
     vertical-align: middle;
+    margin-top: 20px;
     height: auto;
     width: 20%;
     }
