@@ -42,4 +42,8 @@ class IndexController extends Controller
         $activities = Activity::all();
         return view('activities', compact('activities'));
     }
+
+    public function ctf(){
+        return view('ctf');
+    }
 }

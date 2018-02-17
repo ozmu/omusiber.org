@@ -68,3 +68,7 @@ Route::group(['prefix' => 'docs'],function (){
     Route::get('tool/{tool}/edit','DocsController@editTool')->middleware('editor');
     Route::post('tool/{tool}/edit','DocsController@updateTool')->middleware('editor');
 });
+
+
+/* CTF */
+Route::get('ctf', 'IndexController@ctf');
