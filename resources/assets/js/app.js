@@ -37,3 +37,5 @@ Vue.component('ctf',require('./components/Site/Ctf.vue'));
 const app = new Vue({
     el: '#home'
 });
+
+Vue.config.productionTip = false;

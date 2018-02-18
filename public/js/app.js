@@ -1501,6 +1501,8 @@ var app = new Vue({
   el: '#home'
 });
 
+Vue.config.productionTip = false;
+
 /***/ }),
 /* 16 */
 /***/ (function(module, exports, __webpack_require__) {

@@ -1,6 +1,24 @@
 ﻿/* ==========================================================================
   1. CSS RESET
 ============================================================================= */
+::-webkit-scrollbar
+{
+	width: 8px;
+	
+}
+::-webkit-scrollbar-track
+{
+	background: #424242;
+}
+::-webkit-scrollbar-thumb
+{
+	background: #2d5c77;
+}
+::-webkit-scrollbar-thumb:hover
+{
+	background: blue;
+}
+
 body {
 	font-family:"Lato",sans-serif;
 	line-height:1.5;
