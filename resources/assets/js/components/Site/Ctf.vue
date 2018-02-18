@@ -12,7 +12,7 @@
             <h3>En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF</h3>
             <h3 class="italic">Henüz kayıtlar başlamamıştır!</h3>
             <a href="#" class="btn btn-sm sss" @click="sss = !sss">Sık Sorulan Sorular</a>
-            <Countdown date="Mar 10, 2018"></Countdown>            
+                     
         </div>
         <div class="sss" v-if="sss">
             <a href="#" class="btn btn-sm sss back" @click="sss = !sss">Geri</a>
@@ -44,8 +44,8 @@
                 </div>
                 <div class="soru">
                     <h3>İlk aşamadan kastınız nedir?</h3>
-                    <p>CTF iki aşamadan oluşuyor. İlk aşama online gerçekleşecek, ilk aşamada finale kalan Samsun dışından ilk 5 takımı Samsun'a davet edeceğiz ve 
-                        Samsun'da olan ilk 3 takım ile birlikte Nisan ayının sonlarına doğru düzenlediğimiz konferans'ın akşamında offline yarışma fırsatı bulacaklar. Ayrıca, Samsun'un güzel mekânlarında bu 8 takım için 
+                    <p>CTF iki aşamadan oluşuyor. İlk aşama online gerçekleşecek, ilk aşamada finale kalan ilk 8 takımı Samsun'a davet edeceğiz ve 
+                        Nisan ayının sonlarına doğru düzenlediğimiz konferans'ın akşamında offline yarışma fırsatı bulacaklar. Ayrıca, Samsun'un güzel mekânlarında bu 8 takım için 
                         güzel eğlenceler hazırlayacağız. :)
                     </p>
                 </div>
@@ -56,6 +56,9 @@
                 <div class="soru">
                     <h3>İlk aşamada 1. olarak dereceye girip offline CTF'e katılmaya hak kazandım, 5. olarak dereceye girmiş takımla eşit mi başlayacağım offline CTF'e ?</h3>
                     <p>Elbette hayır. Aldığınız puanlar ikinci aşama olan offline ctf için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır.</p>
+                </div>
+                <div class="soru">
+                    <p>Düzenlemeler için burayı takip edebilirsiniz. Sorularınız için siber@omu.edu.tr</p>
                 </div>
             </div>
         </div>
@@ -232,7 +235,7 @@ export default {
 
     div.sss .container {
         max-height: 300px;
-        margin: 0 15%;
+        margin: 0 10%;
         overflow-y: auto;
     }
 
@@ -266,10 +269,6 @@ export default {
 
     div.sss .soru h3 {
         font-size: 22px;
-    }
-
-    div.sss .soru h3::before {
-        content: '* ';
     }
 
     div.sss .soru p {
