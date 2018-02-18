@@ -115,7 +115,8 @@ export default {
     height: 100%;
     width: 100%;
     text-align: center;
-    background: linear-gradient(#E96874, #6E3663, #2B0830);
+    /*background: linear-gradient(#E96874, #6E3663, #2B0830);*/
+    background: linear-gradient(#060202, #319289, #0c323c);
     border-radius: 2px;
     box-shadow: 0 6px 12px -3px rgba(0,0,0,.3);
     color: #fff;
