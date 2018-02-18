@@ -281,4 +281,21 @@ export default {
         font-size: 52px;
     }
 
+    /* Responsive */
+
+    @media all and (max-width: 430px){
+        img {
+            width: 60%;
+        }
+
+        .card header > *:first-child,.card header > *:last-child {
+            margin:0 10px;
+        }
+
+        div.sss h1.sss {
+            font-size: 38px;
+            margin-top: 20px;
+        }
+    }
+
 </style>
