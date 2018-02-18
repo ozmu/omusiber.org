@@ -16,7 +16,7 @@
         </div>
         <div class="sss" v-if="sss">
             <a href="#" class="btn btn-sm sss back" @click="sss = !sss">Geri</a>
-            <h1>Sık Sorulan Sorular</h1>
+            <h1 class="sss">Sık Sorulan Sorular</h1>
             <div class="container">
                 <div class="soru">
                     <h3>CTF Nedir?</h3>
@@ -268,12 +268,16 @@ export default {
     }
 
     div.sss .soru h3 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     div.sss .soru p {
         font-size: 14px;
         text-transform: initial;
+    }
+
+    div.sss h1.sss {
+        font-size: 52px;
     }
 
 </style>
