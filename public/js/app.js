@@ -52129,7 +52129,7 @@ var render = function() {
           _vm._v(" "),
           _c("h3", [
             _vm._v(
-              "En zoru olmayabilir fakat muhtemelen katılacağınız en eğlenceli CTF"
+              "Eğlenceli olacağına inandığımız bir siber güvenlik yarışması"
             )
           ]),
           _vm._v(" "),
@@ -52199,31 +52199,21 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "container" }, [
       _c("div", { staticClass: "soru" }, [
-        _c("h3", [_vm._v("CTF Nedir?")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "CTF, insanların siber güvenlik bilgilerini test ettiği yarışmalardır."
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "soru" }, [
         _c("h3", [_vm._v("OMUCTF'18 Nedir?")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "OMUSiber tarafından düzenlenmiş en büyük çaplı CTF'dir. Organizasyonda ayrıca poineTR'nin de emeği çok büyüktür."
+            "\n                      CTF (Capture the Flag) siber güvenlik alanında düzenlenen yeni bilgiler edinmek, var olan bilgileri tazelemek isteyenlerin katılabileceği, \n                      araştırmaya yönlendiren, eğlenirken öğrenmeyi hedefleyen bir yarışmadır.\n                      OMUCTF'18, PoineTR'nin yardımlarıyla Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu tarafından düzenlenen iki aşamalı bir CTF yarışmasıdır. \n                      İlk aşama online olup, 9 Mart'ı 10 Mart'a bağlayan gece 00.00'da başlayacaktır ve 23.59'a kadar sürecektir. İlk aşamada başarılı olan ilk 8 takım \n                      Samsun'a davet edilip Nisan'da planlanan bir tarihte aynı ortamda yarışmanın ikinci aşamasını tamamlayacaktır. \n                  "
           )
         ])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "soru" }, [
-        _c("h3", [_vm._v("CTF'in asıl amacı ne ?")]),
+        _c("h3", [_vm._v("OMUCTF'18'e neden katılmalıyım?")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Asıl amaç her şeyden önce öğrenmek. Fakat bunun dışında gerçekten eğlenmek ve offline ctf zamanı gerçekleşecek olan konferansta birbirinden önemli isimlerle tanışma fırsatı bulmaktır."
+            "CTF'de dereceye girerek; üniversitemiz bünyesinde düzenlenecek ikinci aşama olan final yarışmasına katılma şansı yakalayabilir, ikinci aşama ile aynı tarihlerde düzenlenecek konferansla bilişim dünyasının alanında uzman birbirinden \n                      değerli konuşmacıları ile tanışma fırsatı bulabilirsiniz."
           )
         ])
       ]),
@@ -52234,6 +52224,16 @@ var staticRenderFns = [
         _c("p", [
           _vm._v(
             "Yarışmaya en fazla 3 kişilik ekiple katılabilirsiniz. İsterseniz bireysel katılım da gösterebilirsiniz."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Katılım ücreti ne kadar?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Katılım tamamen ücretsizdir. Online CTF'de finalist olan takımlar OMUCTF'18 kapsamında misafir edilerek yol ve barınma giderleri karşılanacaktır."
           )
         ])
       ]),
@@ -52259,16 +52259,6 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "soru" }, [
-        _c("h3", [_vm._v("İlk aşamadan kastınız nedir?")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "CTF iki aşamadan oluşuyor. İlk aşama online gerçekleşecek, ilk aşamada finale kalan ilk 8 takımı Samsun'a davet edeceğiz ve \n                      Nisan ayının sonlarına doğru düzenlediğimiz konferans'ın akşamında offline yarışma fırsatı bulacaklar. Ayrıca, Samsun'un güzel mekânlarında bu 8 takım için \n                      güzel eğlenceler hazırlayacağız. :)\n                  "
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "soru" }, [
         _c("h3", [_vm._v("Ödüller neler?")]),
         _vm._v(" "),
         _c("p", [_vm._v("Ödüller henüz belirlenmedi.")])
@@ -52277,13 +52267,13 @@ var staticRenderFns = [
       _c("div", { staticClass: "soru" }, [
         _c("h3", [
           _vm._v(
-            "İlk aşamada 1. olarak dereceye girip offline CTF'e katılmaya hak kazandım, 5. olarak dereceye girmiş takımla eşit mi başlayacağım offline CTF'e ?"
+            "İlk aşamada 1. olarak dereceye girip ikinci aşamaya katılmaya hak kazandım, ikinci aşamaya 8. olarak dereceye girmiş takımla eşit mi başlayacağım ?"
           )
         ]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Elbette hayır. Aldığınız puanlar ikinci aşama olan offline ctf için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır."
+            "Elbette hayır. Aldığınız puanlar ikinci aşama için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır."
           )
         ])
       ]),
@@ -52291,7 +52281,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "soru" }, [
         _c("p", [
           _vm._v(
-            "Düzenlemeler için burayı takip edebilirsiniz. Sorularınız için siber@omu.edu.tr"
+            "Düzenlemeler için burayı takip edebilirsiniz. Sorularınız için siber@omu.edu.tr üzerinden veya sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz!"
           )
         ])
       ])
