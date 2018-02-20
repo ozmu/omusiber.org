@@ -5,7 +5,7 @@
             <div class="logo">
                 <img src="assets/images/logo.png"/>
             </div>
-            <div class="sponsor">PoineTR</div>
+            <div class="sponsor"><a href="https://poinetr.com/">PoineTR</a></div>
         </header>
         <div class="announcement" v-if="!sss">
             <h1>OMUCTF'18</h1>
@@ -23,7 +23,7 @@
                     <p>
                         CTF (Capture the Flag) siber güvenlik alanında düzenlenen yeni bilgiler edinmek, var olan bilgileri tazelemek isteyenlerin katılabileceği, 
                         araştırmaya yönlendiren, eğlenirken öğrenmeyi hedefleyen bir yarışmadır.
-                        OMUCTF'18, PoineTR'nin yardımlarıyla Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu tarafından düzenlenen iki aşamalı bir CTF yarışmasıdır. 
+                        OMUCTF'18, PoineTR'nin katkılarıyla Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu tarafından düzenlenen iki aşamalı bir CTF yarışmasıdır. 
                         İlk aşama online olup, 9 Mart'ı 10 Mart'a bağlayan gece 00.00'da başlayacaktır ve 23.59'a kadar sürecektir. İlk aşamada başarılı olan ilk 8 takım 
                         Samsun'a davet edilip Nisan'da planlanan bir tarihte aynı ortamda yarışmanın ikinci aşamasını tamamlayacaktır. 
                     </p>
@@ -54,8 +54,8 @@
                     <p>Ödüller henüz belirlenmedi.</p>
                 </div>
                 <div class="soru">
-                    <h3>İlk aşamada 1. olarak dereceye girip ikinci aşamaya katılmaya hak kazandım, ikinci aşamaya 8. olarak dereceye girmiş takımla eşit mi başlayacağım ?</h3>
-                    <p>Elbette hayır. Aldığınız puanlar ikinci aşama için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır.</p>
+                    <h3>İkinci aşama nasıl olacak ?</h3>
+                    <p>İlk aşamayı başarıyla geçtikten sonra, ikinci aşamada yani burada sürpriz bir eleme sistemiyle karşılaşacaksınız. Henüz açıklamıyoruz fakat eğleneceğinize eminiz!</p>
                 </div>
                 <div class="soru">
                     <p>Düzenlemeler için burayı takip edebilirsiniz. Sorularınız için siber@omu.edu.tr üzerinden veya sosyal medya hesaplarımızdan bizimle iletişime geçebilirsiniz!</p>

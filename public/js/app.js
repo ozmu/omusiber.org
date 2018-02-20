@@ -52190,7 +52190,11 @@ var staticRenderFns = [
         _c("img", { attrs: { src: "assets/images/logo.png" } })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "sponsor" }, [_vm._v("PoineTR")])
+      _c("div", { staticClass: "sponsor" }, [
+        _c("a", { attrs: { href: "https://poinetr.com/" } }, [
+          _vm._v("PoineTR")
+        ])
+      ])
     ])
   },
   function() {
@@ -52203,7 +52207,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "\n                      CTF (Capture the Flag) siber güvenlik alanında düzenlenen yeni bilgiler edinmek, var olan bilgileri tazelemek isteyenlerin katılabileceği, \n                      araştırmaya yönlendiren, eğlenirken öğrenmeyi hedefleyen bir yarışmadır.\n                      OMUCTF'18, PoineTR'nin yardımlarıyla Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu tarafından düzenlenen iki aşamalı bir CTF yarışmasıdır. \n                      İlk aşama online olup, 9 Mart'ı 10 Mart'a bağlayan gece 00.00'da başlayacaktır ve 23.59'a kadar sürecektir. İlk aşamada başarılı olan ilk 8 takım \n                      Samsun'a davet edilip Nisan'da planlanan bir tarihte aynı ortamda yarışmanın ikinci aşamasını tamamlayacaktır. \n                  "
+            "\n                      CTF (Capture the Flag) siber güvenlik alanında düzenlenen yeni bilgiler edinmek, var olan bilgileri tazelemek isteyenlerin katılabileceği, \n                      araştırmaya yönlendiren, eğlenirken öğrenmeyi hedefleyen bir yarışmadır.\n                      OMUCTF'18, PoineTR'nin katkılarıyla Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu tarafından düzenlenen iki aşamalı bir CTF yarışmasıdır. \n                      İlk aşama online olup, 9 Mart'ı 10 Mart'a bağlayan gece 00.00'da başlayacaktır ve 23.59'a kadar sürecektir. İlk aşamada başarılı olan ilk 8 takım \n                      Samsun'a davet edilip Nisan'da planlanan bir tarihte aynı ortamda yarışmanın ikinci aşamasını tamamlayacaktır. \n                  "
           )
         ])
       ]),
@@ -52265,15 +52269,11 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "soru" }, [
-        _c("h3", [
-          _vm._v(
-            "İlk aşamada 1. olarak dereceye girip ikinci aşamaya katılmaya hak kazandım, ikinci aşamaya 8. olarak dereceye girmiş takımla eşit mi başlayacağım ?"
-          )
-        ]),
+        _c("h3", [_vm._v("İkinci aşama nasıl olacak ?")]),
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Elbette hayır. Aldığınız puanlar ikinci aşama için de geçerli olacaktır. Aslında ikinci aşamada her takım, ilk aşamadaki puanından başlayacaktır."
+            "İlk aşamayı başarıyla geçtikten sonra, ikinci aşamada yani burada sürpriz bir eleme sistemiyle karşılaşacaksınız. Henüz açıklamıyoruz fakat eğleneceğinize eminiz!"
           )
         ])
       ]),
