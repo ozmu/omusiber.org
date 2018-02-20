@@ -293,8 +293,7 @@ export default {
         }
 
         div.sss h1.sss {
-            font-size: 38px;
-            margin-top: 20px;
+            font-size: 30px;
         }
     }
 
