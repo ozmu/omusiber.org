@@ -32,6 +32,7 @@ Vue.component('site-gallery',require('./components/Site/Gallery.vue'));
 Vue.component('docs',require('./components/Docs/Index.vue'));
 Vue.component('about',require('./components/Site/About.vue'));
 Vue.component('team',require('./components/Admin/Team.vue'));
+Vue.component('home-projects',require('./components/Site/HomeProjects.vue'));
 Vue.component('ctf',require('./components/Site/Ctf.vue'));
 
 const app = new Vue({
