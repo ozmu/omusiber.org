@@ -1454,7 +1454,7 @@ VueSweetalert2.install = function(Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(115);
+module.exports = __webpack_require__(118);
 
 
 /***/ }),
@@ -1496,7 +1496,8 @@ Vue.component('docs', __webpack_require__(94));
 Vue.component('about', __webpack_require__(12));
 Vue.component('team', __webpack_require__(97));
 Vue.component('home-projects', __webpack_require__(102));
-Vue.component('ctf', __webpack_require__(105));
+Vue.component('home-activities', __webpack_require__(105));
+Vue.component('ctf', __webpack_require__(108));
 
 var app = new Vue({
   el: '#home'
@@ -52031,15 +52032,465 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(106)
+/* template */
+var __vue_template__ = __webpack_require__(107)
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Site/HomeActivities.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-a1f2a2a4", Component.options)
+  } else {
+    hotAPI.reload("data-v-a1f2a2a4", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 106 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['header']
+
+});
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "activities" } }, [
+    _c("div", { staticClass: "heading main centered" }, [
+      _c("h3", { staticClass: "uppercase lg-title" }, [
+        _c("span", { staticClass: "titles" }, [_vm._v(_vm._s(_vm.header))])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(0)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row row-eq-height" }, [
+        _c("div", { staticClass: "col-md-12 md-padding main-content" }, [
+          _c("div", { staticClass: "blog-posts timeline full" }, [
+            _c("div", { staticClass: "post-item" }, [
+              _c("div", { staticClass: "timeline_date" }, [
+                _c("span", { staticClass: "inner_date main-bg" }, [
+                  _c("span", { staticClass: "day" }, [_vm._v("21")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "month" }, [_vm._v("Ekim")])
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "year" }, [_vm._v("2017")])
+              ]),
+              _vm._v(" "),
+              _c("article", { staticClass: "post-content" }, [
+                _c(
+                  "div",
+                  { staticClass: "post-image main-border bot-4-border" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/assets/images/activities/pwnlydays.jpg",
+                          alt: "Pwnlydays"
+                        }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "post-item-rit" }, [
+                  _c("div", { staticClass: "post-info-container" }, [
+                    _c("div", { staticClass: "post-info" }, [
+                      _c("h4", [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("Pwnlydays")])
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "post-meta" }, [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-info" }),
+                          _c("span", { staticClass: "activity-over" }, [
+                            _vm._v("Bitti")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-bolt" }),
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Eğitim")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Canyoupwnme")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("i", { staticClass: "fa fa-map-signs" }),
+                            _c("span", [_vm._v("Mühendislik Fakültesi")])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  "
+                    ),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "more_btn main-color",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Devamını oku..")]
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "post-item" }, [
+              _c("div", { staticClass: "timeline_date" }, [
+                _c("span", { staticClass: "inner_date main-bg" }, [
+                  _c("span", { staticClass: "day" }, [_vm._v("16")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "month" }, [_vm._v("Nisan")])
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "year" }, [_vm._v("2017")])
+              ]),
+              _vm._v(" "),
+              _c("article", { staticClass: "post-content" }, [
+                _c(
+                  "div",
+                  { staticClass: "post-image main-border bot-4-border" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        attrs: {
+                          src: "assets/images/activities/omuctf2.jpg",
+                          alt: "Our Blog post image goes here"
+                        }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "post-item-rit" }, [
+                  _c("div", { staticClass: "post-info-container" }, [
+                    _c("div", { staticClass: "post-info" }, [
+                      _c("h4", [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("OMUCTF-II")])
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "post-meta" }, [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-info" }),
+                          _c("span", { staticClass: "activity-over" }, [
+                            _vm._v("Bitti")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "meta-user" }, [
+                          _c("i", { staticClass: "fa fa-bolt" }),
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Yarışma")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "meta_date" }, [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("OmuSiber")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("i", { staticClass: "fa fa-map-signs" }),
+                            _c("span", [_vm._v("Online")])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "OMUCTF-II, üniversitemizin topluluğumuza Hacktrick Siber Güvenlik Konferansı için onayladığı 3 kişilik yol harçlığını kullanacak üyelerimizi belirlemek için düzenlediğimiz siber güvenlik bilgi yarışmasıdır."
+                    ),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "more_btn main-color",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Devamını oku..")]
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "post-item" }, [
+              _c("div", { staticClass: "timeline_date" }, [
+                _c("span", { staticClass: "inner_date main-bg" }, [
+                  _c("span", { staticClass: "day" }, [_vm._v("5")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "month" }, [_vm._v("Mart")])
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "year" }, [_vm._v("2017")])
+              ]),
+              _vm._v(" "),
+              _c("article", { staticClass: "post-content" }, [
+                _c(
+                  "div",
+                  { staticClass: "post-image main-border bot-4-border" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        attrs: {
+                          src: "assets/images/activities/omuctf17.jpg",
+                          alt: "Our Blog post image goes here"
+                        }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "post-item-rit" }, [
+                  _c("div", { staticClass: "post-info-container" }, [
+                    _c("div", { staticClass: "post-info" }, [
+                      _c("h4", [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("OMUCTF'17")])
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "post-meta" }, [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-info" }),
+                          _c("span", { staticClass: "activity-over" }, [
+                            _vm._v("Bitti")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "meta-user" }, [
+                          _c("i", { staticClass: "fa fa-bolt" }),
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Yarışma")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", { staticClass: "meta_date" }, [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("OmuSiber")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("i", { staticClass: "fa fa-map-signs" }),
+                            _c("span", [_vm._v("Online")])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      " OMUCTF’17, Siber Güvenlik Topluluğu olarak insanların düşünme ve araştırma becerilerini geliştirmelerini amaçlayarak gerçekleştirdiğimiz yarışmasıdır."
+                    ),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "more_btn main-color",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Devamını oku..")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-a1f2a2a4", module.exports)
+  }
+}
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(106)
+  __webpack_require__(109)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(108)
+var __vue_script__ = __webpack_require__(111)
 /* template */
-var __vue_template__ = __webpack_require__(114)
+var __vue_template__ = __webpack_require__(117)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -52079,13 +52530,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(107);
+var content = __webpack_require__(110);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -52105,7 +52556,7 @@ if(false) {
 }
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -52119,12 +52570,12 @@ exports.push([module.i, "\n::-webkit-scrollbar\n{\n    width: 0px;\n}\n::-webkit
 
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Countdown_vue__);
 //
 //
@@ -52205,19 +52656,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 109 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(110)
+  __webpack_require__(113)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(112)
+var __vue_script__ = __webpack_require__(115)
 /* template */
-var __vue_template__ = __webpack_require__(113)
+var __vue_template__ = __webpack_require__(116)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -52257,13 +52708,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(111);
+var content = __webpack_require__(114);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -52283,7 +52734,7 @@ if(false) {
 }
 
 /***/ }),
-/* 111 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -52297,7 +52748,7 @@ exports.push([module.i, "\n.block {\n    display: -webkit-box;\n    display: -ms
 
 
 /***/ }),
-/* 112 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52366,7 +52817,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 113 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -52418,7 +52869,7 @@ if (false) {
 }
 
 /***/ }),
-/* 114 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -52603,7 +53054,7 @@ if (false) {
 }
 
 /***/ }),
-/* 115 */
+/* 118 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
