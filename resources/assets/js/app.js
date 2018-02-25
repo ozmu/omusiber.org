@@ -34,6 +34,7 @@ Vue.component('about',require('./components/Site/About.vue'));
 Vue.component('team',require('./components/Admin/Team.vue'));
 Vue.component('home-projects',require('./components/Site/HomeProjects.vue'));
 Vue.component('home-activities',require('./components/Site/HomeActivities.vue'));
+Vue.component('home-subscribe',require('./components/Site/HomeSubscribe.vue'));
 Vue.component('ctf',require('./components/Site/Ctf.vue'));
 
 const app = new Vue({

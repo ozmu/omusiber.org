@@ -41,28 +41,8 @@
 	<about header="{{ $titles->about_us }}" content="{{ $texts->about_us_body }}" :team="{{ $team }}"></about>
 	<home-projects header="{{ $titles->projects }}"></home-projects>
 	<home-activities header="{{ $titles->activities }}"></home-activities>
-
 	<site-gallery header="{{ $titles->gallery }}" :images="{{ $gallery }}"></site-gallery>
-
-	<div id="subscribe">
-		<div class="heading main centered">
-			<h3 class="uppercase lg-title"><span class="titles">{{ $titles->members }}</span></h3>
-		</div>
-		<div class="md-padding">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="text-color">
-							{!! $texts->subscribe_body !!}
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<a class="bttn-unite bttn-lg bttn-primary" href="subscribe">Üye Ol</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	<home-subscribe header="{{ $titles->members }}" content="{!! $texts->subscribe_body !!}"></home-subscribe>
 	<contact header="{{ $titles->contact }}"></contact>
 	</div>
 
