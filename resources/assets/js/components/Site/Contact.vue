@@ -87,6 +87,11 @@
             return {
                 error: false,
                 success: false,
+                name: '',
+                surname: '',
+                email: '',
+                subject: '',
+                message: ''
             }
         },
 

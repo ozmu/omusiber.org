@@ -43897,7 +43897,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             error: false,
-            success: false
+            success: false,
+            name: '',
+            surname: '',
+            email: '',
+            subject: '',
+            message: ''
         };
     },
 
