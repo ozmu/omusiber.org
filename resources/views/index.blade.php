@@ -44,8 +44,4 @@
 	<site-gallery header="{{ $titles->gallery }}" :images="{{ $gallery }}"></site-gallery>
 	<home-subscribe header="{{ $titles->members }}" content="{!! $texts->subscribe_body !!}"></home-subscribe>
 	<contact header="{{ $titles->contact }}"></contact>
-	</div>
-
-
-
 @endsection

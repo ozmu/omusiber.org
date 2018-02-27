@@ -52229,6 +52229,87 @@ var staticRenderFns = [
             _c("div", { staticClass: "post-item" }, [
               _c("div", { staticClass: "timeline_date" }, [
                 _c("span", { staticClass: "inner_date main-bg" }, [
+                  _c("span", { staticClass: "day" }, [_vm._v("10")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "month" }, [_vm._v("Mart")])
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "year" }, [_vm._v("2018")])
+              ]),
+              _vm._v(" "),
+              _c("article", { staticClass: "post-content" }, [
+                _c(
+                  "div",
+                  { staticClass: "post-image main-border bot-4-border" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/assets/images/activities/omuctf18.jpg",
+                          alt: "OMUCTF'18"
+                        }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "post-item-rit" }, [
+                  _c("div", { staticClass: "post-info-container" }, [
+                    _c("div", { staticClass: "post-info" }, [
+                      _c("h4", [
+                        _c("a", { attrs: { href: "#" } }, [_vm._v("OMUCTF'18")])
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "post-meta" }, [
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-info" }),
+                          _c("span", { staticClass: "activity-over" }, [
+                            _vm._v("Henüz başlamadı")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-bolt" }),
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Yarışma")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("i", { staticClass: "fa fa-user" }),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("OMUSiber")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _c("i", { staticClass: "fa fa-map-signs" }),
+                            _c("span", [_vm._v("ctf.omusiber.org")])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "OMUSiber tarafından poineTR'nin katkılarıyla hazırlanan OMUCTF'18 iki aşamalı gerçekleşecektir. Detaylı bilgi için: "
+                    ),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "more_btn main-color",
+                        attrs: { href: "https://omusiber.org/ctf" }
+                      },
+                      [_vm._v("omusiber.org/ctf")]
+                    )
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "post-item" }, [
+              _c("div", { staticClass: "timeline_date" }, [
+                _c("span", { staticClass: "inner_date main-bg" }, [
                   _c("span", { staticClass: "day" }, [_vm._v("21")]),
                   _vm._v(" "),
                   _c("span", { staticClass: "month" }, [_vm._v("Ekim")])
@@ -52293,87 +52374,6 @@ var staticRenderFns = [
                   _c("p", [
                     _vm._v(
                       "Günümüzde yaşanan gelişmelerden sonra fiziksel olduğu kadar siber alanda da güvenliğin son derece önemli olduğu ortaya çıkmış ve bu konuda hassasiyet artmıştır. Malesef ki bu gelişim sürecinde Türkçe kaynak ve test ortamı gibi öğretici unsurlar oldukça azdır.  "
-                    ),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "more_btn main-color",
-                        attrs: { href: "#" }
-                      },
-                      [_vm._v("Devamını oku..")]
-                    )
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "post-item" }, [
-              _c("div", { staticClass: "timeline_date" }, [
-                _c("span", { staticClass: "inner_date main-bg" }, [
-                  _c("span", { staticClass: "day" }, [_vm._v("16")]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "month" }, [_vm._v("Nisan")])
-                ]),
-                _vm._v(" "),
-                _c("span", { staticClass: "year" }, [_vm._v("2017")])
-              ]),
-              _vm._v(" "),
-              _c("article", { staticClass: "post-content" }, [
-                _c(
-                  "div",
-                  { staticClass: "post-image main-border bot-4-border" },
-                  [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        attrs: {
-                          src: "assets/images/activities/omuctf2.jpg",
-                          alt: "Our Blog post image goes here"
-                        }
-                      })
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "post-item-rit" }, [
-                  _c("div", { staticClass: "post-info-container" }, [
-                    _c("div", { staticClass: "post-info" }, [
-                      _c("h4", [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("OMUCTF-II")])
-                      ]),
-                      _vm._v(" "),
-                      _c("ul", { staticClass: "post-meta" }, [
-                        _c("li", [
-                          _c("i", { staticClass: "fa fa-info" }),
-                          _c("span", { staticClass: "activity-over" }, [
-                            _vm._v("Bitti")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "meta-user" }, [
-                          _c("i", { staticClass: "fa fa-bolt" }),
-                          _c("a", { attrs: { href: "#" } }, [_vm._v("Yarışma")])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "meta_date" }, [
-                          _c("i", { staticClass: "fa fa-user" }),
-                          _c("a", { attrs: { href: "#" } }, [
-                            _vm._v("OmuSiber")
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _c("a", { attrs: { href: "#" } }, [
-                            _c("i", { staticClass: "fa fa-map-signs" }),
-                            _c("span", [_vm._v("Online")])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "OMUCTF-II, üniversitemizin topluluğumuza Hacktrick Siber Güvenlik Konferansı için onayladığı 3 kişilik yol harçlığını kullanacak üyelerimizi belirlemek için düzenlediğimiz siber güvenlik bilgi yarışmasıdır."
                     ),
                     _c(
                       "a",
