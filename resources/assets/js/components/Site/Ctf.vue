@@ -9,8 +9,8 @@
         </header>
         <div class="announcement" v-if="!sss">
             <h1>OMUCTF'18</h1>
-            <h3>Eğlenceli olacağına inandığımız bir siber güvenlik yarışması</h3>
-            <h3 class="italic">Henüz kayıtlar başlamamıştır!</h3>
+            <h3>Eğlenceli ve bilgilendirici bir siber güvenlik yarışması</h3>
+            <h3 class="italic"><a href="https://ctf.omusiber.org">Kayıt için tıklayın!</a></h3>
             <a href="#" class="btn btn-sm sss" @click="sss = !sss">Sık Sorulan Sorular</a>
                      
         </div>
@@ -36,6 +36,10 @@
                 <div class="soru">
                     <h3>Kaç kişilik ekiple katılabilirim?</h3>
                     <p>Yarışmaya en fazla 3 kişilik ekiple katılabilirsiniz. İsterseniz bireysel katılım da gösterebilirsiniz.</p>
+                </div>
+                <div class="soru">
+                    <h3>Nasıl kayıt olabilirim?</h3>
+                    <p>ctf.omusiber.org adresinden kayıt olduktan sonra, mail adresinize gelen onay linki ile kaydı onaylamanız gerekmektedir. Daha sonra takım arkadaşlarınızla kullanıcı adı ve şifrenizi paylaşarak yarışma zamanı soruları beraber çözebilirsiniz.</p>
                 </div>
                 <div class="soru">
                     <h3>Katılım ücreti ne kadar?</h3>

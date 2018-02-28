@@ -52789,6 +52789,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -53029,14 +53033,10 @@ var render = function() {
           _c("h1", [_vm._v("OMUCTF'18")]),
           _vm._v(" "),
           _c("h3", [
-            _vm._v(
-              "Eğlenceli olacağına inandığımız bir siber güvenlik yarışması"
-            )
+            _vm._v("Eğlenceli ve bilgilendirici bir siber güvenlik yarışması")
           ]),
           _vm._v(" "),
-          _c("h3", { staticClass: "italic" }, [
-            _vm._v("Henüz kayıtlar başlamamıştır!")
-          ]),
+          _vm._m(1),
           _vm._v(" "),
           _c(
             "a",
@@ -53072,7 +53072,7 @@ var render = function() {
           _vm._v(" "),
           _c("h1", { staticClass: "sss" }, [_vm._v("Sık Sorulan Sorular")]),
           _vm._v(" "),
-          _vm._m(1)
+          _vm._m(2)
         ])
       : _vm._e()
   ])
@@ -53095,6 +53095,16 @@ var staticRenderFns = [
         _c("a", { attrs: { href: "https://poinetr.com/" } }, [
           _vm._v("PoineTR")
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h3", { staticClass: "italic" }, [
+      _c("a", { attrs: { href: "https://ctf.omusiber.org" } }, [
+        _vm._v("Kayıt için tıklayın!")
       ])
     ])
   },
@@ -53129,6 +53139,16 @@ var staticRenderFns = [
         _c("p", [
           _vm._v(
             "Yarışmaya en fazla 3 kişilik ekiple katılabilirsiniz. İsterseniz bireysel katılım da gösterebilirsiniz."
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "soru" }, [
+        _c("h3", [_vm._v("Nasıl kayıt olabilirim?")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "ctf.omusiber.org adresinden kayıt olduktan sonra, mail adresinize gelen onay linki ile kaydı onaylamanız gerekmektedir. Daha sonra takım arkadaşlarınızla kullanıcı adı ve şifrenizi paylaşarak yarışma zamanı soruları beraber çözebilirsiniz."
           )
         ])
       ]),
