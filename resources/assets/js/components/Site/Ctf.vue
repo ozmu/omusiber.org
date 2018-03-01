@@ -70,9 +70,7 @@
 </template>
 
 <script>
-import Countdown from '../Countdown.vue';
 export default {
-  components: { Countdown },
   data(){
       return {
           sss: false,

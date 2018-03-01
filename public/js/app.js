@@ -1454,7 +1454,7 @@ VueSweetalert2.install = function(Vue) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(15);
-module.exports = __webpack_require__(121);
+module.exports = __webpack_require__(116);
 
 
 /***/ }),
@@ -44863,36 +44863,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['header', 'content', 'team'],
@@ -52635,7 +52605,7 @@ var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(114)
 /* template */
-var __vue_template__ = __webpack_require__(120)
+var __vue_template__ = __webpack_require__(115)
 /* template functional */
   var __vue_template_functional__ = false
 /* styles */
@@ -52720,8 +52690,6 @@ exports.push([module.i, "\n::-webkit-scrollbar\n{\n    width: 0px;\n}\n::-webkit
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Countdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Countdown_vue__);
 //
 //
 //
@@ -52793,10 +52761,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: { Countdown: __WEBPACK_IMPORTED_MODULE_0__Countdown_vue___default.a },
     data: function data() {
         return {
             sss: false
@@ -52806,219 +52772,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 115 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(116)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(118)
-/* template */
-var __vue_template__ = __webpack_require__(119)
-/* template functional */
-  var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Countdown.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4042e26a", Component.options)
-  } else {
-    hotAPI.reload("data-v-4042e26a", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(117);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(3)("4f27134d", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4042e26a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Countdown.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4042e26a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Countdown.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(undefined);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);", ""]);
-
-// module
-exports.push([module.i, "\n.block {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    margin: 20px;\n}\n.text {\n    color: #1abc9c;\n    font-size: 40px;\n    font-family: 'Roboto Condensed', serif;\n    font-weight: 400;\n    margin-top:10px;\n    margin-bottom: 10px;\n    text-align: center;\n}\n.digit {\n    color: #ecf0f1;\n    font-size: 60px;\n    font-weight: 100;\n    font-family: 'Roboto', serif;\n    margin: 10px;\n    text-align: center;\n}\n\n/*\n@media all and (min-width: 576px) and (max-width:768px){\n    .digit {\n        font-size: 40px;\n    }\n    .text {\n        font-size: 30px;\n    }\n}\n\n@media all and (max-width:576px){\n    .digit {\n        font-size: 24px;\n    }\n    .text {\n        font-size: 15px;\n    }\n}*/\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 118 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    ready: function ready() {
-        var _this = this;
-
-        window.setInterval(function () {
-            _this.now = Math.trunc(new Date().getTime() / 1000);
-        }, 1000);
-    },
-
-
-    props: {
-        date: {
-            type: Number,
-            coerce: function coerce(str) {
-                return Math.trunc(Date.parse(str) / 1000);
-            }
-        }
-    },
-
-    data: function data() {
-        return {
-            now: Math.trunc(new Date().getTime() / 1000)
-        };
-    },
-
-
-    computed: {
-        seconds: function seconds() {
-            return (this.date - this.now) % 60;
-        },
-        minutes: function minutes() {
-            return Math.trunc((this.date - this.now) / 60) % 60;
-        },
-        hours: function hours() {
-            return Math.trunc((this.date - this.now) / 60 / 60) % 24;
-        },
-        days: function days() {
-            return Math.trunc((this.date - this.now) / 60 / 60 / 24);
-        }
-    }
-});
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "block" }, [
-      _c("p", { staticClass: "digit" }, [
-        _vm._v(_vm._s(_vm._f("two_digits")(_vm.days)))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text" }, [_vm._v("Days")])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "block" }, [
-      _c("p", { staticClass: "digit" }, [
-        _vm._v(_vm._s(_vm._f("two_digits")(_vm.hours)))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text" }, [_vm._v("Hours")])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "block" }, [
-      _c("p", { staticClass: "digit" }, [
-        _vm._v(_vm._s(_vm._f("two_digits")(_vm.minutes)))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text" }, [_vm._v("Minutes")])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "block" }, [
-      _c("p", { staticClass: "digit" }, [
-        _vm._v(_vm._s(_vm._f("two_digits")(_vm.seconds)))
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "text" }, [_vm._v("Seconds")])
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4042e26a", module.exports)
-  }
-}
-
-/***/ }),
-/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -53219,7 +52972,7 @@ if (false) {
 }
 
 /***/ }),
-/* 121 */
+/* 116 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
