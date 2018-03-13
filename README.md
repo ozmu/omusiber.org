@@ -51,3 +51,8 @@ Artisan kullanarak projeyi ayaklandırmak:
 
     $ php artisan serve
     
+Herhangi bir sorunda sosyal medya üzerinden veya mail yoluyla ulaşabilirsiniz.
+
+Twitter: [@omusiber](https://twitter.com/omusiber)
+Instagram: [omusiber](https://instagram.com/omusiber)
+Mail : siber@omu.edu.tr
