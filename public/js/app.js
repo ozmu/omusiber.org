@@ -52857,7 +52857,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("h3", { staticClass: "italic" }, [
       _c("a", { attrs: { href: "https://ctf.omusiber.org" } }, [
-        _vm._v("Kayıt için tıklayın!")
+        _vm._v("Yarışma sona ermiştir!")
       ])
     ])
   },

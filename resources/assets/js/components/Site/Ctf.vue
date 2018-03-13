@@ -10,7 +10,7 @@
         <div class="announcement" v-if="!sss">
             <h1>OMUCTF'18</h1>
             <h3>Eğlenceli ve bilgilendirici bir siber güvenlik yarışması</h3>
-            <h3 class="italic"><a href="https://ctf.omusiber.org">Kayıt için tıklayın!</a></h3>
+            <h3 class="italic"><a href="https://ctf.omusiber.org">Yarışma sona ermiştir!</a></h3>
             <a href="#" class="btn btn-sm sss" @click="sss = !sss">Sık Sorulan Sorular</a>
                      
         </div>
