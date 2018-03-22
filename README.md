@@ -6,7 +6,7 @@ Biz, OMUSiber olarak üniversitemizde, şehrimizde ve ülkemizde insanların bil
 
 Bunun için seminerler, konferanslar, eğitimler, yarışmalar düzenliyoruz.
 
-Asıl gayemiz olan daha güvenli bir sanal ortam sağlamak fikrinde, bizi yolda yalnız bırakmayan değerli kardeş topluluklarımıza ve öğretmenlerimize teşekkür ederiz.
+Asıl gayemiz olan daha güvenli bir sanal ortam sağlamak fikrinde, bizi yolda yalnız bırakmayan değerli kardeş topluluklarımıza, firmalara ve öğretmenlerimize teşekkür ederiz.
 
 Organizasyonlarımızda aktif görev almak ve hep beraber daha güçlü bir topluluk olma yolunda bize katılmak istersen, [twitter](https://twitter.com/omusiber) hesabımızdan bize ulaşabilirsin.
 
