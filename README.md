@@ -1,3 +1,8 @@
+# Bu repo'nun geliştirme süreci sona ermiştir!
+
+Bu projenin geliştirme süreci, OMUSiber topluluk sayfasına alınmıştır. [https://github.com/omusiber/omusiber.org](https://github.com/omusiber/omusiber.org) adresinden ulaşabilirsiniz.
+
+
 # OMUSiber | Ondokuz Mayıs Üniversitesi Siber Güvenlik Topluluğu
 
 OMUSiber, 2015 yılında Ondokuz Mayıs Üniversitesi'nden birkaç arkadaşın toplanıp kurduğu Karadeniz'in en büyük Siber Güvenlik Topluluğudur.
